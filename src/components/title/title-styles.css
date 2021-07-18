@@ -1,0 +1,88 @@
+* {
+    font-family: Vazir;
+}
+
+
+
+.title {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.title-head {
+    width: 100%;
+    font-size: 2em;
+}
+
+.title-description {
+    font-size: 15px;
+    width: 60%;
+    margin: auto;
+}
+
+.title-bottom {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    font-size: 1em;
+    padding-top: 3%;
+}
+
+.title-bottom * {
+    width: 30%;
+    border: none;
+    background-color: none;
+}
+
+
+.title-team-bottom, .title-about-bottom {
+    text-decoration: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: rgb(224, 219, 215);
+    text-align: center;
+    background-color: rgb(202, 26, 26);
+}
+
+.title-team-bottom :hover, .title-about-bottom :hover {
+    background-color: seagreen;
+}
+
+
+@media screen and (max-width: 800px) {  
+    .title {
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .title-head {
+        font-size: 2em;
+    }
+
+    .title-description {
+        font-size: 15px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .title-bottom {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .title-team-bottom :hover, .title-about-bottom :hover {
+        background-color: seagreen;
+    }
+}
