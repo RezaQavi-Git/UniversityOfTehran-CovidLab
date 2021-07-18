@@ -75,14 +75,21 @@
     }
 
     .title-bottom {
-        width: 50%;
+        width: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
+        text-align: center;
     }
 
     .title-team-bottom :hover, .title-about-bottom :hover {
         background-color: seagreen;
     }
+
+    .title-team-bottom  {
+        padding:  0;
+    }
+ 
+ 
 }
