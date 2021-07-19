@@ -25,8 +25,6 @@ class Title extends React.Component {
                 </div>
                 <br></br>
                 <div className="title-bottom">
-                    {/* <Link className="title-team-bottom" to="#">تیم ما</Link>
-                    <Link className="title-about-bottom" to="#about">درباره ی ما</Link>   */}
                     <a className="title-team-bottom" href="#team">تیم ما</a>
                     <a className="title-about-bottom" href="#about">درباره ی ما</a>        
                 </div>
