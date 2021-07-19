@@ -1,0 +1,58 @@
+
+* {
+    font-family: Vazir;
+  }
+  
+.about {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-description {
+    width: 50%;
+    font-size: 1.25em;
+    text-align: justify;
+
+}
+
+.about-img {
+    width: 40%;
+}
+
+.about-image {
+    width: 95%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .about {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+    
+    .about-description {
+        width: 90%;
+        font-size: 1.25em;
+        text-align: justify;
+    
+    }
+    
+    .about-img {
+        width: 60%;
+    }
+    
+    .about-image {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+}
