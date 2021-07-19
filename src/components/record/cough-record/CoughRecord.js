@@ -136,10 +136,12 @@ class CoughRecord extends React.Component{
                     <div className="recorder">
                         <audio src={this.state.blobURL} controls="controls" className="record-player" />
                         <div className="control-bottom">
-                        <button onClick={this.stop} disabled={!this.state.isRecording} className="record-bottom">توقف</button>
-                        <button onClick={this.start} disabled={this.state.isRecording} className="record-bottom">ضبط</button>
+                            <button className="submit-bottom">ارسال</button>
+                            <button onClick={this.stop} disabled={!this.state.isRecording} className="record-bottom stop">توقف</button>
+                            <button onClick={this.start} disabled={this.state.isRecording} className="record-bottom">ضبط</button>
                         </div>
                     </div>
+                    
                 </div>
             </React.Fragment>
         );
