@@ -71,14 +71,18 @@ class CoughRecord extends React.Component{
                 <div className="questions en">
                     <div className="question">
                         <div>
-                            <p className="question-title">Do you have a history of smoking?</p>
+                            <p className="question-title">Please specify your status</p>
                         </div>
-                        <div className="question-options" onChange={this.setSmoke.bind(this) }>
-                            <form className="question-form">
-                                    <input type="radio" id="q3-1" name="type" value="true" />
-                                  <label for="html">Yes</label><br/>
-                                    <input type="radio" id="q3-2" name="type" value="false" />
-                                  <label for="html">No</label><br/>
+                        <div className="question-options">
+                            <form className="question-form" onChange={this.setSituation.bind(this) }>
+                                    <input type="radio" id="q1-1" name="type" value="positive" />
+                                  <label for="html">Definitive diagnosis of Covid 19</label><br/>
+                                    <input type="radio" id="q1-2" name="type" value="middle" />
+                                  <label for="html">Suspicious of Covid 19</label><br/>
+                                    <input type="radio" id="q1-3" name="type" value="others" />
+                                  <label for="html">Other diseases</label><br/>
+                                    <input type="radio" id="q1-4" name="type" value="healthy" />
+                                  <label for="html">Healthy</label><br/>
                                 <br/>
                             </form>
                         </div>
@@ -103,18 +107,14 @@ class CoughRecord extends React.Component{
 
                     <div className="question">
                         <div>
-                            <p className="question-title">Please specify your status</p>
+                            <p className="question-title">Do you have a history of smoking?</p>
                         </div>
-                        <div className="question-options">
-                            <form className="question-form" onChange={this.setSituation.bind(this) }>
-                                    <input type="radio" id="q1-1" name="type" value="positive" />
-                                  <label for="html">Definitive diagnosis of Covid 19</label><br/>
-                                    <input type="radio" id="q1-2" name="type" value="middle" />
-                                  <label for="html">Suspicious of Covid 19</label><br/>
-                                    <input type="radio" id="q1-3" name="type" value="others" />
-                                  <label for="html">Other diseases</label><br/>
-                                    <input type="radio" id="q1-4" name="type" value="healthy" />
-                                  <label for="html">Healthy</label><br/>
+                        <div className="question-options" onChange={this.setSmoke.bind(this) }>
+                            <form className="question-form">
+                                    <input type="radio" id="q3-1" name="type" value="true" />
+                                  <label for="html">Yes</label><br/>
+                                    <input type="radio" id="q3-2" name="type" value="false" />
+                                  <label for="html">No</label><br/>
                                 <br/>
                             </form>
                         </div>
