@@ -68,7 +68,7 @@ class CoughRecord extends React.Component{
                         <p >Accompany us in a more accurate answer by filling in the details below</p>
                     </div>
                 </div><br/>
-                <div className="questions">
+                <div className="questions en">
                     <div className="question">
                         <div>
                             <p className="question-title">Do you have a history of smoking?</p>
@@ -122,7 +122,7 @@ class CoughRecord extends React.Component{
 
                 </div>
                 {/* https://github.com/sivaprakashDesingu/react-voice-recorder/tree/master/src/imgs */}
-                <div className="record">
+                <div className="record en">
                     <div className="recorder">
                         <audio src={this.state.blobURL} controls="controls" className="record-player" />
                         <div className="control-buttom">
@@ -132,6 +132,7 @@ class CoughRecord extends React.Component{
                         </div>
                     </div>
                     <div className="hints">
+                        <div className="en">
                         <p> To record the sound of a cough, please do so in a quiet environment as much as possible </p>
                         <p> Also, when using this program, please follow the health tips. For example: </p>
                         <ol className="health-tips">
@@ -139,6 +140,7 @@ class CoughRecord extends React.Component{
                             <li> 2. Avoid coughing in front of others. </li>
                             <li> 3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask. </li>
                         </ol>
+                        </div>
                     </div>
                     
                 </div>

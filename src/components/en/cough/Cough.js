@@ -10,8 +10,6 @@ import Team from './team/Team';
 import About from './about/About';
 import '../../common/total-page.css';
 
-import $ from 'jquery';
-
 
 class Cough extends React.Component {
     
