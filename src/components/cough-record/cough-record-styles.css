@@ -1,0 +1,211 @@
+* {
+    font-family: Vazir;
+}
+
+.title {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.title-head {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: 2em;
+}
+
+.title-description {
+    font-size: 15px;
+    width: 60%;
+    margin: auto;
+}
+
+.questions {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+.question-options {
+    padding-right: 25%;
+}
+
+.question-title {
+    text-align: center;
+}
+
+
+
+.record {
+    width: 80%;
+    margin: auto;
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hints {
+    width: 45%;
+    margin: auto;
+    font-size: 1em;
+    text-align: right;
+
+}
+
+.health-tips {
+    color: red;
+    list-style-type: none;
+}
+
+
+.recorder {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 35%;
+    margin: auto;
+}
+
+.control-bottom {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:stretch;
+}
+
+.record-bottom {
+    text-decoration: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: rgb(224, 219, 215);
+    text-align: center;
+    background-color: rgb(61, 173, 16);
+    font-size: 1.5em;
+}
+
+.record-player {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px ;
+}
+
+
+.seprator {
+    color: black;
+    font-size: 2.5em;
+    padding: 1% 0px;
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .title {
+        width: 100%;
+        margin: auto;
+        margin-top: 5%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .title-head {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        font-size: 1.25em;
+        /* margin-top: 25% ; */
+    }
+    
+    .title-description {
+        font-size: 15px;
+        width: 60%;
+        margin: auto;
+    }
+
+
+    .questions {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em;
+    }
+    
+    .question-options {
+        padding-right: 10%;
+    }
+    
+    .question-title {
+        text-align: center;
+    }
+
+    .record {
+        width: 90%;
+        margin: auto;
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hints {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .health-tips {
+        color: red;
+        list-style-type: none;
+    }
+    
+    
+    .recorder {
+        width: 80%;
+        margin: auto;
+    }
+    
+
+    .control-bottom {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:stretch;
+    }
+    
+    .record-bottom {
+        text-decoration: none;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: rgb(224, 219, 215);
+        text-align: center;
+        background-color: rgb(61, 173, 16);
+        font-size: 1em;
+    }
+    
+    .record-player {
+        width: 100%;
+        margin: auto;
+        border-radius: 15px ;
+    }
+    
+}
