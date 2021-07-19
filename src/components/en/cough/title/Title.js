@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './title-styles.css'
-import { Link } from 'react-router-dom';
 
 class Title extends React.Component {
     constructor(props) {
