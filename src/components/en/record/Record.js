@@ -1,13 +1,15 @@
 import React from 'react';
 
+import $ from 'jquery'
 import Header from '../common/header/Header';
 import Footer from '../common/footer/Footer';
 import CoughRecord from './cough-record/CoughRecord'
 
-import '../record/record-styles.css'
+import '../../common/total-page.css';
+
 
 class Record extends React.Component {
-
+    
     constructor(props) {
         super(props);
         this.state = {            
@@ -21,6 +23,13 @@ class Record extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <div className={"lang-button-en"} >
+                    <button className="dropbtn" >language</button>
+                    <div className="lang-button-en-content">
+                        <a href={"/record"}>persian</a>
+                        <a href={"/record/en"} >english</a>
+                        </div>
+                </div>
                 <div className="main">
                     <Header />
                     <CoughRecord />  

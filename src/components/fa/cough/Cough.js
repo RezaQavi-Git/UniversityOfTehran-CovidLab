@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import $ from 'jquery';
 
 import Header from '../common/header/Header';
 import Footer from '../common/footer/Footer';
@@ -10,8 +10,8 @@ import Team from './team/Team';
 import About from './about/About';
 
 
-import './cough-styles.css'
-import '../common/common.css'
+import '../../common/total-page.css';
+
 
 class Cough extends React.Component {
 
@@ -28,6 +28,13 @@ class Cough extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <div className="lang-button">
+                    <button className="dropbtn" >زبان</button>
+                    <div className="lang-button-content">
+                        <a href={"/"}>فارسی</a>
+                        <a href={ "/en"}>انگلیسی</a>
+                        </div>
+                </div>
                 <div className="main">
                     <Header />
                     <Title />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './about-styles.css'
+import '../../../common/cough/about.css'
 
 import ROBOLAB from '../../../static/images/robolab.jpg';
 

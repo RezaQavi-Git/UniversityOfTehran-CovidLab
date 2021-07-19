@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './team-styles.css'
+import '../../../common/cough/team.css'
 
 import DRMORADI from '../../../static/images/DrhadiMoradi.jpg';
 

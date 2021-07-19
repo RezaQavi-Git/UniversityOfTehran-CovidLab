@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './header-styles.css';
+import '../../../common/header.css';
 import LOGO from '../../../static/images/ut-logo.png';
 
 class Header extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './record-box-styles.css'
+import '../../../common/cough/record-box.css'
 
 class RecordBox extends React.Component {
     constructor(props) {

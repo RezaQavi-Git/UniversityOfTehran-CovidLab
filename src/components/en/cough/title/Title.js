@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './title-styles.css'
+import '../../../common/cough/title.css'
 
 class Title extends React.Component {
     constructor(props) {
@@ -18,8 +18,8 @@ class Title extends React.Component {
                     <p className="title-head">
                     Detection of Covid 19 by coughing sound
                     </p>
-                    <p className="title-description">
-                    Yazd - IRNA - The spokesman of Shahid Sadoughi University of Medical Sciences in Yazd said: "Currently, 811 people are hospitalized in the province due to Covid 19 disease, of which 136 people are in the ICU intensive care unit of medical services." Is presented.
+                    <p className="title-description" >
+                        Yazd - IRNA - The spokesman of Shahid Sadoughi University of Medical Sciences in Yazd said: "Currently, 811 people are hospitalized in the province due to Covid 19 disease, of which 136 people are in the ICU intensive care unit of medical services." Is presented.
                     </p>
                 </div>
                 <br></br>

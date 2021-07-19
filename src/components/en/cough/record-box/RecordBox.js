@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './record-box-styles.css'
+import '../../../common/cough/record-box.css'
 
 class RecordBox extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class RecordBox extends React.Component {
                         <Link to="/record/en"> <img src="https://img.icons8.com/ios/50/4a90e2/play-record--v2.png" className="microphone" alt="mic"/>  </Link> 
                         <p>Record Voice</p>
                     </div>
-                    <div className="description-box-description">
+                    <div className="description-box-description en">
                         <p>
                         Yazd, with a population of 1.2 million, has 10 cities. According to the university spokesman, the trend of spreading the corona virus, which causes Covid 19 disease, is increasing in the province.
                         Currently, the health status of 9 out of 10 cities in Yazd province is in red due to the increase in the prevalence of coronavirus, and only Ashkzar city is orange.

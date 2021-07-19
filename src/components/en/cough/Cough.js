@@ -8,26 +8,33 @@ import Title from './title/Title';
 import RecordBox from './record-box/RecordBox';
 import Team from './team/Team';
 import About from './about/About';
+import '../../common/total-page.css';
 
+import $ from 'jquery';
 
-import './cough-styles.css'
-import '../common/common.css'
 
 class Cough extends React.Component {
-
+    
     constructor(props) {
         super(props);
         this.state = {            
         }
     }
-
+    
     componentDidMount(){
         document.title = 'cough';
     }
-
+    
     render() {
         return (
             <React.Fragment>
+                <div className={"lang-button-en"} >
+                    <button className="dropbtn" >language</button>
+                    <div className="lang-button-en-content">
+                        <a href={"/"}>persian</a>
+                        <a href={"/en"}>english</a>
+                        </div>
+                </div>
                 <div className="main">
                     <Header />
                     <Title />

@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './header-styles.css';
+import '../../../common/header.css';
 import LOGO from '../../../static/images/ut-logo.png';
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -9,8 +10,8 @@ class Header extends React.Component {
         this.state = {            
         }
     }
-
-
+    
+    
     render(){
         return(
             <React.Fragment>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './about-styles.css'
+import '../../../common/cough/about.css'
 
 import ROBOLAB from '../../../static/images/robolab.jpg';
 
@@ -21,9 +21,9 @@ class About extends React.Component {
                     <div className="about-img">
                         <img src={ROBOLAB} alt="robolab" className="about-image"/>
                     </div>
-                    <div className="about-description" >
+                    <div className="about-description en" >
                         <p>
-                        Zaid - IRNA - The spokesman of Shahid Sadoughi University of Medical Sciences in Yazd said: "Currently, 811 people are hospitalized in the province's hospitals due to Covid 19 disease, of which 136 people are in the intensive care unit (ICU)." Provide use
+                            Zaid - IRNA - The spokesman of Shahid Sadoughi University of Medical Sciences in Yazd said: "Currently, 811 people are hospitalized in the province's hospitals due to Covid 19 disease, of which 136 people are in the intensive care unit (ICU)." Provide use
                         </p>
                     </div>
                 </div>
