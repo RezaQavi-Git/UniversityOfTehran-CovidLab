@@ -2,7 +2,7 @@ import React from 'react';
 
 import './about-styles.css'
 
-import ROBOLAB from '../../static/images/robolab.jpg';
+import ROBOLAB from '../../../static/images/robolab.jpg';
 
 class About extends React.Component {
     constructor(props) {

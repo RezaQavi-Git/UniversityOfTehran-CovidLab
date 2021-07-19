@@ -24,9 +24,9 @@ class Title extends React.Component {
                     </p>
                 </div>
                 <br></br>
-                <div className="title-bottom">
-                    <a className="title-team-bottom" href="#team">تیم ما</a>
-                    <a className="title-about-bottom" href="#about">درباره ی ما</a>        
+                <div className="title-buttom">
+                    <a className="title-team-buttom" href="#team">تیم ما</a>
+                    <a className="title-about-buttom" href="#about">درباره ی ما</a>        
                 </div>
             </React.Fragment>
         )

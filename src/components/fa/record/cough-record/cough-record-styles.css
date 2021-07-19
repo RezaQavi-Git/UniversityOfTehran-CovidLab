@@ -79,8 +79,8 @@
     margin: auto;
 }
 
-.control-bottom {
-    width: 50%;
+.control-buttom {
+    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -88,7 +88,7 @@
     align-items:stretch;
 }
 
-.record-bottom {
+.record-buttom {
     text-decoration: none;
     border: none;
     padding: 5px 10px;
@@ -103,7 +103,7 @@
     background-color: rgb(252, 18, 10);
 }
 
-.submit-bottom {
+.submit-buttom {
     text-decoration: none;
     border: none;
     padding: 5px 10px;
@@ -189,7 +189,7 @@
     }
     
 
-    .control-bottom {
+    .control-buttom {
         width: 80%;
         margin: auto;
         display: flex;

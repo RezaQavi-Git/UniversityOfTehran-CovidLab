@@ -2,16 +2,16 @@ import React from 'react';
 
 
 
-import Header from '../header/Header';
+import Header from '../common/header/Header';
+import Footer from '../common/footer/Footer';
 import Title from './title/Title';
 import RecordBox from './record-box/RecordBox';
 import Team from './team/Team';
 import About from './about/About';
-import Footer from '../footer/Footer';
 
 
 import './cough-styles.css'
-import '../common.css'
+import '../common/common.css'
 
 class Cough extends React.Component {
 

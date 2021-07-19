@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './header-styles.css';
-import LOGO from '../static/images/ut-logo.png';
+import LOGO from '../../../static/images/ut-logo.png';
 
 class Header extends React.Component {
     constructor(props) {
