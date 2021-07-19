@@ -28,16 +28,16 @@ class Cough extends React.Component {
         return (
             <React.Fragment>
                 <div className="main">
-                <Header />
-
-                <Title />
-                <p className="seprator">پرسشنامه</p>
-                <QuestionBox />
-                <p className="seprator">تیم ما</p>
-                <Team />
-                <p className="seprator">درباره ی ما</p>
-                <About />   
-                <Footer />
+                    <Header />
+                    <p className="seprator"></p>
+                    <Title />
+                    <p className="seprator">پرسشنامه</p>
+                    <QuestionBox />
+                    <p className="seprator">تیم ما</p>
+                    <Team />
+                    <p className="seprator">درباره ی ما</p>
+                    <About />   
+                    <Footer />
                 </div>
             </React.Fragment>       
         )

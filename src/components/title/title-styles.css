@@ -2,12 +2,10 @@
     font-family: Vazir;
 }
 
-
-
 .title {
     width: 80%;
     margin: auto;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     text-align: center;
 }
 
@@ -60,7 +58,6 @@
     .title {
         width: 90%;
         margin: auto;
-        margin-top: 5%;
         text-align: center;
     }
 
@@ -75,7 +72,7 @@
     }
 
     .title-bottom {
-        width: 80%;
+        width: 50%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

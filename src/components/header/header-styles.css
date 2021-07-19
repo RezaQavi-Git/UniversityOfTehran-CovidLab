@@ -7,20 +7,19 @@
     width: 50%;
     left: 0;
     float: left;
-    /* margin-left: 5%; */
-     margin: auto;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.logo .logo-img {
-    width: 150px;
-    height: 150px;
+.logo-img {
+    width: 100px;
+    height: 100px;
 }
 
-.logo .logo-title {
+.logo-title {
     width: 50%;
     font-size: 1em;
     text-align: center;
@@ -30,18 +29,25 @@
     padding: 0;
 }
 
+.logo-title_ {
+    margin: 0;
+    padding: 0;
+}
+
 
 @media screen and (max-width: 800px) {
     .logo {
-        width: 100%;
+        width: 80%;
+        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
     
-    .logo-img {
-        width: 50%;
+    .logo .logo-img {
+        width: 35%;
+        height:inherit;
     }
     
 }
