@@ -140,23 +140,24 @@
     
     .title-description {
         width: 60%;
-        font-size: 3em;
+        font-size: 1.1em;
         margin: auto;
-        background-color: brown;
     }
 
 
     .questions {
-        width: 10%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        font-size: 2em;
+        font-size: 1.2em;
     }
     
     .question-options {
+        width: 85%;
+        margin: auto;
         padding-right: 10%;
     }
     
@@ -179,7 +180,7 @@
     }
     
     .health-tips {
-        color: rgb(8, 1, 1);
+        color: red;
         list-style-type: none;
     }
     

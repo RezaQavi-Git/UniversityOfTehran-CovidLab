@@ -88,15 +88,19 @@
 
 @media screen and (max-width: 800px) {
     .dropbtn {
+        background-color: #f70303;
+        color: rgb(255, 255, 255);
         padding: 5px 15px;
+        font-size: 0.7em;
+        border: none;
+        border-radius: 15px;
     }
-    
     .lang-button-content {
-        min-width: 75px;
+        min-width: 50px;
     }
     /* EN */
     .lang-button-en-content {
-        min-width: 75px;
+        min-width: 50px;
     }
     
 }
