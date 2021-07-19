@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import CoughRecord from '../cough-record/CoughRecord'
+import CoughRecord from './cough-record/CoughRecord'
 
 import '../record/record-styles.css'
 
