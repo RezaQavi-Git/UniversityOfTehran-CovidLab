@@ -83,6 +83,7 @@
 
 .en {
     text-align: left;
+    direction: ltr;
 }
 
 @media screen and (max-width: 800px) {
