@@ -1,7 +1,5 @@
 import React from 'react';
 
-import $ from 'jquery';
-
 import Header from '../common/header/Header';
 import Footer from '../common/footer/Footer';
 import Title from './title/Title';
