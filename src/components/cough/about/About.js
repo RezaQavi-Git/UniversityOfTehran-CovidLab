@@ -2,7 +2,7 @@ import React from 'react';
 
 import './about-styles.css'
 
-import ROBOLAB from '../static/images/robolab.jpg';
+import ROBOLAB from '../../static/images/robolab.jpg';
 
 class About extends React.Component {
     constructor(props) {
@@ -17,7 +17,7 @@ class About extends React.Component {
         return(
             <React.Fragment>
                 <br></br><br></br>
-                <div id="about" className="about">
+                <div className="about">
                     <div className="about-description" >
                         <p>
                             زد- ایرنا- سخنگوی دانشگاه علوم پزشکی شهید صدوقی یزد گفت: هم‌اکنون ۸۱۱ نفر به دلیل ابتلا به بیماری کووید ۱۹ در بیمارستان های استان بستری هستند که از این تعداد به ۱۳۶ نفر در بخش مراقبت‌های ویژه آی .سی.یو( I.C.U) خدمات درمانی ارایه می‌شود

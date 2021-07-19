@@ -3,14 +3,15 @@ import React from 'react';
 
 
 import Header from '../header/Header';
-import Title from '../title/Title';
-import RecordBox from '../record-box/RecordBox';
-import Team from '../team/Team';
-import About from '../about/About';
+import Title from './title/Title';
+import RecordBox from './record-box/RecordBox';
+import Team from './team/Team';
+import About from './about/About';
 import Footer from '../footer/Footer';
 
 
 import './cough-styles.css'
+import '../common.css'
 
 class Cough extends React.Component {
 
@@ -29,13 +30,12 @@ class Cough extends React.Component {
             <React.Fragment>
                 <div className="main">
                     <Header />
-                    <p className="seprator"></p>
                     <Title />
-                    <p className="seprator">پرسشنامه</p>
+                    <p className="seprator">توضیحات</p>
                     <RecordBox />
-                    <p className="seprator">تیم ما</p>
+                    <p id="team" className="seprator">تیم ما</p>
                     <Team />
-                    <p className="seprator">درباره ی ما</p>
+                    <p id="about"className="seprator">درباره ی ما</p>
                     <About />   
                     <Footer />
                 </div>

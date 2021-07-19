@@ -1,6 +1,8 @@
 import React from 'react';
 
 import './cough-record-styles.css';
+import '../../common.css'
+
 
 import MicRecorder from 'mic-recorder-to-mp3';
 
