@@ -15,8 +15,8 @@
 }
 
 .logo-img {
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    /* height: 100px; */
 }
 
 .logo-title {
@@ -45,8 +45,8 @@
         align-items: center;
     }
     
-    .logo .logo-img {
-        width: 35%;
+    .logo-img {
+        width: 25%;
         height:inherit;
     }
     
