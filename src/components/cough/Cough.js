@@ -4,7 +4,7 @@ import React from 'react';
 
 import Header from '../header/Header';
 import Title from '../title/Title';
-import QuestionBox from '../question-box/QuestionBox';
+import RecordBox from '../record-box/RecordBox';
 import Team from '../team/Team';
 import About from '../about/About';
 import Footer from '../footer/Footer';
@@ -32,7 +32,7 @@ class Cough extends React.Component {
                     <p className="seprator"></p>
                     <Title />
                     <p className="seprator">پرسشنامه</p>
-                    <QuestionBox />
+                    <RecordBox />
                     <p className="seprator">تیم ما</p>
                     <Team />
                     <p className="seprator">درباره ی ما</p>
