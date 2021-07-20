@@ -27,6 +27,9 @@ class Footer extends React.Component {
                         <img src="https://img.icons8.com/ios/50/ffffff/email-open.png" alt="email" className="footer-img"/>
                         <p className="footer-detail">ece@ece.ut.ac.ir</p>
                     </div>
+                    <div className="footer-copyright">
+                        <p > All rights of the site belong to a certain company . designer <a href="https://github.com/RezaQavi-git">Reza Qavi</a> </p>
+                    </div>
                 </footer>
             </React.Fragment>
         )
