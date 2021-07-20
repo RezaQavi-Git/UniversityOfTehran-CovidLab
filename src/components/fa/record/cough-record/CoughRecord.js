@@ -21,18 +21,25 @@ class CoughRecord extends React.Component{
         }
 
     setSituation(event) {
-        console.log(event.target.value);
+        this.setState({
+            situation: event.target.value
+        }) ;
     }
 
     setGender(event) {
-        console.log(event.target.value);
+        this.setState({
+            gender: event.target.value
+        }) ;    
     }
 
     setSmoke(event) {
-        console.log(event.target.value);
+        this.setState({
+            smoke: event.target.value
+        }) ;    
     }
 
-    start = () => {
+    start = () => {   
+        document.getElementById("notife").innerText = "درحال ضبط";
         if (this.state.isBlocked) {
           console.log('Permission Denied');
         } else {
@@ -45,6 +52,7 @@ class CoughRecord extends React.Component{
       };
 
       stop = () => {
+        document.getElementById("notife").innerText = "ضبط متوقف شد";
         Mp3Recorder
           .stop()
           .getMp3()
@@ -53,6 +61,14 @@ class CoughRecord extends React.Component{
             this.setState({ blobURL, isRecording: false });
           }).catch((e) => console.log(e));
       };
+
+
+      reStart = () => {
+        document.getElementById("notife").innerText = "دوباره تلاش کنید";
+          this.setState({
+              blobURL: ''
+          })
+      }
 
     
     render () {
@@ -134,10 +150,12 @@ class CoughRecord extends React.Component{
                     <div className="recorder">
                         <audio src={this.state.blobURL} controls="controls" className="record-player" />
                         <div className="control-buttom">
+                            <button onClick={this.reStart} disabled={this.state.isRecording} className="record-buttom">تلاش مجدد</button>
                             <button className="submit-buttom">ارسال</button>
                             <button onClick={this.stop} disabled={!this.state.isRecording} className="record-buttom stop">توقف</button>
                             <button onClick={this.start} disabled={this.state.isRecording} className="record-buttom">ضبط</button>
-                        </div>
+                        </div><br/>
+                        <span id="notife" className="notife"></span>
                     </div>
                     
                 </div>

@@ -22,18 +22,25 @@ class CoughRecord extends React.Component{
         }
 
     setSituation(event) {
-        console.log(event.target.value);
+        this.setState({
+            situation: event.target.value
+        }) ;
     }
 
     setGender(event) {
-        console.log(event.target.value);
+        this.setState({
+            gender: event.target.value
+        }) ;    
     }
 
     setSmoke(event) {
-        console.log(event.target.value);
+        this.setState({
+            smoke: event.target.value
+        }) ;    
     }
 
     start = () => {
+        document.getElementById("notife").innerText = "Recording";
         if (this.state.isBlocked) {
           console.log('Permission Denied');
         } else {
@@ -46,6 +53,8 @@ class CoughRecord extends React.Component{
       };
 
       stop = () => {
+        document.getElementById("notife").innerText = "Stoped";
+
         Mp3Recorder
           .stop()
           .getMp3()
@@ -56,6 +65,14 @@ class CoughRecord extends React.Component{
       };
 
     
+      reStart = () => {
+        document.getElementById("notife").innerText = "please try again";
+        this.setState({
+            blobURL: ''
+        })
+      }
+
+
     render () {
         return (
             <React.Fragment>
@@ -126,10 +143,12 @@ class CoughRecord extends React.Component{
                     <div className="recorder">
                         <audio src={this.state.blobURL} controls="controls" className="record-player" />
                         <div className="control-buttom">
-                            <button className="submit-buttom">submit</button>
-                            <button onClick={this.stop} disabled={!this.state.isRecording} className="record-buttom stop">stop</button>
                             <button onClick={this.start} disabled={this.state.isRecording} className="record-buttom">start</button>
-                        </div>
+                            <button onClick={this.stop} disabled={!this.state.isRecording} className="record-buttom stop">stop</button>
+                            <button className="submit-buttom">submit</button>
+                            <button onClick={this.reStart} disabled={this.state.isRecording} className="record-buttom">reTry</button>
+                        </div><br/>
+                        <span id="notife" className="notife"></span>
                     </div>
                     <div className="hints">
                         <div className="en">
