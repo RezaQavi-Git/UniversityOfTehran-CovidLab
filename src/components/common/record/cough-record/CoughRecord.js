@@ -38,8 +38,12 @@ class CoughRecord extends React.Component{
         }) ;    
     }
 
-    start = () => {   
-        document.getElementById("notife").innerText = "درحال ضبط";
+    start = () => {
+        if(this.props.lang === "fa") {
+            document.getElementById("notife").innerText = "درحال ضبط";
+        } else {
+            document.getElementById("notife").innerText = "Recording";
+        }
         if (this.state.isBlocked) {
           console.log('Permission Denied');
         } else {
@@ -52,7 +56,11 @@ class CoughRecord extends React.Component{
       };
 
       stop = () => {
-        document.getElementById("notife").innerText = "ضبط متوقف شد";
+        if(this.props.lang === "fa") {
+            document.getElementById("notife").innerText = "ضبط متوقف شد";
+        } else {
+            document.getElementById("notife").innerText = "ُStoped";
+        }
         Mp3Recorder
           .stop()
           .getMp3()
@@ -64,7 +72,11 @@ class CoughRecord extends React.Component{
 
 
       reStart = () => {
-        document.getElementById("notife").innerText = "دوباره تلاش کنید";
+        if(this.props.lang === "fa") {
+            document.getElementById("notife").innerText = "دوباره تلاش کنید";
+        } else {
+            document.getElementById("notife").innerText = "Please tru again";
+        }
           this.setState({
               blobURL: ''
           })
@@ -229,7 +241,6 @@ class CoughRecord extends React.Component{
                         </div>
     
                     </div>
-                    {/* https://github.com/sivaprakashDesingu/react-voice-recorder/tree/master/src/imgs */}
                     <div className="record en">
                         <div className="recorder">
                             <audio src={this.state.blobURL} controls="controls" className="record-player" />
