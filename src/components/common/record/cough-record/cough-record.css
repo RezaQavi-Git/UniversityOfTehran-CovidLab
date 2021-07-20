@@ -273,3 +273,17 @@
     }
     
 }
+
+@media screen and (max-width: 550px)  {
+    .control-buttom {
+        width: 40%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:stretch;
+    }
+    .control-buttom * {
+        margin-bottom: 5%;
+    }
+}
