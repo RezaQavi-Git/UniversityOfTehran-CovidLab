@@ -59,7 +59,7 @@ class CoughRecord extends React.Component{
         if(this.props.lang === "fa") {
             document.getElementById("notife").innerText = "ضبط متوقف شد";
         } else {
-            document.getElementById("notife").innerText = "ُStoped";
+            document.getElementById("notife").innerText = "Stoped";
         }
         Mp3Recorder
           .stop()
@@ -75,7 +75,7 @@ class CoughRecord extends React.Component{
         if(this.props.lang === "fa") {
             document.getElementById("notife").innerText = "دوباره تلاش کنید";
         } else {
-            document.getElementById("notife").innerText = "Please tru again";
+            document.getElementById("notife").innerText = "Please try again";
         }
           this.setState({
               blobURL: ''

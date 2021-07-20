@@ -226,7 +226,7 @@
 @media screen and (max-width: 1100px) {
 
     .record {
-        width: 100%;
+        width: 80%;
         margin: auto;
         display: flex ;
         flex-direction: column;
