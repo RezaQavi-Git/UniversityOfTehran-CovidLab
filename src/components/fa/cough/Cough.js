@@ -1,11 +1,13 @@
 import React from 'react';
 
-import Header from '../common/header/Header';
-import Footer from '../common/footer/Footer';
-import Title from './title/Title';
-import RecordBox from './record-box/RecordBox';
-import Team from './team/Team';
-import About from './about/About';
+import Header from '../../common/header/Header';
+import Footer from '../../common/footer/Footer';
+
+
+import Title from '../../common/cough/title/Title';
+import RecordBox from '../../common/cough/record-box/RecordBox';
+import Team from '../../common/cough/team/Team';
+import About from '../../common/cough/about/About';
 
 
 import '../../common/total-page.css';
@@ -36,15 +38,15 @@ class Cough extends React.Component {
                     <a href={fa_url}><img src={fa_img} alt="presian-lang" className="lang-img" /></a>
                 </div>
                 <div className="main">
-                    <Header />
-                    <Title />
+                    <Header lang="fa"/>
+                    <Title lang="fa"/>
                     <p className="seprator">توضیحات</p>
-                    <RecordBox />
+                    <RecordBox lang="fa"/>
                     <p id="team" className="seprator">تیم ما</p>
-                    <Team />
+                    <Team lang="fa"/>
                     <p id="about"className="seprator">درباره ی ما</p>
-                    <About />   
-                    <Footer />
+                    <About lang="fa"/>   
+                    <Footer lang="fa"/>
                 </div>
             </React.Fragment>       
         )

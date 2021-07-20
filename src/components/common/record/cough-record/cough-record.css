@@ -221,3 +221,55 @@
     }
     
 }
+
+
+@media screen and (max-width: 1100px) {
+
+    .record {
+        width: 100%;
+        margin: auto;
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hints {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .health-tips {
+        color: red;
+        list-style-type: none;
+    }
+    
+    
+    .recorder {
+        width: 80%;
+        margin: auto;
+    }
+    
+
+    .control-buttom {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:stretch;
+    }
+    
+    .record-player {
+        width: 100%;
+        margin: auto;
+        border-radius: 15px ;
+    }
+
+    .notife {
+        width: 90%;
+        margin: auto;
+        font-size: 0.9em;
+    }
+    
+}
