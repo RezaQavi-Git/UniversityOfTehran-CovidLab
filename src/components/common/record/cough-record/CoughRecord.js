@@ -75,7 +75,7 @@ class CoughRecord extends React.Component{
         if(this.props.lang === "fa") {
             document.getElementById("notife").innerText = "دوباره تلاش کنید";
         } else {
-            document.getElementById("notife").innerText = "Please try again";
+            document.getElementById("notife").innerText = "Please tru again";
         }
           this.setState({
               blobURL: ''

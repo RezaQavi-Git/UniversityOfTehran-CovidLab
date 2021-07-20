@@ -2,7 +2,7 @@ import React from 'react';
 
 import './team.css'
 
-import DRMORADI from '../../../static/images/DrhadiMoradi.jpg';
+import DRMORADI from '../../../static/images/DrhadiMoradi.png';
 
 class Team extends React.Component {
     constructor(props) {
