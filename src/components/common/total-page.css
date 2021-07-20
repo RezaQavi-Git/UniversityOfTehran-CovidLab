@@ -17,7 +17,7 @@
 .lang-button {
     position: absolute;
     top: 8px;
-    right: 5px;
+    right: 5%;
     font-size: 1.25em;
 }
 
@@ -47,7 +47,7 @@
 .lang-button-en {
     position: absolute;
     top: 8px;
-    left: 5px;
+    left: 5%;
     font-size: 1.25em;
 }
 
