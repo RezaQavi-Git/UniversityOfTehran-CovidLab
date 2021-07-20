@@ -6,6 +6,12 @@ import CoughRecord from './cough-record/CoughRecord'
 
 import '../../common/total-page.css';
 
+import fa_img from '../../static/images/fa-lang.png';
+import en_img from '../../static/images/en-lang.png';
+
+const fa_url = "/";
+const en_url = "/en";
+
 
 class Record extends React.Component {
     
@@ -22,12 +28,9 @@ class Record extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className={"lang-button-en"} >
-                    <button className="dropbtn" >language</button>
-                    <div className="lang-button-en-content">
-                        <a href={"/record"}>persian</a>
-                        <a href={"/record/en"} >english</a>
-                        </div>
+                <div className="lang-button-en" >
+                    <a href={en_url}><img src={en_img} alt="english-lang" className="lang-img" /></a>
+                    <a href={fa_url}><img src={fa_img} alt="presian-lang" className="lang-img" /></a>
                 </div>
                 <div className="main">
                     <Header />

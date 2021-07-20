@@ -10,6 +10,11 @@ import About from './about/About';
 
 import '../../common/total-page.css';
 
+import fa_img from '../../static/images/fa-lang.png';
+import en_img from '../../static/images/en-lang.png';
+
+const fa_url = "/";
+const en_url = "/en";
 
 class Cough extends React.Component {
 
@@ -26,12 +31,9 @@ class Cough extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="lang-button">
-                    <button className="dropbtn" >زبان</button>
-                    <div className="lang-button-content">
-                        <a href={"/"}>فارسی</a>
-                        <a href={ "/en"}>انگلیسی</a>
-                        </div>
+                <div className="lang-button" >
+                    <a href={en_url}><img src={en_img} alt="english-lang" className="lang-img" /></a>
+                    <a href={fa_url}><img src={fa_img} alt="presian-lang" className="lang-img" /></a>
                 </div>
                 <div className="main">
                     <Header />

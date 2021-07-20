@@ -5,14 +5,6 @@
     justify-content: center;
 }
 
-.dropbtn {
-    background-color: #f70303;
-    color: rgb(255, 255, 255);
-    padding: 5px 20px;
-    font-size: 0.9em;
-    border: none;
-    border-radius: 15px;
-}
 
 .lang-button {
     position: absolute;
@@ -21,29 +13,6 @@
     font-size: 1.25em;
 }
 
-.lang-button-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.lang-button-content a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    display: block;
-}
-
-.lang-button-content {
-   text-align: center;
-}
-.lang-button-content a:hover {background-color: rgb(68, 189, 52);}
-.lang-button:hover .lang-button-content {display: table-cell;}
-.lang-button:hover .dropbtn {background-color: #ec8a09ec;} 
- 
-
-/* EN */
 .lang-button-en {
     position: absolute;
     top: 8px;
@@ -51,26 +20,11 @@
     font-size: 1.25em;
 }
 
-.lang-button-en-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 110px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.lang-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
-.lang-button-en-content a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    display: block;
-}
-
-.lang-button-en-content {
-   text-align: center;
-}
-.lang-button-en-content a:hover {background-color: rgb(68, 189, 52);}
-.lang-button-en:hover .lang-button-en-content {display: table-cell;}
-.lang-button-en:hover .dropbtn {background-color: #ec8a09ec;} 
 
 
 .seprator {
@@ -101,6 +55,12 @@
     /* EN */
     .lang-button-en-content {
         min-width: 50px;
+    }
+    
+    .lang-img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
     }
     
 }
