@@ -6,6 +6,23 @@ import MicRecorder from 'mic-recorder-to-mp3';
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
+const en_questions = [
+    {title: "Please specify your status", 
+        options: ["Definitive diagnosis of Covid 19", "Suspicious of Covid 19","Other diseases", "Healthy"]},
+    {title: "Please specify your gender", 
+        options: ["Male", "Female"]},
+    {title: "Do you have a history of smoking?", 
+        options: ["Yes", "No"]}
+]
+
+const fa_questions = [
+    {title: "لطفا وضعیت خود را مشخص کنید", 
+        options: ["تشخیص قطعی کووید19", "مشکوک به کووید19","بیماری های دیگر", "سالم"]},
+    {title: "لطفا جنسیت خود را مشخص کنید", 
+        options: ["مرد", "زن"]},
+    {title: "آیا سابقه ی مصرف سیگار دارید؟", 
+        options: ["بله", "خیر"]}
+]
 
 class CoughRecord extends React.Component{
     constructor(props) {
@@ -18,24 +35,28 @@ class CoughRecord extends React.Component{
             blobURL: '',
             isBlocked: false,
             }
+
+            this.setSituation = this.setSituation.bind(this);
+            this.setGender = this.setGender.bind(this);
+            this.setSmoke = this.setSmoke.bind(this);
         }
 
-    setSituation(event) {
+    setSituation(_situation) {
         this.setState({
-            situation: event.target.value
+            situation: _situation
         }) ;
     }
 
-    setGender(event) {
+    setGender(_gender) {
         this.setState({
-            gender: event.target.value
+            gender: _gender
         }) ;    
     }
 
-    setSmoke(event) {
+    setSmoke(_smoke) {
         this.setState({
-            smoke: event.target.value
-        }) ;    
+            smoke: toString(_smoke)
+        }) ;
     }
 
     start = () => {
@@ -99,7 +120,12 @@ class CoughRecord extends React.Component{
                         </div>
                     </div><br/>
                     <div className="questions">
-                        <div className="question">
+
+                        <Question question={fa_questions[0]} func={this.setSituation}/>
+                        <Question question={fa_questions[1]} func={this.setGender}/>
+                        <Question question={fa_questions[2]} func={this.setSmoke}/>
+
+                        {/* <div className="question">
                             <div>
                                 <p className="question-title">لطفا وضعیت خود را مشخص کنید</p>
                             </div>
@@ -148,8 +174,7 @@ class CoughRecord extends React.Component{
                                     <br/>
                                 </form>
                             </div>
-                        </div>
-    
+                        </div> */}
                     </div>
                     {/* https://github.com/sivaprakashDesingu/react-voice-recorder/tree/master/src/imgs */}
                     <div className="record">
@@ -272,5 +297,51 @@ class CoughRecord extends React.Component{
 
     }
 }
+
+
+class Question extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+
+    handelChange(event){
+        this.props.func(event.target.value)
+    }
+
+    render() {
+        const question = this.props.question;
+
+        var i;
+        const items = [];
+        for(i= 0; i< question.options.length; i++) {
+            items.push(
+                <React.Fragment>
+                    <input type="radio"  name="type" value={question.options[i]} />
+                    <label for="html">{question.options[i]}</label><br/>
+                </React.Fragment>
+            )
+
+        }
+        return(
+            <div className="question">
+                <div>
+                    <p className="question-title">{question.title}</p>
+                </div>
+                <div className="question-options">
+                    <form className="question-form" onClick={this.handelChange.bind(this)}>
+                        {items}
+                        <br/>
+                    </form>
+                </div>
+            </div>
+        );
+    }
+}
+
 
 export default CoughRecord;
