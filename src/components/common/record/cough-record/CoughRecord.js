@@ -30,15 +30,16 @@ class CoughRecord extends React.Component{
     constructor(props) {
         super(props) ;
         this.state = {
-            status: "Q1",
+            status: "Recording",
             situation: "",
             gender: "",
             smoke: "",  
             }
-
             this.setSituation = this.setSituation.bind(this);
             this.setGender = this.setGender.bind(this);
             this.setSmoke = this.setSmoke.bind(this);
+            this.setStatus = this.setStatus.bind(this);
+
         }
 
     setSituation(_situation) {
@@ -61,13 +62,13 @@ class CoughRecord extends React.Component{
             status: "Hint"
         }) ;
     }
-      show() {
-        console.log(this.state.situation)
-        console.log(this.state.gender)
-        console.log(this.state.smoke)
-
-      }
     
+    setStatus() {
+        this.setState({
+            status: "Recording"
+        })
+    }
+
     render () {
 
         const lang = this.props.lang;
@@ -83,11 +84,12 @@ class CoughRecord extends React.Component{
                             <p >با پر کردن مشخصات زیر مارا در پاسخگویی دقیق تر همراهی کنید</p>
                         </div>
                     </div><br/>
-                    <div className="questions">
+                    <div className="record-body">
                         { (this.state.status === "Q1") ? <Question question={fa_questions[0]} func={this.setSituation} status={this.state.status}/> :
                             (this.state.status === "Q2") ? <Question question={fa_questions[1]} func={this.setGender} status={this.state.status}/>:
                             (this.state.status === "Q3") ? <Question question={fa_questions[2]} func={this.setSmoke}  status={this.state.status}/> :
-                            (this.state.status === "Hint") ? <Record lang="fa" /> : ""     
+                            (this.state.status === "Hint") ? <Hints lang="fa" func={this.setStatus}/> :
+                            (this.state.status === "Recording") ? <Record lang="fa"/> : ""    
                         }
                     </div>
                 </React.Fragment>
@@ -104,11 +106,12 @@ class CoughRecord extends React.Component{
                             <p >Accompany us in a more accurate answer by filling in the details below</p>
                         </div>
                     </div><br/>
-                    <div className="questions en">
+                    <div className="record-body en">
                         { (this.state.status === "Q1") ? <Question question={en_questions[0]} func={this.setSituation} status={this.state.status}/> :
                             (this.state.status === "Q2") ? <Question question={en_questions[1]} func={this.setGender} status={this.state.status}/>:
                             (this.state.status === "Q3") ? <Question question={en_questions[2]} func={this.setSmoke}  status={this.state.status}/> :
-                            (this.state.status === "Hint") ? <Record lang="en"/> : ""     
+                            (this.state.status === "Hint") ? <Hints lang="en" func={this.setStatus}/> :
+                            (this.state.status === "Recording") ? <Record lang="en"/> : ""
                         }
                     </div>
                 </React.Fragment>
@@ -118,7 +121,6 @@ class CoughRecord extends React.Component{
 
     }
 }
-
 
 class Question extends React.Component {
     constructor(props){
@@ -161,6 +163,59 @@ class Question extends React.Component {
 }
 
 
+class Hints extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    }
+
+
+    accept() {
+        this.props.func()
+    }
+
+    render() {
+        const lang = this.props.lang;
+        
+        if(lang === "fa"){   
+            return (
+                <div className="record">
+                    <div className="hints">
+                        <p>برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید</p>
+                        <p>همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:</p>
+                        <ol className="health-tips">
+                            <li>۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح,  ضدعفونی کنید.</li>
+                            <li>۲. از سرفه در حضور دیگران پرهیز کنید.</li>
+                            <li>۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید.</li>
+                        </ol>
+                    </div> 
+                    <div className="accept-button" onClick={this.accept.bind(this)}>خب</div>                   
+                </div>
+            )
+        } else {
+            return(
+                <div className="record en">
+                    <div className="hints">
+                        <div className="en">
+                        <p> To record the sound of a cough, please do so in a quiet environment as much as possible </p>
+                        <p> Also, when using this program, please follow the health tips. For example: </p>
+                        <ol className="health-tips">
+                            <li> 1. Disinfect your phone or tablet properly after use. </li>
+                            <li> 2. Avoid coughing in front of others. </li>
+                            <li> 3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask. </li>
+                        </ol>
+                        </div>
+                    </div>
+                    <div className="accept-button" onClick={this.accept.bind(this)}>Ok</div>
+                </div>
+            )
+        }  
+    }
+}
+
+
+
 class Record extends React.Component {
     constructor(props) {
         super(props);
@@ -185,7 +240,7 @@ class Record extends React.Component {
             Mp3Recorder
             .start()
             .then(() => {
-                this.setState({ status: false, isRecording: true });
+                this.setState({ status: false, isRecording: true, recorded: false });
             }).catch((e) => console.error(e));
         }
 
@@ -222,15 +277,6 @@ class Record extends React.Component {
         if(lang === "fa"){   
             return (
                 <div className="record">
-                    <div className="hints">
-                        <p>برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید</p>
-                        <p>همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:</p>
-                        <ol className="health-tips">
-                            <li>۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح,  ضدعفونی کنید.</li>
-                            <li>۲. از سرفه در حضور دیگران پرهیز کنید.</li>
-                            <li>۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید.</li>
-                        </ol>
-                    </div>
                     <div className="recorder">
                             <div className="control-button">
                                 <div className="record-voice">
@@ -243,34 +289,22 @@ class Record extends React.Component {
                                 </div>
                             </div><br/>
                     </div>
-                    
                 </div>
             )
         } else {
             return(
                 <div className="record en">
-                    <div className="hints">
-                        <div className="en">
-                        <p> To record the sound of a cough, please do so in a quiet environment as much as possible </p>
-                        <p> Also, when using this program, please follow the health tips. For example: </p>
-                        <ol className="health-tips">
-                            <li> 1. Disinfect your phone or tablet properly after use. </li>
-                            <li> 2. Avoid coughing in front of others. </li>
-                            <li> 3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask. </li>
-                        </ol>
-                        </div>
-                    </div>
                     <div className="recorder">
-                            <div className="control-button">
-                                <div className="record-voice">
-                                    <img src={Microphone} alt="mirophone" onClick={(this.state.status) ? this.start : this.stop} className="record-button"></img>
-                                    <span id="notife" className="notife"></span>
-                                </div>                                   
-                                <div id="submit" className={(this.state.recorded) ? "submit-voice" : "submit-voice hidden"}>
-                                    <button className="submit button" onClick={this.submitVoice.bind(this)}>Submit</button>
-                                    <button className="cancel button" onClick={this.cancelVoice.bind(this)}>Cancel</button>
-                                </div>
-                            </div><br/>
+                        <div className="control-button">
+                            <div className="record-voice">
+                                <img src={Microphone} alt="mirophone" onClick={(this.state.status) ? this.start : this.stop} className="record-button"></img>
+                                <span id="notife" className="notife"></span>
+                            </div>                                   
+                            <div id="submit" className={(this.state.recorded) ? "submit-voice" : "submit-voice hidden"}>
+                                <button className="submit button" onClick={this.submitVoice.bind(this)}>Submit</button>
+                                <button className="cancel button" onClick={this.cancelVoice.bind(this)}>Cancel</button>
+                            </div>
+                        </div><br/>
                     </div>
                 </div>
             )
