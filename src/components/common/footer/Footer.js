@@ -2,6 +2,12 @@ import React from 'react';
 
 import './footer.css'
 
+import Location from '../../static/images/location.png';
+import Phone from '../../static/images/phone.png';
+import Email from '../../static/images/email.png';
+
+
+
 class Footer extends React.Component {
     constructor(props) {
         super(props);
@@ -38,15 +44,15 @@ class Footer extends React.Component {
                 <React.Fragment>
                     <footer className="footer">
                         <div className="footer-member">
-                            <img src="https://img.icons8.com/ios/50/ffffff/email-open.png" alt="email" className="footer-img"/>
+                            <img src={Email} alt="email" className="footer-img"/>
                             <p className="footer-detail">ece@ece.ut.ac.ir</p>
                         </div>
                         <div className="footer-member">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" className="footer-img"/>
+                            <img src={Phone} alt="phone" className="footer-img"/>
                             <p className="footer-detail" dir="ltr">+98 21 82084960</p>
                         </div>
                         <div className="footer-member">
-                            <img src="https://img.icons8.com/ios/50/ffffff/address--v1.png" alt="location" className="footer-img"/>
+                            <img src={Location} alt="location" className="footer-img"/>
                             <p className="footer-detail">دانشکده مهندسی برق و کامپیوتر ، دانشکده فنی و مهندسی دانشگاه ، دانشگاه تهران ، خیابان کارگر شمالی ، تهران ، ایران. </p>
                         </div>
                     </footer>
