@@ -30,7 +30,7 @@ class CoughRecord extends React.Component{
     constructor(props) {
         super(props) ;
         this.state = {
-            status: "Recording",
+            status: "Q1",
             situation: "",
             gender: "",
             smoke: "",  
