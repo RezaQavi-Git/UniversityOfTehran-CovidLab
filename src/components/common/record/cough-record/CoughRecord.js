@@ -2,6 +2,8 @@ import React from 'react';
 
 import './cough-record.css'
 
+import Microphone from '../../../static/images/microphone.png'
+
 import MicRecorder from 'mic-recorder-to-mp3';
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
@@ -28,12 +30,10 @@ class CoughRecord extends React.Component{
     constructor(props) {
         super(props) ;
         this.state = {
+            status: "Q1",
             situation: "",
             gender: "",
-            smoke: "", 
-            isRecording: false,
-            blobURL: '',
-            isBlocked: false,
+            smoke: "",  
             }
 
             this.setSituation = this.setSituation.bind(this);
@@ -43,66 +43,30 @@ class CoughRecord extends React.Component{
 
     setSituation(_situation) {
         this.setState({
-            situation: _situation
+            situation: _situation,
+            status: "Q2"
         }) ;
     }
 
     setGender(_gender) {
         this.setState({
-            gender: _gender
+            gender: _gender,
+            status: "Q3"
         }) ;    
     }
 
     setSmoke(_smoke) {
         this.setState({
-            smoke: toString(_smoke)
+            smoke: _smoke,
+            status: "Hint"
         }) ;
     }
+      show() {
+        console.log(this.state.situation)
+        console.log(this.state.gender)
+        console.log(this.state.smoke)
 
-    start = () => {
-        if(this.props.lang === "fa") {
-            document.getElementById("notife").innerText = "درحال ضبط";
-        } else {
-            document.getElementById("notife").innerText = "Recording";
-        }
-        if (this.state.isBlocked) {
-          console.log('Permission Denied');
-        } else {
-          Mp3Recorder
-            .start()
-            .then(() => {
-              this.setState({ isRecording: true });
-            }).catch((e) => console.error(e));
-        }
-      };
-
-      stop = () => {
-        if(this.props.lang === "fa") {
-            document.getElementById("notife").innerText = "ضبط متوقف شد";
-        } else {
-            document.getElementById("notife").innerText = "Stoped";
-        }
-        Mp3Recorder
-          .stop()
-          .getMp3()
-          .then(([buffer, blob]) => {
-            const blobURL = URL.createObjectURL(blob)
-            this.setState({ blobURL, isRecording: false });
-          }).catch((e) => console.log(e));
-      };
-
-
-      reStart = () => {
-        if(this.props.lang === "fa") {
-            document.getElementById("notife").innerText = "دوباره تلاش کنید";
-        } else {
-            document.getElementById("notife").innerText = "Please tru again";
-        }
-          this.setState({
-              blobURL: ''
-          })
       }
-
     
     render () {
 
@@ -120,84 +84,11 @@ class CoughRecord extends React.Component{
                         </div>
                     </div><br/>
                     <div className="questions">
-
-                        <Question question={fa_questions[0]} func={this.setSituation}/>
-                        <Question question={fa_questions[1]} func={this.setGender}/>
-                        <Question question={fa_questions[2]} func={this.setSmoke}/>
-
-                        {/* <div className="question">
-                            <div>
-                                <p className="question-title">لطفا وضعیت خود را مشخص کنید</p>
-                            </div>
-                            <div className="question-options">
-                                <form className="question-form" onChange={this.setSituation.bind(this) }>
-                                        <input type="radio" id="q1-1" name="type" value="positive" />
-                                      <label for="html">تشخیص قطعی کووید19</label><br/>
-                                        <input type="radio" id="q1-2" name="type" value="middle" />
-                                      <label for="html">مشکوک به کووید19</label><br/>
-                                        <input type="radio" id="q1-3" name="type" value="others" />
-                                      <label for="html">بیماری های دیگر</label><br/>
-                                        <input type="radio" id="q1-4" name="type" value="healthy" />
-                                      <label for="html">سالم</label><br/>
-                                    <br/>
-                                </form>
-                            </div>
-                        </div>
-    
-                        <div className="question">
-                            <div>
-                                <p className="question-title">لطفا جنسیت خود را مشخص کنید</p>
-                            </div>
-                            <div className="question-options">
-                                <form className="question-form" onChange={this.setGender.bind(this) }>
-                                        <input type="radio" id="q2-1" name="type" value="men" />
-                                      <label for="html">مرد</label><br/>
-                                        <input type="radio" id="q2-2" name="type" value="wemen" />
-                                      <label for="html">زن</label><br/>
-                                        <input type="radio" id="q2-3" name="type" value="others" />
-                                      <label for="html">تمایلی به گفتن ندارم</label><br/>
-                                    <br/>
-                                </form>
-                            </div>
-                        </div>
-    
-                        <div className="question">
-                            <div>
-                                <p className="question-title">آیا سابقه ی مصرف سیگار دارید؟</p>
-                            </div>
-                            <div className="question-options" onChange={this.setSmoke.bind(this) }>
-                                <form className="question-form">
-                                        <input type="radio" id="q3-1" name="type" value="true" />
-                                      <label for="html">بله</label><br/>
-                                        <input type="radio" id="q3-2" name="type" value="false" />
-                                      <label for="html">خیر</label><br/>
-                                    <br/>
-                                </form>
-                            </div>
-                        </div> */}
-                    </div>
-                    {/* https://github.com/sivaprakashDesingu/react-voice-recorder/tree/master/src/imgs */}
-                    <div className="record">
-                        <div className="hints">
-                            <p>برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید</p>
-                            <p>همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:</p>
-                            <ol className="health-tips">
-                                <li>۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح,  ضدعفونی کنید.</li>
-                                <li>۲. از سرفه در حضور دیگران پرهیز کنید.</li>
-                                <li>۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید.</li>
-                            </ol>
-                        </div>
-                        <div className="recorder">
-                            <audio src={this.state.blobURL} controls="controls" className="record-player" />
-                            <div className="control-button">
-                                <button onClick={this.reStart} disabled={this.state.isRecording} className="record-button">تلاش مجدد</button>
-                                <button className="submit-button">ارسال</button>
-                                <button onClick={this.stop} disabled={!this.state.isRecording} className="record-button stop">توقف</button>
-                                <button onClick={this.start} disabled={this.state.isRecording} className="record-button">ضبط</button>
-                            </div><br/>
-                            <span id="notife" className="notife"></span>
-                        </div>
-                        
+                        { (this.state.status === "Q1") ? <Question question={fa_questions[0]} func={this.setSituation} status={this.state.status}/> :
+                            (this.state.status === "Q2") ? <Question question={fa_questions[1]} func={this.setGender} status={this.state.status}/>:
+                            (this.state.status === "Q3") ? <Question question={fa_questions[2]} func={this.setSmoke}  status={this.state.status}/> :
+                            (this.state.status === "Hint") ? <Record lang="fa" /> : ""     
+                        }
                     </div>
                 </React.Fragment>
             );
@@ -214,81 +105,11 @@ class CoughRecord extends React.Component{
                         </div>
                     </div><br/>
                     <div className="questions en">
-                        <div className="question">
-                            <div>
-                                <p className="question-title">Please specify your status</p>
-                            </div>
-                            <div className="question-options">
-                                <form className="question-form" onChange={this.setSituation.bind(this) }>
-                                        <input type="radio" id="q1-1" name="type" value="positive" />
-                                      <label for="html">Definitive diagnosis of Covid 19</label><br/>
-                                        <input type="radio" id="q1-2" name="type" value="middle" />
-                                      <label for="html">Suspicious of Covid 19</label><br/>
-                                        <input type="radio" id="q1-3" name="type" value="others" />
-                                      <label for="html">Other diseases</label><br/>
-                                        <input type="radio" id="q1-4" name="type" value="healthy" />
-                                      <label for="html">Healthy</label><br/>
-                                    <br/>
-                                </form>
-                            </div>
-                        </div>
-    
-                        <div className="question">
-                            <div>
-                                <p className="question-title">Please specify your gender</p>
-                            </div>
-                            <div className="question-options">
-                                <form className="question-form" onChange={this.setGender.bind(this) }>
-                                        <input type="radio" id="q2-1" name="type" value="men" />
-                                      <label for="html">Male</label><br/>
-                                        <input type="radio" id="q2-2" name="type" value="wemen" />
-                                      <label for="html">Female</label><br/>
-                                        <input type="radio" id="q2-3" name="type" value="others" />
-                                      <label for="html">I have no desire to say</label><br/>
-                                    <br/>
-                                </form>
-                            </div>
-                        </div>
-    
-                        <div className="question">
-                            <div>
-                                <p className="question-title">Do you have a history of smoking?</p>
-                            </div>
-                            <div className="question-options" onChange={this.setSmoke.bind(this) }>
-                                <form className="question-form">
-                                        <input type="radio" id="q3-1" name="type" value="true" />
-                                      <label for="html">Yes</label><br/>
-                                        <input type="radio" id="q3-2" name="type" value="false" />
-                                      <label for="html">No</label><br/>
-                                    <br/>
-                                </form>
-                            </div>
-                        </div>
-    
-                    </div>
-                    <div className="record en">
-                        <div className="recorder">
-                            <audio src={this.state.blobURL} controls="controls" className="record-player" />
-                            <div className="control-button">
-                                <button onClick={this.start} disabled={this.state.isRecording} className="record-button">start</button>
-                                <button onClick={this.stop} disabled={!this.state.isRecording} className="record-button stop">stop</button>
-                                <button className="submit-button">submit</button>
-                                <button onClick={this.reStart} disabled={this.state.isRecording} className="record-button">reTry</button>
-                            </div><br/>
-                            <span id="notife" className="notife"></span>
-                        </div>
-                        <div className="hints">
-                            <div className="en">
-                            <p> To record the sound of a cough, please do so in a quiet environment as much as possible </p>
-                            <p> Also, when using this program, please follow the health tips. For example: </p>
-                            <ol className="health-tips">
-                                <li> 1. Disinfect your phone or tablet properly after use. </li>
-                                <li> 2. Avoid coughing in front of others. </li>
-                                <li> 3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask. </li>
-                            </ol>
-                            </div>
-                        </div>
-                        
+                        { (this.state.status === "Q1") ? <Question question={en_questions[0]} func={this.setSituation} status={this.state.status}/> :
+                            (this.state.status === "Q2") ? <Question question={en_questions[1]} func={this.setGender} status={this.state.status}/>:
+                            (this.state.status === "Q3") ? <Question question={en_questions[2]} func={this.setSmoke}  status={this.state.status}/> :
+                            (this.state.status === "Hint") ? <Record lang="en"/> : ""     
+                        }
                     </div>
                 </React.Fragment>
             );
@@ -302,13 +123,9 @@ class CoughRecord extends React.Component{
 class Question extends React.Component {
     constructor(props){
         super(props);
-
         this.state = {
-
         }
     }
-
-
     handelChange(event){
         this.props.func(event.target.value)
     }
@@ -320,10 +137,10 @@ class Question extends React.Component {
         const items = [];
         for(i= 0; i< question.options.length; i++) {
             items.push(
-                <React.Fragment>
-                    <input type="radio"  name="type" value={question.options[i]} />
-                    <label for="html">{question.options[i]}</label><br/>
-                </React.Fragment>
+                <div>   
+                    <input type="radio" id={this.props.status + i.toString()} name={this.props.status} value={question.options[i]} onClick={this.handelChange.bind(this)}/>
+                    <label for={this.props.status + i.toString()}>{question.options[i]}</label><br/>
+                </div>
             )
 
         }
@@ -333,7 +150,7 @@ class Question extends React.Component {
                     <p className="question-title">{question.title}</p>
                 </div>
                 <div className="question-options">
-                    <form className="question-form" onClick={this.handelChange.bind(this)}>
+                    <form className="question-form">
                         {items}
                         <br/>
                     </form>
@@ -342,6 +159,126 @@ class Question extends React.Component {
         );
     }
 }
+
+
+class Record extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            status: true,
+            recorded: false,
+            isRecording: false,
+            blobURL: '',
+            isBlocked: false,
+        }
+    }
+
+    start = () => {   
+        if(this.props.lang === "en") {
+            document.getElementById("notife").innerText= "recording";
+        } else {
+            document.getElementById("notife").innerText= "درحال ضبط";
+        }
+        if (this.state.isBlocked) {
+            console.log('Permission Denied');
+        } else {
+            Mp3Recorder
+            .start()
+            .then(() => {
+                this.setState({ status: false, isRecording: true });
+            }).catch((e) => console.error(e));
+        }
+
+      };
+
+      stop = () => {
+        document.getElementById("notife").innerText = "";
+        Mp3Recorder
+          .stop()
+          .getMp3()
+          .then(([buffer, blob]) => {
+            const blobURL = URL.createObjectURL(blob)
+            this.setState({ blobURL, isRecording: false, status: true, recorded: true });
+          }).catch((e) => console.log(e));
+      };
+
+
+      submitVoice() {
+
+      }
+
+      cancelVoice() {
+        this.setState({
+            status: true,
+            recorded: false,
+            isRecording: false,
+            blobURL: '',
+            isBlocked: false,
+        })
+      }
+      render() {
+        const lang = this.props.lang;
+        
+        if(lang === "fa"){   
+            return (
+                <div className="record">
+                    <div className="hints">
+                        <p>برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید</p>
+                        <p>همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:</p>
+                        <ol className="health-tips">
+                            <li>۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح,  ضدعفونی کنید.</li>
+                            <li>۲. از سرفه در حضور دیگران پرهیز کنید.</li>
+                            <li>۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید.</li>
+                        </ol>
+                    </div>
+                    <div className="recorder">
+                            <div className="control-button">
+                                <div className="record-voice">
+                                    <img src={Microphone} alt="mirophone" onClick={(this.state.status) ? this.start : this.stop} className="record-button"></img>
+                                    <span id="notife" className="notife"></span>
+                                </div>                                   
+                                <div id="submit" className={(this.state.recorded) ? "submit-voice" : "submit-voice hidden"}>
+                                    <button className="submit button" onClick={this.submitVoice.bind(this)}>ارسال</button>
+                                    <button className="cancel button" onClick={this.cancelVoice.bind(this)}>انصراف</button>
+                                </div>
+                            </div><br/>
+                    </div>
+                    
+                </div>
+            )
+        } else {
+            return(
+                <div className="record en">
+                    <div className="hints">
+                        <div className="en">
+                        <p> To record the sound of a cough, please do so in a quiet environment as much as possible </p>
+                        <p> Also, when using this program, please follow the health tips. For example: </p>
+                        <ol className="health-tips">
+                            <li> 1. Disinfect your phone or tablet properly after use. </li>
+                            <li> 2. Avoid coughing in front of others. </li>
+                            <li> 3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask. </li>
+                        </ol>
+                        </div>
+                    </div>
+                    <div className="recorder">
+                            <div className="control-button">
+                                <div className="record-voice">
+                                    <img src={Microphone} alt="mirophone" onClick={(this.state.status) ? this.start : this.stop} className="record-button"></img>
+                                    <span id="notife" className="notife"></span>
+                                </div>                                   
+                                <div id="submit" className={(this.state.recorded) ? "submit-voice" : "submit-voice hidden"}>
+                                    <button className="submit button" onClick={this.submitVoice.bind(this)}>Submit</button>
+                                    <button className="cancel button" onClick={this.cancelVoice.bind(this)}>Cancel</button>
+                                </div>
+                            </div><br/>
+                    </div>
+                </div>
+            )
+        }   
+      }
+
+}
+
 
 
 export default CoughRecord;

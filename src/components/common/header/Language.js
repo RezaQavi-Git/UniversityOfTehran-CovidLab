@@ -17,26 +17,19 @@ class Header extends React.Component {
 
         const lang = this.props.lang;
         const url = this.props.url;
-
-
         if(lang === "en") {
             return(
-                <React.Fragment>
                     <div className="lang-button-en" >
                         <a href={(url === "/") ? "/en": "/record/en"}><img src={en_img} alt="english-lang" className="lang-img" /></a>
                         <a href={(url === "/") ?"/": "/record"}><img src={fa_img} alt="presian-lang" className="lang-img" /></a>
                     </div>
-                </React.Fragment>
-    
             )
         } else {
             return(
-                <React.Fragment>
                 <div className="lang-button" >
-                    <a href={(url === "/") ? "/en": "/en"}><img src={en_img} alt="english-lang" className="lang-img" /></a>
+                    <a href={(url === "/") ? "/en": "/record/en"}><img src={en_img} alt="english-lang" className="lang-img" /></a>
                     <a href={(url === "/") ? "/": "/record"}><img src={fa_img} alt="presian-lang" className="lang-img" /></a>
                 </div>
-                </React.Fragment>
             );
         }
 

@@ -23,19 +23,21 @@
 }
 
 .questions {
-    width: 80%;
+    width: 50%;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items:flex-start;
+    background-color: white;
+    border-radius: 15px;
 }
 
 .question {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
 }
 
 .question-options {
@@ -46,19 +48,8 @@
     text-align: center;
 }
 
-
-
-.record {
-    width: 80%;
-    margin: auto;
-    display: flex ;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .hints {
-    width: 45%;
+    width: 90%;
     margin: auto;
     font-size: 1em;
     text-align: right;
@@ -70,54 +61,36 @@
     list-style-type: none;
 }
 
-
 .recorder {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 35%;
+    width: 80%;
     margin: auto;
 }
 
 .control-button {
-    width: 80%;
+    width: 50%;
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items:stretch;
 }
 
-.record-button {
-    text-decoration: none;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: rgb(224, 219, 215);
-    text-align: center;
-    background-color: rgb(61, 173, 16);
-    font-size: 1em;
-}
-
-.stop {
-    background-color: rgb(252, 18, 10);
-}
-
-.submit-button {
-    text-decoration: none;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    background-color: rgb(2, 204, 255);
-    font-size: 1em;
-}
-
-.record-player {
+.record-voice {
     width: 100%;
     margin: auto;
-    border-radius: 15px ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.record-button {
+    background-color: red;
+    width: 70px;
+    border-radius: 50%;
 }
 
 .notife {
@@ -128,8 +101,35 @@
     padding-top: 5%;
 }
 
-@media screen and (max-width: 800px) {
+.submit-voice {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
 
+.hidden {
+    display: none;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+.submit {
+    background-color: rgb(47, 241, 8);
+}
+
+.cancel {
+    background-color: rgb(10, 198, 255);
+}
+
+@media screen and (max-width: 800px) {
 
     .title {
         width: 100%;
@@ -152,19 +152,18 @@
         margin: auto;
     }
 
-
     .questions {
-        width: 100%;
+        width: 90%;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        font-size: 1.2em;
+        font-size: 1em;
     }
     
     .question-options {
-        width: 85%;
+        width: 90%;
         margin: auto;
         padding-right: 10%;
     }
@@ -173,15 +172,6 @@
         text-align: center;
     }
 
-    .record {
-        width: 100%;
-        margin: auto;
-        display: flex ;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
     .hints {
         width: 90%;
         margin: auto;
@@ -191,99 +181,53 @@
         color: red;
         list-style-type: none;
     }
-    
-    
-    .recorder {
-        width: 80%;
-        margin: auto;
-    }
-    
 
-    .control-button {
+    .recorder {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         width: 90%;
         margin: auto;
+        margin-top: 20px;
+
+    }
+    
+    .control-button {
+        width: 80%;
+        margin: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items:stretch;
     }
     
-    .record-player {
-        width: 100%;
-        margin: auto;
-        border-radius: 15px ;
-    }
-
-    .notife {
-        width: 90%;
-        margin: auto;
-        font-size: 0.9em;
-    }
-    
-}
-
-
-@media screen and (max-width: 1100px) {
-
-    .record {
-        width: 80%;
+    .record-voice {
+        width: 50%;
         margin: auto;
         display: flex ;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
     
-    .hints {
-        width: 90%;
-        margin: auto;
-    }
-    
-    .health-tips {
-        color: red;
-        list-style-type: none;
-    }
-    
-    
-    .recorder {
-        width: 80%;
-        margin: auto;
-    }
-    
-
-    .control-button {
-        width: 70%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items:stretch;
-    }
-    
-    .record-player {
-        width: 100%;
-        margin: auto;
-        border-radius: 15px ;
-    }
-
     .notife {
         width: 90%;
         margin: auto;
-        font-size: 0.9em;
+        text-align: center;
+        font-size: 1em;
+        padding-top: 5%;
+    }
+    
+    .submit-voice {
+        width: 50%;
+        margin: auto;
     }
     
 }
 
-@media screen and (max-width: 550px)  {
-    .control-button {
-        width: 40%;
+@media screen and (max-width: 410px) {
+    .submit-voice {
+        width: 90%;
         margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items:stretch;
-    }
-    .control-button * {
-        margin-bottom: 5%;
     }
 }
