@@ -39,7 +39,7 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content:last baseline;
         align-items: center;
         font-size: 1em;
     }
