@@ -24,9 +24,9 @@ class Title extends React.Component {
                         </p>
                     </div>
                     <br></br>
-                    <div className="title-buttom">
-                        <a className="title-team-buttom" href="#team">تیم ما</a>
-                        <a className="title-about-buttom" href="#about">درباره ی ما</a>        
+                    <div className="title-button">
+                        <a className="title-team-button" href="#team">تیم ما</a>
+                        <a className="title-about-button" href="#about">درباره ی ما</a>        
                     </div>
                 </React.Fragment>
             )
@@ -42,9 +42,9 @@ class Title extends React.Component {
                         </p>
                     </div>
                     <br></br>
-                    <div className="title-buttom">
-                        <a className="title-team-buttom" href="#team">Team</a>
-                        <a className="title-about-buttom" href="#about">About us</a>        
+                    <div className="title-button">
+                        <a className="title-team-button" href="#team">Team</a>
+                        <a className="title-about-button" href="#about">About us</a>        
                     </div>
                 </React.Fragment>
             )

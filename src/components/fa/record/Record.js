@@ -3,14 +3,9 @@ import React from 'react';
 import Header from '../../common/header/Header';
 import Footer from '../../common/footer/Footer';
 import CoughRecord from '../../common/record/cough-record/CoughRecord'
+import Language from '../../common/header/Language';
 
 import '../../common/total-page.css';
-
-import fa_img from '../../static/images/fa-lang.png';
-import en_img from '../../static/images/en-lang.png';
-
-const fa_url = "/record";
-const en_url = "/record/en";
 
 class Record extends React.Component {
 
@@ -27,10 +22,7 @@ class Record extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="lang-button" >
-                    <a href={en_url}><img src={en_img} alt="english-lang" className="lang-img" /></a>
-                    <a href={fa_url}><img src={fa_img} alt="presian-lang" className="lang-img" /></a>
-                </div>
+                <Language lang="fa" url="/record" />
                 <div className="main">
                     <Header lang="fa"/>
                     <CoughRecord lang="fa"/>  

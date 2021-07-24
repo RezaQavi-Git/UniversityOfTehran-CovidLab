@@ -164,11 +164,11 @@ class CoughRecord extends React.Component{
                         </div>
                         <div className="recorder">
                             <audio src={this.state.blobURL} controls="controls" className="record-player" />
-                            <div className="control-buttom">
-                                <button onClick={this.reStart} disabled={this.state.isRecording} className="record-buttom">تلاش مجدد</button>
-                                <button className="submit-buttom">ارسال</button>
-                                <button onClick={this.stop} disabled={!this.state.isRecording} className="record-buttom stop">توقف</button>
-                                <button onClick={this.start} disabled={this.state.isRecording} className="record-buttom">ضبط</button>
+                            <div className="control-button">
+                                <button onClick={this.reStart} disabled={this.state.isRecording} className="record-button">تلاش مجدد</button>
+                                <button className="submit-button">ارسال</button>
+                                <button onClick={this.stop} disabled={!this.state.isRecording} className="record-button stop">توقف</button>
+                                <button onClick={this.start} disabled={this.state.isRecording} className="record-button">ضبط</button>
                             </div><br/>
                             <span id="notife" className="notife"></span>
                         </div>
@@ -244,11 +244,11 @@ class CoughRecord extends React.Component{
                     <div className="record en">
                         <div className="recorder">
                             <audio src={this.state.blobURL} controls="controls" className="record-player" />
-                            <div className="control-buttom">
-                                <button onClick={this.start} disabled={this.state.isRecording} className="record-buttom">start</button>
-                                <button onClick={this.stop} disabled={!this.state.isRecording} className="record-buttom stop">stop</button>
-                                <button className="submit-buttom">submit</button>
-                                <button onClick={this.reStart} disabled={this.state.isRecording} className="record-buttom">reTry</button>
+                            <div className="control-button">
+                                <button onClick={this.start} disabled={this.state.isRecording} className="record-button">start</button>
+                                <button onClick={this.stop} disabled={!this.state.isRecording} className="record-button stop">stop</button>
+                                <button className="submit-button">submit</button>
+                                <button onClick={this.reStart} disabled={this.state.isRecording} className="record-button">reTry</button>
                             </div><br/>
                             <span id="notife" className="notife"></span>
                         </div>
