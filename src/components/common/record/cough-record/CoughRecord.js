@@ -34,12 +34,11 @@ class CoughRecord extends React.Component{
             situation: "",
             gender: "",
             smoke: "",  
-            }
-            this.setSituation = this.setSituation.bind(this);
-            this.setGender = this.setGender.bind(this);
-            this.setSmoke = this.setSmoke.bind(this);
-            this.setStatus = this.setStatus.bind(this);
-
+        }
+        this.setSituation = this.setSituation.bind(this);
+        this.setGender = this.setGender.bind(this);
+        this.setSmoke = this.setSmoke.bind(this);
+        this.setStatus = this.setStatus.bind(this);
         }
 
     setSituation(_situation) {
@@ -81,7 +80,7 @@ class CoughRecord extends React.Component{
                             <p >ضبط صدا</p>
                         </div>
                         <div className="title-description">
-                            <p >با پر کردن مشخصات زیر مارا در پاسخگویی دقیق تر همراهی کنید</p>
+                            <p>با ضبط و ارسال صدای سرفه‌ی خود یا دیگران میتوانید به تحقیقات در جهت تشخیص سریع‌تر بیماری Covid-19 کمک نمایید.</p>
                         </div>
                     </div><br/>
                     <div className="record-body">
@@ -103,7 +102,7 @@ class CoughRecord extends React.Component{
                             <p >Record Voice</p>
                         </div>
                         <div className="title-description">
-                            <p >Accompany us in a more accurate answer by filling in the details below</p>
+                            <p >You can help research for a faster diagnosis of Covid-19 by recording and sending the coughing sound of yourself or others.</p>
                         </div>
                     </div><br/>
                     <div className="record-body en">
@@ -214,8 +213,6 @@ class Hints extends React.Component {
     }
 }
 
-
-
 class Record extends React.Component {
     constructor(props) {
         super(props);
@@ -226,14 +223,42 @@ class Record extends React.Component {
             blobURL: '',
             isBlocked: false,
         }
+        this.Interval = null;
+    }
+
+
+    timer() {
+        var seconds = 0; 
+        var tens = 0; 
+        var appendTens = document.getElementById("tens")
+        var appendSeconds = document.getElementById("seconds")
+        clearInterval(this.Interval);
+        this.Interval = setInterval(startTimer, 10);
+        function startTimer () {
+          tens++;    
+          if(tens <= 9){
+            appendTens.innerHTML = "0" + tens;
+          }
+          if (tens > 9){
+            appendTens.innerHTML = tens;
+          } 
+          if (tens > 99) {
+            console.log("seconds");
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "0" + 0;
+          }
+          
+          if (seconds > 9){
+            appendSeconds.innerHTML = seconds;
+          }
+        
+        } 
     }
 
     start = () => {   
-        if(this.props.lang === "en") {
-            document.getElementById("notife").innerText= "recording";
-        } else {
-            document.getElementById("notife").innerText= "درحال ضبط";
-        }
+        this.timer()
         if (this.state.isBlocked) {
             console.log('Permission Denied');
         } else {
@@ -243,11 +268,10 @@ class Record extends React.Component {
                 this.setState({ status: false, isRecording: true, recorded: false });
             }).catch((e) => console.error(e));
         }
-
       };
 
       stop = () => {
-        document.getElementById("notife").innerText = "";
+        clearInterval(this.Interval);
         Mp3Recorder
           .stop()
           .getMp3()
@@ -263,6 +287,10 @@ class Record extends React.Component {
       }
 
       cancelVoice() {
+        var Tens = document.getElementById("tens")
+        var Seconds = document.getElementById("seconds")
+        Tens.innerHTML = "00";
+        Seconds.innerHTML = "00";
         this.setState({
             status: true,
             recorded: false,
@@ -281,11 +309,14 @@ class Record extends React.Component {
                             <div className="control-button">
                                 <div className="record-voice">
                                     <img src={Microphone} alt="mirophone" onClick={(this.state.status) ? this.start : this.stop} className="record-button"></img>
-                                    <span id="notife" className="notife"></span>
+                                    <p className={(this.state.isRecording | this.state.recorded) ? "timer":"hidden"}><span id="seconds">00</span>:<span id="tens">00</span></p>
                                 </div>                                   
-                                <div id="submit" className={(this.state.recorded) ? "submit-voice" : "submit-voice hidden"}>
-                                    <button className="submit button" onClick={this.submitVoice.bind(this)}>ارسال</button>
-                                    <button className="cancel button" onClick={this.cancelVoice.bind(this)}>انصراف</button>
+                                <div id="submit" className={(this.state.recorded) ? "submit-voice" : "hidden"}>
+                                    <p className="notife">آیا صدای ضبط شده مورد تایید شماست؟</p>
+                                    <div className="submit-voice-buttons">
+                                        <button className="submit button" onClick={this.submitVoice.bind(this)}>ارسال</button>
+                                        <button className="cancel button" onClick={this.cancelVoice.bind(this)}>انصراف</button>
+                                    </div>
                                 </div>
                             </div><br/>
                     </div>
@@ -298,11 +329,14 @@ class Record extends React.Component {
                         <div className="control-button">
                             <div className="record-voice">
                                 <img src={Microphone} alt="mirophone" onClick={(this.state.status) ? this.start : this.stop} className="record-button"></img>
-                                <span id="notife" className="notife"></span>
+                                <p className={(this.state.isRecording | this.state.recorded) ? "timer":"hidden"}><span id="seconds">00</span>:<span id="tens">00</span></p>
                             </div>                                   
-                            <div id="submit" className={(this.state.recorded) ? "submit-voice" : "submit-voice hidden"}>
-                                <button className="submit button" onClick={this.submitVoice.bind(this)}>Submit</button>
-                                <button className="cancel button" onClick={this.cancelVoice.bind(this)}>Cancel</button>
+                            <div id="submit" className={(this.state.recorded) ? "submit-voice" : "hidden"}>
+                                <p className="notife">Do you approve of the recorded sound?</p>
+                                <div className="submit-voice-buttons">
+                                    <button className="submit button" onClick={this.submitVoice.bind(this)}>Submit</button>
+                                    <button className="cancel button" onClick={this.cancelVoice.bind(this)}>Cancel</button>
+                                </div>
                             </div>
                         </div><br/>
                     </div>
