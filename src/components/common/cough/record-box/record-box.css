@@ -1,56 +1,53 @@
 * {
-    font-family: Vazir;
-  }
+  font-family: Vazir;
+}
 
 .description-box {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1em;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
 }
 
 .description-box-description {
-    width: 50%;
-    text-align: right;
+  width: 50%;
+  text-align: right;
 }
 
 .description-box-record {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .microphone {
-    width: 100%;
-    align-items: center;
+  width: 100%;
+  align-items: center;
 }
 
-
-
 @media screen and (max-width: 800px) {
-    .description-box {
-        width: 90%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content:last baseline;
-        align-items: center;
-        font-size: 1em;
-    }
-    
-    .description-box-description {
-        width: 100%;
-    }
-    
-    .description-box-record {
-        width: 100%;
-        align-items: center;
-    
-    }
+  .description-box {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .description-box-description {
+    width: 100%;
+  }
+
+  .description-box-record {
+    width: 100%;
+    align-items: center;
+  }
 }
