@@ -21,6 +21,12 @@
   margin: auto;
 }
 
+
+.radio-button-big {
+  width: 20px;
+  height: 20px;
+}
+
 .record-body {
   width: 60%;
   margin: auto;

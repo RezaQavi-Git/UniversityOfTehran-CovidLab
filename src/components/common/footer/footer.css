@@ -1,3 +1,8 @@
+:root {
+  --footer-bg-color: #054e79;
+  --text-color: white;
+}
+
 * {
   font-family: Vazir;
 }
@@ -9,14 +14,14 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: #87b8d4;
+  background-color: var(--footer-bg-color);
   font-size: 1em;
 }
 
 .footer * {
   margin: auto;
   width: 80%;
-  color: white;
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -36,14 +41,14 @@
 .footer-copyright {
   width: 100%;
   text-align: center;
-  background-color: #87b8d4;
+  background-color: var(--footer-bg-color);
   font-size: 1em;
-  color: white;
+  color: var(--text-color);
 }
 
 .footer-copyright a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 450px) {
@@ -54,7 +59,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: #87b8d4;
+    background-color: var(--footer-bg-color);
     font-size: 1em;
   }
 

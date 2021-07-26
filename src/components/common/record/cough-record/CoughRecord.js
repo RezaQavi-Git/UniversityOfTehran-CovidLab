@@ -193,6 +193,7 @@ class Question extends React.Component {
         <div>
           <input
             type="radio"
+            className="radio-button-big"
             id={this.props.status + i.toString()}
             name={this.props.status}
             value={question.options[i]}
