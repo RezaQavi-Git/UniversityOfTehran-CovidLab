@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Microphone from '../../../static/images/record.png'
+
 import './record-box.css'
 
 class RecordBox extends React.Component {
@@ -25,7 +27,7 @@ class RecordBox extends React.Component {
                             </p>
                         </div>
                         <div className="description-box-record">
-                            <Link to="/record"> <img src="https://img.icons8.com/ios/50/4a90e2/play-record--v2.png" className="microphone" alt="mic"/>  </Link> 
+                            <Link to="/record"> <img src={Microphone} className="microphone" alt="mic"/>  </Link> 
                             <p>ضبط صدا</p>
                         </div>
                         
@@ -37,7 +39,7 @@ class RecordBox extends React.Component {
                 <React.Fragment>
                     <div className="description-box">
                         <div className="description-box-record">
-                            <Link to="/record/en"> <img src="https://img.icons8.com/ios/50/4a90e2/play-record--v2.png" className="microphone" alt="mic"/>  </Link> 
+                            <Link to="/record/en"> <img src={Microphone} className="microphone" alt="mic"/>  </Link> 
                             <p>Record Voice</p>
                         </div>
                         <div className="description-box-description">
