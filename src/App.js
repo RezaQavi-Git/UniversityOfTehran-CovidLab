@@ -16,19 +16,19 @@ class App extends React.Component {
             path="/cough/fa"
             render={(props) => <Cough lang="fa" {...props} />}
           ></Route>
-          <Route 
-            exact={true} 
-            path="/record/fa" 
+          <Route
+            exact={true}
+            path="/record/fa"
             render={(props) => <Record lang="fa" {...props} />}
           ></Route>
-          <Route 
-            exact={true} 
-            path="/cough/en" 
+          <Route
+            exact={true}
+            path="/cough/en"
             render={(props) => <Cough lang="en" {...props} />}
           ></Route>
-          <Route 
-            exact={true} 
-            path="/record/en" 
+          <Route
+            exact={true}
+            path="/record/en"
             render={(props) => <Record lang="en" {...props} />}
           ></Route>
         </Switch>

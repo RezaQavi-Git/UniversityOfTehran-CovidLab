@@ -18,31 +18,19 @@ class Footer extends React.Component {
       <React.Fragment>
         <footer className="footer">
           <div className="footer-member">
-            <img
-              src={Email}
-              alt="email"
-              className="footer-img"
-            />
+            <img src={Email} alt="email" className="footer-img" />
             <p className="footer-detail">
               {lang === "fa" ? "ece@ece.ut.ac.ir" : "ece@ece.ut.ac.ir"}
             </p>
           </div>
           <div className="footer-member">
-            <img
-              src={Phone}
-              alt="phone"
-              className="footer-img"
-            />
+            <img src={Phone} alt="phone" className="footer-img" />
             <p className="footer-detail" dir="ltr">
               {lang === "fa" ? "+98 21 82084960" : "+98 21 82084960"}
             </p>
           </div>
           <div className="footer-member">
-            <img
-              src={Location}
-              alt="location"
-              className="footer-img"
-            />
+            <img src={Location} alt="location" className="footer-img" />
             <p className="footer-detail">
               {lang === "fa"
                 ? "دانشکده مهندسی برق و کامپیوتر ، دانشکده فنی و مهندسی دانشگاه ، دانشگاه تهران ، خیابان کارگر شمالی ، تهران ، ایران"

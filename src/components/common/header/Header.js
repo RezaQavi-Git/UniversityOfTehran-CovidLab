@@ -11,22 +11,27 @@ class Header extends React.Component {
 
   render() {
     const lang = this.props.lang;
-      return (
-        <React.Fragment>
-          <div className="logo">
-            <div className="logo-title">
-              <p className="logo-title-txt">{lang==="fa" ? "دانشگاه تهران" : "University of Tehran"}</p>
-              <p className="logo-title-txt">{lang==="fa" ? "دانشکده برق و کامپیوتر" : "School of Electrical & Computer Engineering"}</p>
-            </div>
-            <img
-              src={LOGOIMG}
-              alt="univerrsity of tehran logo"
-              className="logo-img"
-            />
+    return (
+      <React.Fragment>
+        <div className="logo">
+          <div className="logo-title">
+            <p className="logo-title-txt">
+              {lang === "fa" ? "دانشگاه تهران" : "University of Tehran"}
+            </p>
+            <p className="logo-title-txt">
+              {lang === "fa"
+                ? "دانشکده برق و کامپیوتر"
+                : "School of Electrical & Computer Engineering"}
+            </p>
           </div>
-        </React.Fragment>
-      );
-    
+          <img
+            src={LOGOIMG}
+            alt="univerrsity of tehran logo"
+            className="logo-img"
+          />
+        </div>
+      </React.Fragment>
+    );
   }
 }
 

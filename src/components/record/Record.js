@@ -7,8 +7,7 @@ import Language from "../common/header/Language";
 
 import "../common/total-page.css";
 
-import $ from 'jquery';
-
+import $ from "jquery";
 
 class Record extends React.Component {
   constructor(props) {
@@ -17,16 +16,22 @@ class Record extends React.Component {
   }
 
   componentDidMount() {
-    const {lang, match: {params}} = this.props;
+    const {
+      lang,
+      match: { params },
+    } = this.props;
     const title = lang === "fa" ? "ضبط صدای سرفه" : "Record Voice";
     const dir = lang === "fa" ? "rtl" : "ltr";
 
-    document.title =  title ;
-    $("body").attr("dir",  dir );
+    document.title = title;
+    $("body").attr("dir", dir);
   }
 
   render() {
-    const {lang, match: {params}} = this.props;
+    const {
+      lang,
+      match: { params },
+    } = this.props;
     return (
       <React.Fragment>
         <Language lang={lang} url={"/record/" + lang} />

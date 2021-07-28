@@ -134,7 +134,6 @@ class CoughRecord extends React.Component {
         </div>
       </React.Fragment>
     );
-
   }
 }
 
@@ -199,45 +198,44 @@ class Hints extends React.Component {
   render() {
     const lang = this.props.lang;
 
-      return (
-        <div className={"record " + lang}>
-          <div className={"hints " + lang }>
-            <div className={lang}>
-              <p>
+    return (
+      <div className={"record " + lang}>
+        <div className={"hints " + lang}>
+          <div className={lang}>
+            <p>
+              {lang === "fa"
+                ? "برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید"
+                : "To record the sound of a cough, please do so in a quiet environment as much as possible"}
+            </p>
+            <p>
+              {lang === "fa"
+                ? "همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:"
+                : "Also, when using this program, please follow the health tips. For example:"}
+            </p>
+            <ol className="health-tips">
+              <li>
                 {lang === "fa"
-                  ? "برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید"
-                  : "To record the sound of a cough, please do so in a quiet environment as much as possible"}
-              </p>
-              <p>
+                  ? "۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح, ضدعفونی کنید."
+                  : "1. Disinfect your phone or tablet properly after use."}
+              </li>
+              <li>
                 {lang === "fa"
-                  ? "همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:"
-                  : "Also, when using this program, please follow the health tips. For example:"}
-              </p>
-              <ol className="health-tips">
-                <li>
-                  {lang === "fa"
-                    ? "۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح, ضدعفونی کنید."
-                    : "1. Disinfect your phone or tablet properly after use."}
-                </li>
-                <li>
-                  {lang === "fa"
-                    ? "۲. از سرفه در حضور دیگران پرهیز کنید. "
-                    : "2. Avoid coughing in front of others."}
-                </li>
-                <li>
-                  {lang === "fa"
-                    ? "۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید."
-                    : "3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask."}
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div className="accept-button" onClick={this.accept.bind(this)}>
-            {lang==="fa" ? "خب" : "Ok" }
+                  ? "۲. از سرفه در حضور دیگران پرهیز کنید. "
+                  : "2. Avoid coughing in front of others."}
+              </li>
+              <li>
+                {lang === "fa"
+                  ? "۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید."
+                  : "3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask."}
+              </li>
+            </ol>
           </div>
         </div>
-      );
-   
+        <div className="accept-button" onClick={this.accept.bind(this)}>
+          {lang === "fa" ? "خب" : "Ok"}
+        </div>
+      </div>
+    );
   }
 }
 
