@@ -22,7 +22,7 @@
 }
 
 
-.radio-button-big {
+.big-button {
   width: 20px;
   height: 20px;
 }
@@ -82,6 +82,18 @@
   margin-bottom: 5%;
 }
 
+.record-body {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 15px;
+  min-height: 150px;
+}
+
 .record {
   width: 80%;
   margin: auto;
@@ -95,6 +107,13 @@
   text-align: center;
 }
 
+.record-wave {
+  width: 100%;
+  min-height: 150px;
+  margin: auto;
+  background-color: teal;
+}
+/* 
 .control-button {
   width: 70%;
   margin: auto;
@@ -102,7 +121,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-}
+} */
 
 .record-voice {
   width: 80%;
@@ -119,14 +138,14 @@
   border-radius: 50%;
 }
 
-.timer {
+/* .timer {
   width: 80%;
   margin: auto;
   text-align: center;
   font-size: 2em;
   padding-top: 5%;
   color: rgb(7, 156, 255);
-}
+} */
 
 .submit-voice {
   width: 90%;
@@ -249,17 +268,15 @@
     margin-top: 20px;
   }
 
-  .control-button {
-    width: 80%;
+  .record-wave {
+    width: 100%;
+    min-height: 100px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    background-color: teal;
   }
 
   .record-voice {
-    width: 50%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;

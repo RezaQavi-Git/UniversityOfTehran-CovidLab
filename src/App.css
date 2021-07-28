@@ -1,3 +1,11 @@
 * {
   font-family: Vazir;
 }
+
+.en {
+  text-align: left;
+}
+
+.fa {
+  text-align: right;
+}

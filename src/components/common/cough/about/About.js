@@ -12,18 +12,16 @@ class About extends React.Component {
 
   render() {
     const lang = this.props.lang;
-    if (lang === "fa") {
       return (
         <React.Fragment>
           <br></br>
           <br></br>
           <div className="about">
-            <div className="about-description">
+            <div className={"about-description " + lang}>
               <p>
-                زد- ایرنا- سخنگوی دانشگاه علوم پزشکی شهید صدوقی یزد گفت:
-                هم‌اکنون ۸۱۱ نفر به دلیل ابتلا به بیماری کووید ۱۹ در بیمارستان
-                های استان بستری هستند که از این تعداد به ۱۳۶ نفر در بخش
-                مراقبت‌های ویژه آی .سی.یو( I.C.U) خدمات درمانی ارایه می‌شود
+                {lang === "fa"
+                  ? "زد- ایرنا- سخنگوی دانشگاه علوم پزشکی شهید صدوقی یزد گفت: هم‌اکنون ۸۱۱ نفر به دلیل ابتلا به بیماری کووید ۱۹ در بیمارستان های استان بستری هستند که از این تعداد به ۱۳۶ نفر در بخش مراقبت‌های ویژه آی .سی.یو"
+                  : "Zaid - IRNA - The spokesman of Shahid Sadoughi University of Medical Sciences in Yazd said: Currently, 811 people are hospitalized in the province's hospitals due to Covid 19 disease, of which 136 people are in the intensive care unit (ICU)."}
               </p>
             </div>
             <div className="about-img">
@@ -36,28 +34,6 @@ class About extends React.Component {
           </div>
         </React.Fragment>
       );
-    } else {
-      return (
-        <React.Fragment>
-          <br></br>
-          <br></br>
-          <div className="about">
-            <div className="about-img">
-              <img src={ROBOLAB} alt="robolab" className="about-image" />
-            </div>
-            <div className="about-description en">
-              <p>
-                Zaid - IRNA - The spokesman of Shahid Sadoughi University of
-                Medical Sciences in Yazd said: "Currently, 811 people are
-                hospitalized in the province's hospitals due to Covid 19
-                disease, of which 136 people are in the intensive care unit
-                (ICU)." Provide use
-              </p>
-            </div>
-          </div>
-        </React.Fragment>
-      );
-    }
   }
 }
 

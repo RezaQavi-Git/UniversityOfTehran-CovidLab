@@ -34,10 +34,6 @@
   border-bottom: 2px black solid;
 }
 
-.en {
-  text-align: left;
-  direction: ltr;
-}
 
 @media screen and (max-width: 800px) {
   .lang-img {

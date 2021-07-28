@@ -26,6 +26,14 @@
   border-radius: 10px;
 }
 
+.en {
+  text-align: left;
+}
+
+.fa {
+  text-align: right;
+}
+
 @media screen and (max-width: 800px) {
   .about {
     width: 90%;

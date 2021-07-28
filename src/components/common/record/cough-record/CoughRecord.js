@@ -1,12 +1,9 @@
 import React from "react";
+import $ from "jquery";
 
 import "./cough-record.css";
-
+import { ReactMic } from "react-mic";
 import Microphone from "../../../static/images/microphone.png";
-
-import MicRecorder from "mic-recorder-to-mp3";
-
-const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
 const en_questions = [
   {
@@ -51,6 +48,15 @@ class CoughRecord extends React.Component {
     this.setStatus = this.setStatus.bind(this);
   }
 
+  componentDidMount() {
+    const lang = this.props.lang;
+    const title = lang === "fa" ? "ضبط صدای سرفه" : "Record Voice";
+    const dir = lang === "fa" ? "rtl" : "ltr";
+
+    document.title = title;
+    $("body").attr("dir", dir);
+  }
+
   setSituation(_situation) {
     this.setState({
       situation: _situation,
@@ -80,97 +86,55 @@ class CoughRecord extends React.Component {
 
   render() {
     const lang = this.props.lang;
-    if (lang === "fa") {
-      return (
-        <React.Fragment>
-          <br />
-          <div className="title">
-            <div className="title-head">
-              <p>ضبط صدا</p>
-            </div>
-            <div className="title-description">
-              <p>
-                با ضبط و ارسال صدای سرفه‌ی خود یا دیگران میتوانید به تحقیقات در
-                جهت تشخیص سریع‌تر بیماری Covid-19 کمک نمایید.
-              </p>
-            </div>
+    return (
+      <React.Fragment>
+        <br />
+        <div className="title">
+          <div className="title-head">
+            <p>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</p>
           </div>
-          <br />
-          <div className="record-body">
-            {this.state.status === "Q1" ? (
-              <Question
-                question={fa_questions[0]}
-                func={this.setSituation}
-                status={this.state.status}
-              />
-            ) : this.state.status === "Q2" ? (
-              <Question
-                question={fa_questions[1]}
-                func={this.setGender}
-                status={this.state.status}
-              />
-            ) : this.state.status === "Q3" ? (
-              <Question
-                question={fa_questions[2]}
-                func={this.setSmoke}
-                status={this.state.status}
-              />
-            ) : this.state.status === "Hint" ? (
-              <Hints lang="fa" func={this.setStatus} />
-            ) : this.state.status === "Recording" ? (
-              <Record lang="fa" />
-            ) : (
-              ""
-            )}
+          <div className="title-description">
+            <p>
+              {lang === "fa"
+                ? "با ضبط و ارسال صدای سرفه‌ی خود یا دیگران میتوانید به تحقیقات در جهت تشخیص سریع‌تر بیماری Covid-19 کمک نمایید."
+                : "You can help research for a faster diagnosis of Covid-19 by recording and sending the coughing sound of yourself or others."}
+            </p>
           </div>
-        </React.Fragment>
-      );
-    } else {
-      return (
-        <React.Fragment>
-          <br />
-          <div className="title">
-            <div className="title-head">
-              <p>Record Voice</p>
-            </div>
-            <div className="title-description">
-              <p>
-                You can help research for a faster diagnosis of Covid-19 by
-                recording and sending the coughing sound of yourself or others.
-              </p>
-            </div>
-          </div>
-          <br />
-          <div className="record-body en">
-            {this.state.status === "Q1" ? (
-              <Question
-                question={en_questions[0]}
-                func={this.setSituation}
-                status={this.state.status}
-              />
-            ) : this.state.status === "Q2" ? (
-              <Question
-                question={en_questions[1]}
-                func={this.setGender}
-                status={this.state.status}
-              />
-            ) : this.state.status === "Q3" ? (
-              <Question
-                question={en_questions[2]}
-                func={this.setSmoke}
-                status={this.state.status}
-              />
-            ) : this.state.status === "Hint" ? (
-              <Hints lang="en" func={this.setStatus} />
-            ) : this.state.status === "Recording" ? (
-              <Record lang="en" />
-            ) : (
-              ""
-            )}
-          </div>
-        </React.Fragment>
-      );
-    }
+        </div>
+        <br />
+        <div className={"record-body " + lang}>
+          {this.state.status === "Q1" ? (
+            <Question
+              lang={lang}
+              question={lang === "fa" ? fa_questions[0] : en_questions[0]}
+              func={this.setSituation}
+              status={this.state.status}
+            />
+          ) : this.state.status === "Q2" ? (
+            <Question
+              lang={lang}
+              question={lang === "fa" ? fa_questions[1] : en_questions[1]}
+              func={this.setGender}
+              status={this.state.status}
+            />
+          ) : this.state.status === "Q3" ? (
+            <Question
+              lang={lang}
+              question={lang === "fa" ? fa_questions[2] : en_questions[2]}
+              func={this.setSmoke}
+              status={this.state.status}
+            />
+          ) : this.state.status === "Hint" ? (
+            <Hints lang={lang} func={this.setStatus} />
+          ) : this.state.status === "Recording" ? (
+            <Record lang={lang} />
+          ) : (
+            ""
+          )}
+        </div>
+      </React.Fragment>
+    );
+
   }
 }
 
@@ -193,7 +157,7 @@ class Question extends React.Component {
         <div>
           <input
             type="radio"
-            className="radio-button-big"
+            className="big-button"
             id={this.props.status + i.toString()}
             name={this.props.status}
             value={question.options[i]}
@@ -235,66 +199,45 @@ class Hints extends React.Component {
   render() {
     const lang = this.props.lang;
 
-    if (lang === "fa") {
       return (
-        <div className="record">
-          <div className="hints">
-            <p>
-              برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام
-              دهید
-            </p>
-            <p>
-              همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید.
-              برای مثال:
-            </p>
-            <ol className="health-tips">
-              <li>
-                ۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح, ضدعفونی کنید.
-              </li>
-              <li>۲. از سرفه در حضور دیگران پرهیز کنید.</li>
-              <li>
-                ۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده
-                و از ماسک استفاده کنید.
-              </li>
-            </ol>
-          </div>
-          <div className="accept-button" onClick={this.accept.bind(this)}>
-            خب
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="record en">
-          <div className="hints">
-            <div className="en">
+        <div className={"record " + lang}>
+          <div className={"hints " + lang }>
+            <div className={lang}>
               <p>
-                {" "}
-                To record the sound of a cough, please do so in a quiet
-                environment as much as possible{" "}
+                {lang === "fa"
+                  ? "برای ضبط صدای سرفه لطفا تا حد امکان در محیطی ساکت اینکار را انجام دهید"
+                  : "To record the sound of a cough, please do so in a quiet environment as much as possible"}
               </p>
               <p>
-                {" "}
-                Also, when using this program, please follow the health tips.
-                For example:{" "}
+                {lang === "fa"
+                  ? "همچنین در استفاده از این برنامه لطفا نکات بهداشتی را رعایت کنید. برای مثال:"
+                  : "Also, when using this program, please follow the health tips. For example:"}
               </p>
               <ol className="health-tips">
-                <li> 1. Disinfect your phone or tablet properly after use. </li>
-                <li> 2. Avoid coughing in front of others. </li>
                 <li>
-                  {" "}
-                  3. If you are recording a coughing sound from others, keep the
-                  appropriate distance and use a mask.{" "}
+                  {lang === "fa"
+                    ? "۱. تلفن یا تبلت خود را پس از استفاده, به روش صحیح, ضدعفونی کنید."
+                    : "1. Disinfect your phone or tablet properly after use."}
+                </li>
+                <li>
+                  {lang === "fa"
+                    ? "۲. از سرفه در حضور دیگران پرهیز کنید. "
+                    : "2. Avoid coughing in front of others."}
+                </li>
+                <li>
+                  {lang === "fa"
+                    ? "۳. اگر از دیگران صدای سرفه ضبط میکنید فاصله مناسب را رعایت کرده و از ماسک استفاده کنید."
+                    : "3. If you are recording a coughing sound from others, keep the appropriate distance and use a mask."}
                 </li>
               </ol>
             </div>
           </div>
           <div className="accept-button" onClick={this.accept.bind(this)}>
-            Ok
+            {lang==="fa" ? "خب" : "Ok" }
           </div>
         </div>
       );
-    }
+   
   }
 }
 
@@ -311,177 +254,101 @@ class Record extends React.Component {
     this.Interval = null;
   }
 
-  timer() {
-    var seconds = 0;
-    var tens = 0;
-    var appendTens = document.getElementById("tens");
-    var appendSeconds = document.getElementById("seconds");
-    clearInterval(this.Interval);
-    this.Interval = setInterval(startTimer, 10);
-    function startTimer() {
-      tens++;
-      if (tens <= 9) {
-        appendTens.innerHTML = "0" + tens;
-      }
-      if (tens > 9) {
-        appendTens.innerHTML = tens;
-      }
-      if (tens > 99) {
-        console.log("seconds");
-        seconds++;
-        appendSeconds.innerHTML = "0" + seconds;
-        tens = 0;
-        appendTens.innerHTML = "0" + 0;
-      }
-
-      if (seconds > 9) {
-        appendSeconds.innerHTML = seconds;
-      }
-    }
-  }
-
   start = () => {
-    this.timer();
-    if (this.state.isBlocked) {
-      console.log("Permission Denied");
-    } else {
-      Mp3Recorder.start()
-        .then(() => {
-          this.setState({ status: false, isRecording: true, recorded: false });
-        })
-        .catch((e) => console.error(e));
-    }
+    this.setState({
+      status: false,
+      recorded: false,
+      record: true,
+    });
   };
 
   stop = () => {
-    clearInterval(this.Interval);
-    Mp3Recorder.stop()
-      .getMp3()
-      .then(([buffer, blob]) => {
-        const blobURL = URL.createObjectURL(blob);
-        this.setState({
-          blobURL,
-          isRecording: false,
-          status: true,
-          recorded: true,
-        });
-      })
-      .catch((e) => console.log(e));
+    this.setState({
+      isRecording: false,
+      status: true,
+      recorded: true,
+      record: false,
+    });
   };
 
-  submitVoice() {}
+  showAcceptButtun() {
+    document.getElementById("record-accepted").style.display = "flex";
+  }
 
   cancelVoice() {
-    var Tens = document.getElementById("tens");
-    var Seconds = document.getElementById("seconds");
-    Tens.innerHTML = "00";
-    Seconds.innerHTML = "00";
     this.setState({
       status: true,
       recorded: false,
-      isRecording: false,
-      blobURL: "",
-      isBlocked: false,
+      blobURL: null,
+      record: false,
     });
   }
+
+  onStop(recordedBlob) {
+    console.log("recordedBlob is: ", recordedBlob);
+
+    console.log("recordedBlob is: ", typeof recordedBlob.blobURL);
+    this.setState({
+      blobURL: recordedBlob.blobURL,
+    });
+  }
+
   render() {
     const lang = this.props.lang;
 
-    if (lang === "fa") {
-      return (
-        <div className="record">
-          <div className="recorder">
-            <div className="control-button">
-              <div className="record-voice">
-                <img
-                  src={Microphone}
-                  alt="mirophone"
-                  onClick={this.state.status ? this.start : this.stop}
-                  className="record-button"
-                ></img>
-                <p
-                  className={
-                    this.state.isRecording | this.state.recorded
-                      ? "timer"
-                      : "hidden"
-                  }
-                >
-                  <span id="seconds">00</span>:<span id="tens">00</span>
-                </p>
-              </div>
-              <div
-                id="submit"
-                className={this.state.recorded ? "submit-voice" : "hidden"}
-              >
-                <p className="notife">آیا صدای ضبط شده مورد تایید شماست؟</p>
-                <div className="submit-voice-buttons">
-                  <button
-                    className="submit button"
-                    onClick={this.submitVoice.bind(this)}
-                  >
-                    ارسال
-                  </button>
-                  <button
-                    className="cancel button"
-                    onClick={this.cancelVoice.bind(this)}
-                  >
-                    انصراف
-                  </button>
-                </div>
-              </div>
-            </div>
-            <br />
+    return (
+      <div className="record">
+        <div className="recorder">
+          <div className="record-voice">
+            <ReactMic
+              record={this.state.record}
+              className="record-wave"
+              onStop={this.onStop.bind(this)}
+              strokeColor="#000000"
+              mimeType="audio/wav"
+              bitRate={256000}
+              sampleRate={44100}
+            />
+            <img
+              src={Microphone}
+              alt="mirophone"
+              onClick={this.state.status ? this.start : this.stop}
+              className="record-button"
+            />
+            {/* <audio
+                  src={this.state.blobURL}
+                  controls="controls"
+                  className="record-player"
+                /> */}
           </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="record en">
-          <div className="recorder">
-            <div className="control-button">
-              <div className="record-voice">
-                <img
-                  src={Microphone}
-                  alt="mirophone"
-                  onClick={this.state.status ? this.start : this.stop}
-                  className="record-button"
-                ></img>
-                <p
-                  className={
-                    this.state.isRecording | this.state.recorded
-                      ? "timer"
-                      : "hidden"
-                  }
-                >
-                  <span id="seconds">00</span>:<span id="tens">00</span>
-                </p>
-              </div>
-              <div
-                id="submit"
-                className={this.state.recorded ? "submit-voice" : "hidden"}
+          <div
+            id="submit"
+            className={this.state.recorded ? "submit-voice" : "hidden"}
+          >
+            <p className="notife ">
+              {lang === "fa"
+                ? "آیا صدای ضبط شده مورد تایید شماست؟"
+                : "Do you approve of the recorded sound ? "}
+            </p>
+            <div className="submit-voice-buttons">
+              <button
+                className="submit button"
+                onClick={this.showAcceptButtun.bind(this)}
               >
-                <p className="notife">Do you approve of the recorded sound?</p>
-                <div className="submit-voice-buttons">
-                  <button
-                    className="submit button"
-                    onClick={this.submitVoice.bind(this)}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    className="cancel button"
-                    onClick={this.cancelVoice.bind(this)}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
+                {lang === "fa" ? "بله" : "Yes"}
+              </button>
+              <button
+                className="cancel button"
+                onClick={this.cancelVoice.bind(this)}
+              >
+                {lang === "fa" ? "انصراف" : "Cancel"}
+              </button>
             </div>
-            <br />
           </div>
+          <br />
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
 
