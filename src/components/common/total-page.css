@@ -1,9 +1,11 @@
 .main {
+  width: 95%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .lang-button {
@@ -28,10 +30,10 @@
 
 .seprator {
   text-align: center;
-  color: black;
+  color: var(--black);
   font-size: 2.5em;
   margin-top: 2%;
-  border-bottom: 2px black solid;
+  border-bottom: 2px var(--black) solid;
 }
 
 @media screen and (max-width: 800px) {

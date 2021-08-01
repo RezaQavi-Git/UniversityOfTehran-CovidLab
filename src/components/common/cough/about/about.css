@@ -43,11 +43,12 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 5%;
+    font-size: 0.8em;
   }
 
   .about-description {
     width: 90%;
-    font-size: 1.25em;
+    /* font-size: 1.25em; */
     text-align: justify;
   }
 

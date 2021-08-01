@@ -3,22 +3,24 @@
 }
 
 .title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 1em;
+} 
+
+.title-head {
   width: 80%;
   margin: auto;
-  /* margin-top: 5%; */
+  font-size: 2em;
   text-align: center;
 }
 
-.title-head {
-  width: 100%;
-  font-size: 2em;
-}
-
 .title-description {
-  font-size: 15px;
+  font-size: 1em;
   width: 60%;
   margin: auto;
-}
+} 
 
 .title-button {
   width: 30%;
@@ -45,14 +47,14 @@
   border: none;
   padding: 10px 10px;
   border-radius: 5px;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   text-align: center;
-  background-color: rgb(202, 26, 26);
+  background-color: var(--red);
 }
 
 .title-team-button :hover,
 .title-about-button :hover {
-  background-color: seagreen;
+  background-color: var(--green);
 }
 
 @media screen and (max-width: 800px) {
@@ -60,16 +62,17 @@
     width: 90%;
     margin: auto;
     text-align: center;
+    font-size: 0.9em;
   }
-
   .title-head {
-    font-size: 2em;
+    width: 90%;
+    margin: auto;
   }
 
   .title-description {
-    font-size: 15px;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    text-align: justify;
   }
 
   .title-button {
@@ -83,6 +86,6 @@
 
   .title-team-button :hover,
   .title-about-button :hover {
-    background-color: seagreen;
+    background-color: var(--light-blue);
   }
 }

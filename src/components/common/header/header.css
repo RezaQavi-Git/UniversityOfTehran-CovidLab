@@ -44,6 +44,10 @@
     padding-top: 10%;
   }
 
+  .logo-title {
+    font-size: 0.8em;
+  }
+
   .logo-img {
     width: 25%;
     height: inherit;
