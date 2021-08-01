@@ -4,6 +4,7 @@ import $ from "jquery";
 import "./cough-record.css";
 import { ReactMic } from "react-mic";
 import Microphone from "../../../static/images/microphone.png";
+import { Link } from "react-router-dom";
 
 const en_questions = [
   {
@@ -270,7 +271,7 @@ class Record extends React.Component {
   };
 
   showAcceptButtun() {
-    document.getElementById("record-accepted").style.display = "flex";
+    // document.getElementById("record-accepted").style.display = "flex";
   }
 
   cancelVoice() {
@@ -329,12 +330,14 @@ class Record extends React.Component {
                 : "Do you approve of the recorded sound ? "}
             </p>
             <div className="submit-voice-buttons">
-              <button
-                className="submit button"
-                onClick={this.showAcceptButtun.bind(this)}
-              >
-                {lang === "fa" ? "بله" : "Yes"}
-              </button>
+              <Link to={"/cough/" + lang}>
+                <button
+                  className="submit button"
+                  onClick={this.showAcceptButtun.bind(this)}
+                >
+                  {lang === "fa" ? "بله" : "Yes"}
+                </button>
+              </Link>
               <button
                 className="cancel button"
                 onClick={this.cancelVoice.bind(this)}
