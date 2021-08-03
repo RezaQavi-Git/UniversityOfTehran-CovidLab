@@ -1,6 +1,8 @@
 import React from "react";
 
 import "../total-page.css";
+import { Link } from "react-router-dom";
+
 
 import fa_img from "../../static/images/fa-lang.png";
 import en_img from "../../static/images/en-lang.png";
@@ -17,17 +19,17 @@ class Language extends React.Component {
     if (lang === "en") {
       return (
         <div className="lang-button-en">
-          <a href={url === "/cough/en" ? "/cough/fa" : "/record/fa"}>
+          <Link to={url === "/cough/en" ? "/cough/fa" : "/record/fa"}>
             <img src={fa_img} alt="presian-lang" className="lang-img" />
-          </a>
+          </Link>
         </div>
       );
     } else {
       return (
         <div className="lang-button">
-          <a href={url === "/cough/fa" ? "/cough/en" : "/record/en"}>
+          <Link to={url === "/cough/fa" ? "/cough/en" : "/record/en"}>
             <img src={en_img} alt="english-lang" className="lang-img" />
-          </a>
+          </Link>
         </div>
       );
     }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./title.css";
 
@@ -30,12 +31,12 @@ class Title extends React.Component {
         </div>
         <br></br>
         <div className="title-button">
-          <a className="title-team-button" href="#team">
+          <Link className="title-team-button" to={"/cough/" + lang + "/#team"}>
             {lang === "fa" ? "تیم ما" : "Team"}
-          </a>
-          <a className="title-about-button" href="#about">
+          </Link>
+          <Link className="title-about-button" to={"/cough/" + lang + "/#about"}>
             {lang === "fa" ? "درباره ی ما" : "About"}
-          </a>
+          </Link>
         </div>
       </React.Fragment>
     );
