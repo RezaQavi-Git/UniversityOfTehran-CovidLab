@@ -6,7 +6,7 @@ import "./components/static/Fonts/vazir-fonts/fonts.css";
 import Cough from "./components/cough/Cough";
 import Record from "./components/record/Record";
 
-import './App.css';
+import "./App.css";
 
 class App extends React.Component {
   render() {

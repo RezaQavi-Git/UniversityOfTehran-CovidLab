@@ -29,7 +29,7 @@ class Title extends React.Component {
             </p>
           </div>
         </div>
-        <br></br>
+        <br/>
         <div className="title-button">
           <a className="title-team-button" href={"/#team"}>
             {lang === "fa" ? "تیم ما" : "Team"}

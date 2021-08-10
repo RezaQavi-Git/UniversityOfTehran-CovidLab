@@ -3,7 +3,6 @@ import React from "react";
 import "../total-page.css";
 import { Link } from "react-router-dom";
 
-
 import fa_img from "../../static/images/fa-lang.png";
 import en_img from "../../static/images/en-lang.png";
 

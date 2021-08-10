@@ -41,8 +41,7 @@ class Cough extends React.Component {
         <Language lang={lang} url={"/" + lang} />
         <div className="main">
           <Header lang={lang} />
-          <p className="seprator">
-          </p>
+          <p className="seprator"></p>
           <Title lang={lang} />
           <p className="seprator">
             {lang === "fa" ? "توضیحات" : "Description"}

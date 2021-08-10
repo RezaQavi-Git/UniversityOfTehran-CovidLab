@@ -39,7 +39,7 @@ class Footer extends React.Component {
         <div className="footer-copyright">
           <p>
             {lang === "fa"
-              ? "تمامی حقوق سایت متعلق به شرکت فلان میباشد . طراح "
+              ? " تمامی حقوق سایت متعلق به شرکت فلان میباشد . طراح "
               : " All rights of the site belong to a certain company . Designer "}
             <a href="https://github.com/RezaQavi-git">
               {lang === "fa" ? "رضا قوی" : "Reza Qavi"}
