@@ -321,10 +321,7 @@ class Record extends React.Component {
   };
 
   showAcceptButtun() {
-    // document.getElementById("cry-question-body").style.display = "flex";
-    // const cookies = new Cookies();
-    // cookies.set("voice", this.state.blobURL, { path: "/record" });
-    // console.log(cookies.get("voice"));
+    
   }
 
   cancelVoice() {
