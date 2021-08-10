@@ -249,32 +249,87 @@ class Record extends React.Component {
       isRecording: false,
       blobURL: "",
       isBlocked: false,
+      timerOn: false,
+      timerStart: 0,
+      timerTime: 0,
     };
-    this.Interval = null;
   }
 
-  start = () => {
+  componentDidMount() {
+    navigator.getUserMedia(
+      { audio: true },
+      () => {
+        console.log("Permission Granted");
+        this.setState({ isBlocked: false });
+      },
+      () => {
+        console.log("Permission Denied");
+        this.setState({ isBlocked: true });
+      }
+    );
+  }
+
+  startTimer = () => {
     this.setState({
-      status: false,
-      recorded: false,
-      record: true,
+      timerOn: true,
+      timerTime: this.state.timerTime,
+      timerStart: Date.now() - this.state.timerTime,
+    });
+    this.timer = setInterval(() => {
+      this.setState({
+        timerTime: Date.now() - this.state.timerStart,
+      });
+    }, 10);
+  };
+
+  stopTimer = () => {
+    this.setState({ timerOn: false });
+    clearInterval(this.timer);
+  };
+
+  resetTimer = () => {
+    this.setState({
+      timerStart: 0,
+      timerTime: 0,
     });
   };
 
+  start = () => {
+    if (this.state.isBlocked) {
+      alert("microphone is blocked!");
+    } else {
+      this.startTimer();
+      this.setState({
+        status: false,
+        recorded: false,
+        record: true,
+        isRecording: true,
+      });
+    }
+  };
+
   stop = () => {
+    this.stopTimer();
     this.setState({
       isRecording: false,
       status: true,
       recorded: true,
       record: false,
+      isRecording: false,
     });
+    this.resetTimer();
   };
 
   showAcceptButtun() {
-    // document.getElementById("record-accepted").style.display = "flex";
+    // document.getElementById("cry-question-body").style.display = "flex";
+    // const cookies = new Cookies();
+    // cookies.set("voice", this.state.blobURL, { path: "/record" });
+    // console.log(cookies.get("voice"));
   }
 
   cancelVoice() {
+    // document.getElementById("cry-question-body").style.display = "none";
+    this.resetTimer();
     this.setState({
       status: true,
       recorded: false,
@@ -284,9 +339,6 @@ class Record extends React.Component {
   }
 
   onStop(recordedBlob) {
-    console.log("recordedBlob is: ", recordedBlob);
-
-    console.log("recordedBlob is: ", typeof recordedBlob.blobURL);
     this.setState({
       blobURL: recordedBlob.blobURL,
     });
@@ -294,7 +346,9 @@ class Record extends React.Component {
 
   render() {
     const lang = this.props.lang;
-
+    const { timerTime } = this.state;
+    let centiseconds = ("0" + (Math.floor(timerTime / 10) % 100)).slice(-2);
+    let seconds = ("0" + (Math.floor(timerTime / 1000) % 60)).slice(-2);
     return (
       <div className="record">
         <div className="recorder">
@@ -314,11 +368,20 @@ class Record extends React.Component {
               onClick={this.state.status ? this.start : this.stop}
               className="record-button"
             />
-            {/* <audio
-                  src={this.state.blobURL}
-                  controls="controls"
-                  className="record-player"
-                /> */}
+            <div
+              className={
+                this.state.timerOn | this.state.recorded ? "timer" : "hidden"
+              }
+            >
+              {lang === "fa"
+                ? seconds + ":" + centiseconds
+                : seconds + ":" + centiseconds}
+            </div>
+            <audio
+              src={this.state.blobURL}
+              controls="controls"
+              className={this.state.recorded ? "record-player" : "hidden"}
+            />
           </div>
           <div
             id="submit"
@@ -330,14 +393,12 @@ class Record extends React.Component {
                 : "Do you approve of the recorded sound ? "}
             </p>
             <div className="submit-voice-buttons">
-              <Link to={"/cough/" + lang}>
-                <button
-                  className="submit button"
-                  onClick={this.showAcceptButtun.bind(this)}
-                >
-                  {lang === "fa" ? "بله" : "Yes"}
-                </button>
-              </Link>
+              <button
+                className="submit button"
+                onClick={this.showAcceptButtun.bind(this)}
+              >
+                {lang === "fa" ? "بله" : "Yes"}
+              </button>
               <button
                 className="cancel button"
                 onClick={this.cancelVoice.bind(this)}
