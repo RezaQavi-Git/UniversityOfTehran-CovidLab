@@ -91,12 +91,17 @@
 }
 
 .record-voice {
-  width: 80%;
+  width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.record-player {
+  margin-top: 10px;
+  border-radius: 50px;
 }
 
 .record-button {
@@ -120,6 +125,15 @@
   font-size: 1.5em;
   padding-top: 5%;
   color: var(--dark-red);
+}
+
+.timer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 5%;
+  color: rgb(87, 13, 26);
 }
 
 .submit-voice-buttons {
