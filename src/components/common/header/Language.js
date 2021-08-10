@@ -19,7 +19,7 @@ class Language extends React.Component {
     if (lang === "en") {
       return (
         <div className="lang-button-en">
-          <Link to={url === "/cough/en" ? "/cough/fa" : "/record/fa"}>
+          <Link to={url === "/en" ? "/fa" : "/record/fa"}>
             <img src={fa_img} alt="presian-lang" className="lang-img" />
           </Link>
         </div>
@@ -27,7 +27,7 @@ class Language extends React.Component {
     } else {
       return (
         <div className="lang-button">
-          <Link to={url === "/cough/fa" ? "/cough/en" : "/record/en"}>
+          <Link to={url === "/fa" ? "/en" : "/record/en"}>
             <img src={en_img} alt="english-lang" className="lang-img" />
           </Link>
         </div>

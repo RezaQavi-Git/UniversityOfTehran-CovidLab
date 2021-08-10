@@ -31,12 +31,12 @@ class Title extends React.Component {
         </div>
         <br></br>
         <div className="title-button">
-          <Link className="title-team-button" to={"/cough/" + lang + "/#team"}>
+          <a className="title-team-button" href={"/#team"}>
             {lang === "fa" ? "تیم ما" : "Team"}
-          </Link>
-          <Link className="title-about-button" to={"/cough/" + lang + "/#about"}>
+          </a>
+          <a className="title-about-button" href={"/#about"}>
             {lang === "fa" ? "درباره ی ما" : "About"}
-          </Link>
+          </a>
         </div>
       </React.Fragment>
     );

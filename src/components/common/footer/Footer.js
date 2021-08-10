@@ -19,9 +19,7 @@ class Footer extends React.Component {
         <footer className="footer">
           <div className="footer-member">
             <img src={Email} alt="email" className="footer-img" />
-            <p className="footer-detail">
-              {lang === "fa" ? "ece@ece.ut.ac.ir" : "ece@ece.ut.ac.ir"}
-            </p>
+            <p className="footer-detail">moradih@ut.ac.ir</p>
           </div>
           <div className="footer-member">
             <img src={Phone} alt="phone" className="footer-img" />

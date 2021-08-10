@@ -38,7 +38,7 @@ class Cough extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/" + lang} />
+        <Language lang={lang} url={"/" + lang} />
         <div className="main">
           <Header lang={lang} />
           <p className="seprator">

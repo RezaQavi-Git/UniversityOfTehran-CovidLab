@@ -15,7 +15,7 @@ class App extends React.Component {
         <Switch>
           <Route
             exact={true}
-            path="/cough/fa"
+            path="/fa"
             render={(props) => <Cough lang="fa" {...props} />}
           ></Route>
           <Route
@@ -25,7 +25,7 @@ class App extends React.Component {
           ></Route>
           <Route
             exact={true}
-            path="/cough/en"
+            path="/en"
             render={(props) => <Cough lang="en" {...props} />}
           ></Route>
           <Route
