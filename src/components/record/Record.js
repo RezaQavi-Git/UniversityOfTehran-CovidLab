@@ -1,8 +1,7 @@
 import React from "react";
 
-import Header from "../common/header/Header";
 import Footer from "../common/footer/Footer";
-import CoughRecord from "../common/record/cough-record/CoughRecord";
+import CoughRecord from "../common/record/CoughRecord";
 import Language from "../common/header/Language";
 
 import "../common/total-page.css";
@@ -35,9 +34,10 @@ class Record extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
+        <Language lang={lang} url={"/record/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
-        {/* <Language lang={lang} url={"/record/" + lang} /> */}
+          <p className="seprator"></p>
           <CoughRecord lang={lang} />
           <p className="seprator"></p>
           <Footer lang={lang} />
