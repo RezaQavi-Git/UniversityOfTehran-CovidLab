@@ -1,45 +1,44 @@
 .main {
-  width: 95%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--white);
+  margin-top: 0;
 }
 
 .lang-button {
   position: absolute;
   top: 8px;
-  right: 5%;
-  font-size: 1.25em;
+  left: 3%;
 }
 
 .lang-button-en {
   position: absolute;
   top: 8px;
-  left: 5%;
-  font-size: 1.25em;
+  right: 3%;
 }
 
 .lang-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  width: 45px;
+  height: 30px;
+  border-radius: 10px;
 }
 
 .seprator {
   text-align: center;
   color: var(--black);
-  font-size: 2.5em;
+  font-size: 1.8em;
   margin-top: 2%;
   border-bottom: 2px var(--black) solid;
 }
 
 @media screen and (max-width: 800px) {
   .lang-img {
-    width: 20px;
+    width: 30px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 5px;
   }
 }
