@@ -1,19 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import SimpleImageSlider from "react-simple-image-slider";
 
 import "./title.css";
 
+const images = [
+  { url: "https://wallpaperaccess.com/full/2329950.jpg" },
+  { url: "https://wallpaperaccess.com/full/2329950.jpg" },
+  { url: "https://wallpaperaccess.com/full/2329950.jpg" },
+];
 class Title extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+
   render() {
     const lang = this.props.lang;
     return (
       <React.Fragment>
         <div className="title">
+          <div>
+            <SimpleImageSlider slideDuration={0.01} width={896} height={504} images={images} />
+          </div>
           <div className="title-head">
             <p>
               {lang === "fa"
@@ -29,7 +38,8 @@ class Title extends React.Component {
             </p>
           </div>
         </div>
-        <br /><br />
+        <br />
+        <br />
         {/* <br/>
         <div className="title-button">
           <a className="title-team-button" href={"/#team"}>

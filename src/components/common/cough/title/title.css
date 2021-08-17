@@ -8,6 +8,13 @@
   text-align: center;
   font-size: 1em;
 } 
+.title-img {
+  width: 90%;
+  max-height: 550px;
+  margin: auto;
+  text-align: center;
+  font-size: 1em;
+} 
 
 .title-head {
   width: 80%;
