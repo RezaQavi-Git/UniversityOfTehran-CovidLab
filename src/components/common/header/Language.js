@@ -18,17 +18,17 @@ class Language extends React.Component {
     if (lang === "en") {
       return (
         <div className="lang-button-en">
-          <Link to={url === "/en" ? "/fa" : "/record/fa"}>
+          <a href={url === "/en" ? "/fa" : "/record/fa"}>
             <img src={fa_img} alt="presian-lang" className="lang-img" />
-          </Link>
+          </a>
         </div>
       );
     } else {
       return (
         <div className="lang-button">
-          <Link to={url === "/fa" ? "/en" : "/record/en"}>
+          <a href={url === "/fa" ? "/en" : "/record/en"}>
             <img src={en_img} alt="english-lang" className="lang-img" />
-          </Link>
+          </a>
         </div>
       );
     }
