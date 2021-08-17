@@ -18,7 +18,21 @@ class Language extends React.Component {
     if (lang === "en") {
       return (
         <div className="lang-button-en">
-          <a href={url === "/en" ? "/fa" : "/record/fa"}>
+          <a
+            href={
+              url === "/en"
+                ? "/fa"
+                : url === "/record/fa"
+                ? "/record/en"
+                : url === "/team/fa"
+                ? "/team/en"
+                : url === "/projects/fa"
+                ? "/projects/en"
+                : url === "/news/fa"
+                ? "/news/en"
+                : "/about/en"
+            }
+          >
             <img src={fa_img} alt="presian-lang" className="lang-img" />
           </a>
         </div>
@@ -26,7 +40,21 @@ class Language extends React.Component {
     } else {
       return (
         <div className="lang-button">
-          <a href={url === "/fa" ? "/en" : "/record/en"}>
+          <a
+            href={
+              url === "/fa"
+                ? "/en"
+                : url === "/record/en"
+                ? "/record/fa"
+                : url === "/teamss/en"
+                ? "/team/fa"
+                : url === "/projects/en"
+                ? "/projects/fa"
+                : url === "/news/en"
+                ? "/news/fa"
+                : "/about/fa"
+            }
+          >
             <img src={en_img} alt="english-lang" className="lang-img" />
           </a>
         </div>
