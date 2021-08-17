@@ -12,6 +12,7 @@ import Team from "../common/cough/team/Team";
 import About from "../common/cough/about/About";
 
 import "../common/total-page.css";
+import Navbar from "../common/header/Navbar";
 
 class Cough extends React.Component {
   constructor(props) {
@@ -40,10 +41,10 @@ class Cough extends React.Component {
       <React.Fragment>
         <Language lang={lang} url={"/" + lang} />
         <div className="main">
-          <Header lang={lang} />
+          <Navbar lang={lang} />
           <p className="seprator"></p>
           <Title lang={lang} />
-          <p className="seprator">
+          {/* <p className="seprator">
             {lang === "fa" ? "توضیحات" : "Description"}
           </p>
           <RecordBox lang={lang} />
@@ -54,7 +55,7 @@ class Cough extends React.Component {
           <p id="about" className="seprator">
             {lang === "fa" ? "درباره ی ما" : "About"}
           </p>
-          <About lang={lang} />
+          <About lang={lang} /> */}
           <Footer lang={lang} />
         </div>
       </React.Fragment>

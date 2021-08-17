@@ -8,6 +8,7 @@ import Language from "../common/header/Language";
 import "../common/total-page.css";
 
 import $ from "jquery";
+import Navbar from "../common/header/Navbar";
 
 class Record extends React.Component {
   constructor(props) {
@@ -34,9 +35,9 @@ class Record extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/record/" + lang} />
         <div className="main">
-          <Header lang={lang} />
+          <Navbar lang={lang} />
+        {/* <Language lang={lang} url={"/record/" + lang} /> */}
           <CoughRecord lang={lang} />
           <p className="seprator"></p>
           <Footer lang={lang} />
