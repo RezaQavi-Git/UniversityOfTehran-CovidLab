@@ -88,7 +88,7 @@ class TeamMembers extends React.Component {
               alt="reshad hosseini"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "رشاد حسینی" : "reshad hosseini"}
+              {lang === "fa" ? "رشاد حسینی" : "Reshad Hosseini"}
             </p>
             <br />
             <p className="team-member-title">
@@ -105,7 +105,7 @@ class TeamMembers extends React.Component {
               alt="aida khozaee"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "آیدا خوزایی" : "aida khozaee"}
+              {lang === "fa" ? "آیدا خوزایی" : "Aida Khozaee"}
             </p>
             <br />
             <p className="team-member-title">
@@ -124,7 +124,7 @@ class TeamMembers extends React.Component {
               alt="saman mahdanian"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "سامان مهدانیان" : "saman mahdanian"}
+              {lang === "fa" ? "سامان مهدانیان" : "Saman Mahdanian"}
             </p>
             <br />
             <p className="team-member-title">
@@ -140,7 +140,7 @@ class TeamMembers extends React.Component {
               alt="mahbod nouri"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "مهبد نوری" : "mahbod nouri"}
+              {lang === "fa" ? "مهبد نوری" : "Mahbod Nouri"}
             </p>
             <br />
             <p className="team-member-title">
