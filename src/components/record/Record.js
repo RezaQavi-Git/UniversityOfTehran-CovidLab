@@ -1,7 +1,7 @@
 import React from "react";
 
 import Footer from "../common/footer/Footer";
-import CoughRecord from "../common/record/CoughRecord";
+import CoughRecord from "./CoughRecord";
 import Language from "../common/header/Language";
 
 import "../common/total-page.css";
