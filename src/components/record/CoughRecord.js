@@ -49,12 +49,12 @@ class CoughRecord extends React.Component {
   }
 
   componentDidMount() {
-    const lang = this.props.lang;
-    const title = lang === "fa" ? "ضبط صدای سرفه" : "Record Voice";
-    const dir = lang === "fa" ? "rtl" : "ltr";
+    // const lang = this.props.lang;
+    // const title = lang === "fa" ? "ضبط صدای سرفه" : "Record Voice";
+    // const dir = lang === "fa" ? "rtl" : "ltr";
 
-    document.title = title;
-    $("body").attr("dir", dir);
+    // document.title = title;
+    // $("body").attr("dir", dir);
   }
 
   setSituation(_situation) {
