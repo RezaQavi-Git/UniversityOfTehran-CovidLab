@@ -31,7 +31,7 @@
   text-align: center;
   color: var(--black);
   font-size: 1.8em;
-  margin-top: 2%;
+  margin-top: 0;
   border-bottom: 2px var(--black) solid;
 }
 
