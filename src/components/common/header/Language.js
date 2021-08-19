@@ -15,7 +15,7 @@ class Language extends React.Component {
   render() {
     const lang = this.props.lang;
     const url = this.props.url;
-    if (lang === "en") {
+    if (lang === "fa") {
       return (
         <div className="lang-button-en">
           <a
@@ -46,7 +46,7 @@ class Language extends React.Component {
                 ? "/en"
                 : url === "/record/en"
                 ? "/record/fa"
-                : url === "/teamss/en"
+                : url === "/team/en"
                 ? "/team/fa"
                 : url === "/projects/en"
                 ? "/projects/fa"
