@@ -1,6 +1,14 @@
 * {
   font-family: Vazir;
 }
+
+.title-head {
+  text-align: center;
+  color: var(--black);
+  font-size: 1.8em;
+  margin-top: 2%;
+}
+
 .big-button {
   width: 20px;
   height: 20px;

@@ -167,7 +167,7 @@
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 850px) {
   .navbar-logo {
     width: 60%;
     margin: auto;
@@ -176,7 +176,7 @@
   }
 
   .navbar-links {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;

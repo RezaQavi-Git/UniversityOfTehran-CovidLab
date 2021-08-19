@@ -12,13 +12,13 @@
 .lang-button {
   position: absolute;
   top: 8px;
-  left: 3%;
+  right: 3%;
 }
 
 .lang-button-en {
   position: absolute;
   top: 8px;
-  right: 3%;
+  left: 3%;
 }
 
 .lang-img {
@@ -31,7 +31,7 @@
   text-align: center;
   color: var(--black);
   font-size: 1.8em;
-  margin-top: 0;
+  margin-top: 2%;
   border-bottom: 2px var(--black) solid;
 }
 
