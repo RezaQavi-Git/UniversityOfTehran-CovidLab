@@ -12,7 +12,7 @@ import "../common/total-page.css";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import pic from "../static/images/ventilator.png";
-import pic1 from "../static/images/covid-record.png";
+import pic1 from "../static/images/cough-record.png";
 const slideImages = [pic, pic1, pic];
 
 class Home extends React.Component {

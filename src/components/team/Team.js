@@ -42,7 +42,7 @@ class Team extends React.Component {
         <Language lang={lang} url={"/team/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
-          <p className="seprator"></p>
+          <p className="seprator">{lang==="fa" ? "اعضا" : "Members" }</p>
           <TeamMembers lang={lang} />
           <p className="seprator"></p>
           <Footer lang={lang} />
@@ -76,8 +76,8 @@ class TeamMembers extends React.Component {
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "دانشیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر"
-                : "Associate Professor, Department of Machine Intelligence and Robotics, ECE"}
+                ? "دانشیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
+                : "Associate Professor, Department of Machine Intelligence and Robotics, ECE, University of Tehran"}
             </p>
           </div>
 
@@ -93,8 +93,8 @@ class TeamMembers extends React.Component {
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "استادیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر"
-                : "Assistant Professor, Department of Machine Intelligence and Robotics, ECE"}
+                ? "استادیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
+                : "Assistant Professor, Department of Machine Intelligence and Robotics, ECE, University of Tehran"}
             </p>
           </div>
 
@@ -105,7 +105,7 @@ class TeamMembers extends React.Component {
               alt="aida khozaee"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "آیدا خوزایی" : "Aida Khozaee"}
+              {lang === "fa" ? "آیدا خزایی" : "Aida Khozaee"}
             </p>
             <br />
             <p className="team-member-title">
@@ -145,8 +145,8 @@ class TeamMembers extends React.Component {
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "ارشد علوم شناختی دانشگاه ادینبورگ"
-                : "Master of Cognitive Science, University of Edinburgh"}
+                ? " دانشجوی کارشناسی ارشد علوم شناختی دانشگاه ادینبورگ"
+                : "Master student in Cognitive Science, University of Edinburgh"}
             </p>
           </div>
         </div>
