@@ -9,6 +9,11 @@
   margin-top: 2%;
 }
 
+.title-description {
+  width: 90%;
+  margin: auto;
+}
+
 .big-button {
   width: 20px;
   height: 20px;
