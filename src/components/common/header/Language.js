@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../total-page.css";
-import { Link } from "react-router-dom";
 
 import fa_img from "../../static/images/fa-lang.png";
 import en_img from "../../static/images/en-lang.png";
@@ -33,7 +32,7 @@ class Language extends React.Component {
                 : "/about/en"
             }
           >
-            <img src={fa_img} alt="presian-lang" className="lang-img" />
+            <img src={en_img} alt="presian-lang" className="lang-img" />
           </a>
         </div>
       );
@@ -55,7 +54,7 @@ class Language extends React.Component {
                 : "/about/fa"
             }
           >
-            <img src={en_img} alt="english-lang" className="lang-img" />
+            <img src={fa_img} alt="english-lang" className="lang-img" />
           </a>
         </div>
       );
