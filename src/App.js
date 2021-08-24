@@ -8,7 +8,7 @@ import Record from "./components/cough/record/Record";
 import Team from "./components/cough/team/Team";
 import News from "./components/cough/news/News";
 import Projects from "./components/cough/projects/Projects";
-
+import Main from "./components/mainpage/Main";
 
 import "./App.css";
 
@@ -17,6 +17,16 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
+        <Route
+            exact={true}
+            path="/coughtest/fa"
+            render={(props) => <Main lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/coughtest/en"
+            render={(props) => <Main lang="en" {...props} />}
+          ></Route>
           <Route
             exact={true}
             path="/cough/fa"
