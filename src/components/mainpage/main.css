@@ -27,7 +27,7 @@
 }
 
 .main-body-text {
-  width: 45%;
+  width: 55%;
   margin: auto;
 }
 
@@ -76,9 +76,11 @@
 }
 
 .main-body-link {
-  width: 40%;
+  width: 45%;
   margin: auto;
   border-radius: 10px;
+  /* border: 5px salmon solid; */
+  margin-top: 2%;
 }
 
 .link-img {
@@ -92,15 +94,107 @@
 }
 
 .link-title {
+  width: 90%;
+  margin: auto;
   font-size: 2em;
 }
 
 .link-description {
+  width: 95%;
+  margin: auto;
   font-size: 1.5em;
 }
 
 .link-href {
+  width: 95%;
+  margin: auto;
   font-size: 1.2em;
   text-decoration: none;
-  color: rgb(17, 145, 231);
+  color: rgb(255, 10, 10);
+}
+
+@media screen and (max-width: 800px) {
+  .main-body-top {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .main-body-image {
+    display: none;
+  }
+  
+  .main-body-text {
+    width: 95%;
+    margin: auto;
+    margin-top: 10%;
+  }
+
+  .main-body-logo-img {
+    width: 25%;
+  }
+  .main-body-logo-text {
+    width: 80%;
+    margin: auto;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .main-body-text-title {
+    font-size: 2.5em;
+    color: rgb(30, 188, 228);
+    margin-top: 2%;
+  }
+  .main-body-text-description {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+  }
+  
+  .main-body-bottom {
+      background-color: rgb(245, 250, 250);
+      padding-top: 5%;
+      padding-bottom: 5%;
+  }
+  
+  .main-body-links {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-body-link {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    /* border: 5px salmon solid; */
+    margin-top: 10%;
+  }
+  
+  .link-title {
+    width: 90%;
+    margin: auto;
+    font-size: 1.5em;
+  }
+  
+  .link-description {
+    width: 95%;
+    margin: auto;
+    font-size: 1em;
+  }
+  
+  .link-href {
+    width: 95%;
+    margin: auto;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(255, 10, 10);
+  }
 }
