@@ -32,6 +32,8 @@
   color: var(--black);
   font-size: 1.8em;
   margin-top: 2%;
+  margin-bottom: 2%;
+
   border-bottom: 2px var(--black) solid;
 }
 

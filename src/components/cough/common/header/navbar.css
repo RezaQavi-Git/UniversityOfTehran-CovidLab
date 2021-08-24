@@ -9,13 +9,14 @@
 .navbar-container {
   width: 95%;
   margin: auto;
+  font-size: 1.2em;
 }
 
 .small-navbar {
   width: 100%;
   margin: auto;
   display: none;
-  margin: 0;
+  margin-top: 1%;
 }
 
 .small-navbar-button {

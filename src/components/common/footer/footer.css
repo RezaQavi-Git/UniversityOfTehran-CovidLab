@@ -11,7 +11,7 @@
   text-align: center;
   background-color: var(--dark-blue);
   font-size: 1em;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 
 .footer * {
@@ -40,6 +40,7 @@
   background-color: var(--dark-blue);
   font-size: 1em;
   color: var(--white);
+  margin-top: 0;
 }
 
 .footer-copyright a {
