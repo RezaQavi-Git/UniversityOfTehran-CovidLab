@@ -9,6 +9,12 @@ import Team from "./components/cough/team/Team";
 import News from "./components/cough/news/News";
 import Projects from "./components/cough/projects/Projects";
 import Main from "./components/mainpage/Main";
+import VHome from "./components/ventilator/home/Home";
+import VDocuments from "./components/ventilator/documents/Documents";
+import VTeam from "./components/ventilator/team/Team";
+import VNews from "./components/ventilator/news/News";
+import VLinks from "./components/ventilator/links/Links";
+import VStandards from "./components/ventilator/standards/Standards";
 
 import "./App.css";
 
@@ -17,7 +23,7 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-        <Route
+          <Route
             exact={true}
             path="/coughtest/fa"
             render={(props) => <Main lang="fa" {...props} />}
@@ -27,6 +33,7 @@ class App extends React.Component {
             path="/coughtest/en"
             render={(props) => <Main lang="en" {...props} />}
           ></Route>
+
           <Route
             exact={true}
             path="/cough/fa"
@@ -76,6 +83,69 @@ class App extends React.Component {
             exact={true}
             path="/cough/news/en"
             render={(props) => <News lang="en" {...props} />}
+          ></Route>
+
+
+
+          <Route
+            exact={true}
+            path="/ventilator/fa"
+            render={(props) => <VHome lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/en"
+            render={(props) => <VHome lang="en" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/documents/fa"
+            render={(props) => <VDocuments lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/documents/en"
+            render={(props) => <VDocuments lang="en" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/team/fa"
+            render={(props) => <VTeam lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/team/en"
+            render={(props) => <VTeam lang="en" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/links/fa"
+            render={(props) => <VLinks lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/links/en"
+            render={(props) => <VLinks lang="en" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/news/fa"
+            render={(props) => <VNews lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/news/en"
+            render={(props) => <VNews lang="en" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/standards/fa"
+            render={(props) => <VStandards lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/standards/en"
+            render={(props) => <VStandards lang="en" {...props} />}
           ></Route>
         </Switch>
       </Router>

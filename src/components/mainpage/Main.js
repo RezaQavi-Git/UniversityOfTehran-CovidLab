@@ -39,7 +39,7 @@ class Main extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={"en"} url={"/cough/" + lang} />
+        <Language lang={lang} url={"/cough/" + lang} />
         <div className="main-body-top">
           <div className="main-body-text">
             <div className="main-body-logo">
@@ -77,71 +77,96 @@ class Main extends React.Component {
               className={"main-body-image " + (lang === "fa" ? "fliped" : "")}
             />
           </div>
-        </div> 
-        <div className="main-body-bottom">
-        <div className="main-body-links">
-          <div className="main-body-link">
-            <div className="link-img">
-              <img src={RSSD} alt="folan" className="link-image"></img>
-            </div>
-            <p className="link-title">
-              {lang === "fa"
-                ? "آشکارساز ROS در نمونه خلط (RDSS)"
-                : "ROS detector in the sputum sample (RDSS)"}
-            </p>
-            <p className="link-description">
-              {lang === "fa"
-                ? "رونمایی از دستگاه تشخیص سریع بیماری التهابی حاد (COVID-19)"
-                : "The unveiling of the fast detection device for acute inflammatory disease (COVID-19)"}
-            </p>
-            <a href="https://nanoelechealth.com/archives/243" className="link-href">
-              {lang === "fa" ? "ادامه مطلب" : "Read more"}
-            </a>
-          </div>
-          <div className="main-body-link">
-            <div className="link-img">
-              <img src={SINACARE} alt="folan" className="link-image"></img>
-            </div>
-            <p className="link-title">{lang === "fa" ? "SinaCare" : "SinaCare"}</p>
-            <p className="link-description">
-              {lang === "fa"
-                ? "یک پلت فرم آنلاین برای نظارت از راه دور بیماران مبتلا به کووید -19"
-                : "An online platform for remote monitoring of patients with Covid-19"}
-            </p>
-            <a href="https://www.sinacare.ir/covid/" className="link-href">
-              {lang === "fa" ? "ادامه مطلب" : "Read more"}
-            </a>
-          </div>
         </div>
-        <div className="main-body-links">
-          <div className="main-body-link">
-            <div className="link-img">
-              <img src={COUGH} alt="folan" className="link-image"></img>
+        <div className="main-body-bottom">
+          <div className="main-body-links">
+            <div className="main-body-link">
+              <div className="link-img">
+                <img src={RSSD} alt="folan" className="link-image"></img>
+              </div>
+              <p className="link-title">
+                {lang === "fa"
+                  ? "آشکارساز ROS در نمونه خلط (RDSS)"
+                  : "ROS detector in the sputum sample (RDSS)"}
+              </p>
+              <p className="link-description">
+                {lang === "fa"
+                  ? "رونمایی از دستگاه تشخیص سریع بیماری التهابی حاد (COVID-19)"
+                  : "The unveiling of the fast detection device for acute inflammatory disease (COVID-19)"}
+              </p>
+              <p className="link-href">
+                <a
+                  href="https://nanoelechealth.com/archives/243"
+                  className="link-href"
+                >
+                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
+                </a>
+              </p>
             </div>
-            <p className="link-title">{lang === "fa" ? "تشخیص COVID-19 از طریق صدای سرفه" : "COVID-19 diagnosis via cough sound"}</p>
-            <p className="link-description">
-              {lang === "fa"
-                ? "تشخیص علائم COVID-19 از طریق صدای سرفه با استفاده از هوش مصنوعی"
-                : "Diagnosing COVID-19 symptoms from cough sound using AI"}
-            </p>
-            <a href={"http://localhost:3000/cough/" + lang} className="link-href">
-              {lang === "fa" ? "ادامه مطلب" : "Read more"}
-            </a>
-          </div>
-          <div className="main-body-link">
-            <div className="link-img">
-              <img src={VENTILATOR} alt="folan" className="link-image"></img>
+            <div className="main-body-link">
+              <div className="link-img">
+                <img src={SINACARE} alt="folan" className="link-image"></img>
+              </div>
+              <p className="link-title">
+                {lang === "fa" ? "SinaCare" : "SinaCare"}
+              </p>
+              <p className="link-description">
+                {lang === "fa"
+                  ? "یک پلت فرم آنلاین برای نظارت از راه دور بیماران مبتلا به کووید -19"
+                  : "An online platform for remote monitoring of patients with Covid-19"}
+              </p>
+              <p className="link-href">
+                <a href="https://www.sinacare.ir/covid/" className="link-href">
+                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
+                </a>
+              </p>
             </div>
-            <p className="link-title">{lang === "fa" ? "تشخیص COVID-19 از طریق صدای سرفه" : "COVID-19 diagnosis via cough sound"}</p>
-            <p className="link-description">
-              {lang === "fa"
-                ? "تشخیص علائم COVID-19 از طریق صدای سرفه با استفاده از هوش مصنوعی"
-                : "Diagnosing COVID-19 symptoms from cough sound using AI"}
-            </p>
-            <a href={"http://localhost:3000/cough/" + lang} className="link-href">
-              {lang === "fa" ? "ادامه مطلب" : "Read more"}
-            </a>
           </div>
+          <div className="main-body-links">
+            <div className="main-body-link">
+              <div className="link-img">
+                <img src={COUGH} alt="folan" className="link-image"></img>
+              </div>
+              <p className="link-title">
+                {lang === "fa"
+                  ? "تشخیص COVID-19 از طریق صدای سرفه"
+                  : "COVID-19 diagnosis via cough sound"}
+              </p>
+              <p className="link-description">
+                {lang === "fa"
+                  ? "تشخیص علائم COVID-19 از طریق صدای سرفه با استفاده از هوش مصنوعی"
+                  : "Diagnosing COVID-19 symptoms from cough sound using AI"}
+              </p>
+              <p className="link-href">
+                <a
+                  href={"http://localhost:3000/cough/" + lang}
+                  className="link-href"
+                >
+                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
+                </a>
+              </p>
+            </div>
+            <div className="main-body-link">
+              <div className="link-img">
+                <img src={VENTILATOR} alt="folan" className="link-image"></img>
+              </div>
+              <p className="link-title">
+                {lang === "fa" ? "ونتیلاتور" : "Ventilator"}
+              </p>
+              <p className="link-description">
+                {lang === "fa"
+                  ? " هوش مصنوعیمصنوعیمصنوعیمصنوعی مصنوعیمصنوعی"
+                  : " sound using AI sound using AI sound using AI"}
+              </p>
+              <p className="link-href">
+                <a
+                  href={"http://localhost:3000/ventilator/" + lang}
+                  className="link-href"
+                >
+                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
         <Footer lang={lang} />
