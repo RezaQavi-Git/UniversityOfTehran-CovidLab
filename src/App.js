@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./components/static/Fonts/vazir-fonts/fonts.css";
 
-import Home from "./components/home/Home";
-import Record from "./components/record/Record";
-import Team from "./components/team/Team";
-import About from "./components/about/About";
-import News from "./components/news/News";
-import Projects from "./components/projects/Projects";
+import Home from "./components/cough/home/Home";
+import Record from "./components/cough/record/Record";
+import Team from "./components/cough/team/Team";
+import News from "./components/cough/news/News";
+import Projects from "./components/cough/projects/Projects";
 
 
 import "./App.css";
@@ -47,16 +46,6 @@ class App extends React.Component {
             exact={true}
             path="/team/en"
             render={(props) => <Team lang="en" {...props} />}
-          ></Route>
-          <Route
-            exact={true}
-            path="/about/fa"
-            render={(props) => <About lang="fa" {...props} />}
-          ></Route>
-          <Route
-            exact={true}
-            path="/about/en"
-            render={(props) => <About lang="en" {...props} />}
           ></Route>
           <Route
             exact={true}
