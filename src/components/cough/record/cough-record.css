@@ -1,0 +1,293 @@
+* {
+  font-family: Vazir;
+}
+
+.title-head {
+  text-align: center;
+  color: var(--black);
+  font-size: 1.8em;
+  margin-top: 2%;
+}
+
+.title-description {
+  width: 90%;
+  margin: auto;
+}
+
+.big-button {
+  width: 20px;
+  height: 20px;
+}
+
+.record-body {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 15px;
+  min-height: 150px;
+}
+
+.question {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question-options {
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+.question-title {
+  text-align: center;
+}
+
+.hints {
+  width: 90%;
+  margin: auto;
+  font-size: 1em;
+  text-align: right;
+}
+
+.health-tips {
+  color: var(--red);
+  list-style-type: none;
+}
+
+.accept-button {
+  width: 15%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: var(--green);
+  text-align: center;
+  padding: 0 10px;
+  color: var(--white);
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
+
+.record-body {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 15px;
+  min-height: 150px;
+}
+
+.record {
+  width: 80%;
+  margin: auto;
+}
+
+.recorder {
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.record-wave {
+  width: 100%;
+  min-height: 150px;
+  margin: auto;
+}
+
+.record-voice {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-player {
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.record-button {
+  background-color: var(--red);
+  width: 70px;
+  border-radius: 50%;
+}
+
+.submit-voice {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notife {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 5%;
+  color: var(--dark-red);
+}
+
+.timer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 5%;
+  color: rgb(87, 13, 26);
+}
+
+.submit-voice-buttons {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  color: var(--white);
+  font-size: 1em;
+  border: none;
+}
+
+.submit {
+  background-color: var(--light-green);
+}
+
+.cancel {
+  background-color: var(--red);
+}
+
+@media screen and (max-width: 800px) {
+  .record-body {
+    width: 100%;
+    margin: auto;
+  }
+
+  .questions {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .question-options {
+    width: 90%;
+    margin: auto;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  .question-title {
+    text-align: center;
+  }
+
+  .hints {
+    width: 90%;
+    margin: auto;
+  }
+
+  .health-tips {
+    color: var(--red);
+    list-style-type: none;
+  }
+
+  .accept-button {
+    width: 20%;
+    margin: auto;
+    padding: 0 10px;
+    color: var(--white);
+    font-size: 1.2em;
+    margin-bottom: 5%;
+  }
+
+  .recorder {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .record-wave {
+    width: 100%;
+    min-height: 100px;
+    margin: auto;
+  }
+
+  .record-voice {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .notife {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 1em;
+    padding-top: 5%;
+  }
+
+  .submit-voice {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .questions {
+    width: 100%;
+    margin: auto;
+  }
+
+  .question-options {
+    width: 100%;
+    margin: auto;
+  }
+
+  .hints {
+    width: 100%;
+    margin: auto;
+  }
+
+  .submit-voice {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .submit-voice * {
+    margin-top: 2%;
+  }
+}
