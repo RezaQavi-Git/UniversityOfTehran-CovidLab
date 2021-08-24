@@ -34,7 +34,7 @@ class Projects extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/projects/" + lang} />
+        <Language lang={lang} url={"/cough/projects/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator">{lang === "fa" ? "پروژه ها" : "Projects"}</p>

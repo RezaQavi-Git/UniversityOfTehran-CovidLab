@@ -39,7 +39,7 @@ class Team extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/team/" + lang} />
+        <Language lang={lang} url={"/cough/team/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator">{lang==="fa" ? "اعضا" : "Members" }</p>

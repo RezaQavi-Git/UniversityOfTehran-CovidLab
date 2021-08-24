@@ -67,19 +67,19 @@ class VerticalNavbar extends React.Component {
     const lang = this.props.lang;
     return (
       <div id="vertical-navbar" className={"vertical-navbar " + lang}>
-        <Link to={"/" + lang}>
+        <Link to={"/cough/" + lang}>
             {lang === "fa" ? "خانه" : "Home"}
             </Link>
-          <Link to={"/team/" + lang}>
+          <Link to={"/cough/team/" + lang}>
             {lang === "fa" ? "تیم ما" : "Team"}
           </Link>
-          <Link to={"/record/" + lang}>
+          <Link to={"/cough/record/" + lang}>
             {lang === "fa" ? "ضبط صدا" : "Record"}
           </Link>
-          <Link to={"/projects/" + lang}>
+          <Link to={"/cough/projects/" + lang}>
             {lang === "fa" ? "پروژه ها" : "Projects"}
           </Link>
-          <Link to={"/news/" + lang}>
+          <Link to={"/cough/news/" + lang}>
             {lang === "fa" ? "اخبار" : "News"}
           </Link>
           {/* <Link to={"/about/" + lang}>
@@ -108,19 +108,19 @@ class HorizontalNavbar extends React.Component {
           <p>{lang==="fa" ? "تشخیص کووید 19 با صدای سرفه": "Detection of COVID-19 by coughing sound"}</p>
         </div>
         <div className="navbar-links">
-          <Link to={"/" + lang}>
+          <Link to={"/cough/" + lang}>
             {lang === "fa" ? "خانه" : "Home"}
             </Link>
-          <Link to={"/team/" + lang}>
+          <Link to={"/cough/team/" + lang}>
             {lang === "fa" ? "تیم ما" : "Team"}
           </Link>
-          <Link to={"/record/" + lang}>
+          <Link to={"/cough/record/" + lang}>
             {lang === "fa" ? "ضبط صدا" : "Record"}
           </Link>
-          <Link to={"/projects/" + lang}>
+          <Link to={"/cough/projects/" + lang}>
             {lang === "fa" ? "پروژه ها" : "Projects"}
           </Link>
-          <Link to={"/news/" + lang}>
+          <Link to={"/cough/news/" + lang}>
             {lang === "fa" ? "اخبار" : "News"}
           </Link>
           {/* <Link to={"/about/" + lang}>

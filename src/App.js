@@ -19,52 +19,52 @@ class App extends React.Component {
         <Switch>
           <Route
             exact={true}
-            path="/fa"
+            path="/cough/fa"
             render={(props) => <Home lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/en"
+            path="/cough/en"
             render={(props) => <Home lang="en" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/record/fa"
+            path="/cough/record/fa"
             render={(props) => <Record lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/record/en"
+            path="/cough/record/en"
             render={(props) => <Record lang="en" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/team/fa"
+            path="/cough/team/fa"
             render={(props) => <Team lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/team/en"
+            path="/cough/team/en"
             render={(props) => <Team lang="en" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/projects/fa"
+            path="/cough/projects/fa"
             render={(props) => <Projects lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/projects/en"
+            path="/cough/projects/en"
             render={(props) => <Projects lang="en" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/news/fa"
+            path="/cough/news/fa"
             render={(props) => <News lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/news/en"
+            path="/cough/news/en"
             render={(props) => <News lang="en" {...props} />}
           ></Route>
         </Switch>

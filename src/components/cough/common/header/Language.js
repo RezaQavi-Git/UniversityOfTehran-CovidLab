@@ -22,20 +22,20 @@ class Language extends React.Component {
         <div className="lang-button-en">
           <a
             href={
-              url === "/fa"
-                ? "/en"
-                : (url === "/record/fa")
-                ? "/record/en"
-                : (url === "/team/fa")
-                ? "/team/en"
-                : (url === "/projects/fa")
-                ? "/projects/en"
-                : (url === "/news/fa")
-                ? "/news/en"
-                : "/about/en"
+              url === "/cough/fa"
+                ? "/cough/en"
+                : (url === "/cough/record/fa")
+                ? "/cough/record/en"
+                : (url === "/cough/team/fa")
+                ? "/cough/team/en"
+                : (url === "/cough/projects/fa")
+                ? "/cough/projects/en"
+                : (url === "/cough/news/fa")
+                ? "/cough/news/en"
+                : "/cough/about/en"
             }
           >
-            <img src={en_img} alt="presian-lang" className="lang-img" />
+            <img src={en_img} alt="english-lang" className="lang-img" />
           </a>
         </div>
       );
@@ -44,20 +44,20 @@ class Language extends React.Component {
         <div className="lang-button">
           <a
             href={
-              url === "/en"
-                ? "/fa"
-                : url === "/record/en"
-                ? "/record/fa"
-                : url === "/team/en"
-                ? "/team/fa"
-                : url === "/projects/en"
-                ? "/projects/fa"
-                : url === "/news/en"
-                ? "/news/fa"
-                : "/about/fa"
+              url === "/cough/en"
+                ? "/cough/fa"
+                : url === "/cough/record/en"
+                ? "/cough/record/fa"
+                : url === "/cough/team/en"
+                ? "/cough/team/fa"
+                : url === "/cough/projects/en"
+                ? "/cough/projects/fa"
+                : url === "/cough/news/en"
+                ? "/cough/news/fa"
+                : "/cough/about/fa"
             }
           >
-            <img src={fa_img} alt="english-lang" className="lang-img" />
+            <img src={fa_img} alt="persian-lang" className="lang-img" />
           </a>
         </div>
       );
