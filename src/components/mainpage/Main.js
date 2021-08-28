@@ -49,10 +49,10 @@ class Main extends React.Component {
                 className="main-body-logo-img"
               ></img>
               <div className="main-body-logo-text">
-                <p>
+                <p style={{fontFamily: "Titrbold"}}>
                   {lang === "fa" ? "دانشگاه تهران" : "University of Tehran"}
                 </p>
-                <p>
+                <p  style={{fontFamily: "Titrbold"}}>
                   {lang === "fa"
                     ? "دانشکده ی برق و کامپیوتر"
                     : "School of Electrical & Computer Engineering"}
@@ -65,17 +65,9 @@ class Main extends React.Component {
             </p>
             <p className="main-body-text-description">
               {lang === "fa"
-                ? "گروه یادگیری ماشین و رباتیک (MLRG) به آموزش و تحقیق در زمینه رباتیک و سیستم های هوشمند اختصاص داده شده است. این برنامه به دنبال آماده سازی دانش آموزان برای حرفه ای صنعتی در رباتیک ، اتوماسیون و سیستم های هوشمند است. همچنین دانشجویانی را که مایل به تحصیل و تحقیقات پیشرفته هستند منجر به دکترا می شود. این مقطع کارشناسی ارشد و دکتری را ارائه می دهد. در زمینه رباتیک و یادگیری ماشین"
+                ? "گروه یادگیری ماشین و رباتیک (MLRG) به آموزش و تحقیق در زمینه رباتیک و سیستم های هوشمند اختصاص داده شده است. این برنامه به دنبال آماده سازی دانش آموزان برای حرفه ای صنعتی در رباتیک ، اتوماسیون و سیستم های هوشمند است. همچنین دانشجویانی را که مایل به تحصیل و تحقیقات پیشرفته هستند منجر به دکترا می شود. این آزمایشگاه در زمینه رباتیک و یادگیری ماشین را در مقطع کارشناسی ارشد و دکتری ارائه می دهد. "
                 : "Machine Learning and Robatics Group (MLRG) is dedicated to teaching and research in Robotics and Intelligent Systems. The program seeks to prepare the students for an industrial career in robotics, automation and intelligent systems. It also prepares the students who wish to pursue advanced studies and research leading to a Ph.D. It offers both master degree and Ph.D. in Robotics and Machine Learning."}
             </p>
-          </div>
-
-          <div className="main-body-img">
-            <img
-              src={MAINPIC}
-              alt="ai-robot"
-              className={"main-body-image " + (lang === "fa" ? "fliped" : "")}
-            />
           </div>
         </div>
         <div className="main-body-bottom">
@@ -139,7 +131,7 @@ class Main extends React.Component {
               </p>
               <p className="link-href">
                 <a
-                  href={"http://localhost:3000/cough/" + lang}
+                  href={"/#/cough/" + lang}
                   className="link-href"
                 >
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
@@ -160,7 +152,7 @@ class Main extends React.Component {
               </p>
               <p className="link-href">
                 <a
-                  href={"http://localhost:3000/ventilator/" + lang}
+                  href={"/#/ventilator/" + lang}
                   className="link-href"
                 >
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
