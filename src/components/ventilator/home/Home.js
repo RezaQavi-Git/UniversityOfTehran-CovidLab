@@ -63,7 +63,7 @@ class HomeBody extends React.Component {
     const lang = this.props.lang;
     return (
       <React.Fragment>
-        <div className="body">
+        <div className="ventilator-body">
           <div className="slide-container">
             <Slide>
               <div className="each-slide">
@@ -84,19 +84,19 @@ class HomeBody extends React.Component {
             </Slide>
           </div>
 
-          <div className="body-head">
+          <div className="ventilator-body-head">
             <p>
               {lang === "fa"
                 ? " 111111111این تایتل فرضی است کامل شود"
                 : "In title farzi ast/ kamel mishavad 1111111"}
             </p>
           </div>
-          <div className="body-description">
-            <div className="body-box">
-              <div className="body-box-img">
+          <div className="ventilator-body-description">
+            <div className="ventilator-body-box">
+              <div className="ventilator-body-box-img">
                 <img src={pic2} alt="record" className="box-img" />
               </div>
-              <div className="body-box-txt">
+              <div className="ventilator-body-box-txt">
                 <p>
                   {lang === "fa"
                     ? "ویروس کرونا دوره نهفتگی بین 1 روز تا دو هفته را دارد که باعث میگردد به راحتی بین افراد شیوع پیدا کند. از سوی دیگر، تشخیص آن در این دوره نهفتگی به سادگی نبوده و هزینه بر میباشد. لذا طراحی و ساخت سیستمهای هوشمند جهت غربالگری اولیه، همانند تشخیص از صدای سرفه افراد، میتواند کمک بسزایی در جهت جلوگیری از شیوع این بیماری با ایجاد آگاهی در افراد بنماید. این سایت، تحقیقات مربوط به غربالگری کوید 19 از طریق پردازش صدای سرفه کاربران راه اندازی شده است. در این سامانه شما میتوانید به غربالگری اولیه خود پرداخته و در صورت نیاز خودقرنطینگی انجام داده یا به مراکز بهداشتی مراجعه نمایید."
