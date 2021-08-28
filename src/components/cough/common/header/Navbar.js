@@ -8,7 +8,6 @@ import ENLOGO from "../../../static/images/en-lab-logo.png";
 import UTLOGO from "../../../static/images/ut-logo.png";
 import AUFLOGO from "../../../static/images/auf.png";
 
-
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -67,22 +66,20 @@ class VerticalNavbar extends React.Component {
     const lang = this.props.lang;
     return (
       <div id="vertical-navbar" className={"vertical-navbar " + lang}>
-        <Link to={"/cough/" + lang}>
-            {lang === "fa" ? "خانه" : "Home"}
-            </Link>
-          <Link to={"/cough/team/" + lang}>
-            {lang === "fa" ? "تیم ما" : "Team"}
-          </Link>
-          <Link to={"/cough/record/" + lang}>
-            {lang === "fa" ? "ضبط صدا" : "Record"}
-          </Link>
-          <Link to={"/cough/projects/" + lang}>
-            {lang === "fa" ? "پروژه ها" : "Projects"}
-          </Link>
-          <Link to={"/cough/news/" + lang}>
-            {lang === "fa" ? "اخبار" : "News"}
-          </Link>
-          {/* <Link to={"/about/" + lang}>
+        <Link to={"/cough/" + lang}>{lang === "fa" ? "خانه" : "Home"}</Link>
+        <Link to={"/cough/team/" + lang}>
+          {lang === "fa" ? "تیم ما" : "Team"}
+        </Link>
+        <Link to={"/cough/record/" + lang}>
+          {lang === "fa" ? "ضبط صدا" : "Record"}
+        </Link>
+        <Link to={"/cough/projects/" + lang}>
+          {lang === "fa" ? "پروژه ها" : "Projects"}
+        </Link>
+        <Link to={"/cough/news/" + lang}>
+          {lang === "fa" ? "اخبار" : "News"}
+        </Link>
+        {/* <Link to={"/about/" + lang}>
             {lang === "fa" ? "درباره ما" : "About"}
           </Link> */}
       </div>
@@ -104,13 +101,19 @@ class HorizontalNavbar extends React.Component {
     return (
       <div id="horizontal-navbar" className={"horizontal-navbar-" + lang}>
         <div className="navbar-logo">
-          <img src={lang==="fa" ? FALOGO : ENLOGO} alt="logo" className="navbar-logo-img" />
-          <p>{lang==="fa" ? "تشخیص کووید 19 با صدای سرفه": "Detection of COVID-19 by coughing sound"}</p>
+          <img
+            src={lang === "fa" ? FALOGO : ENLOGO}
+            alt="logo"
+            className="navbar-logo-img"
+          />
+          <p className="navbar-logo-text" style={ {fontFamily: lang==="en" ? "sens" : "" }}>
+            {lang === "fa"
+              ? "تشخیص کووید 19 با صدای سرفه"
+              : "Detection of COVID-19 by coughing sound"}
+          </p>
         </div>
         <div className="navbar-links">
-          <Link to={"/cough/" + lang}>
-            {lang === "fa" ? "خانه" : "Home"}
-            </Link>
+          <Link to={"/cough/" + lang}>{lang === "fa" ? "خانه" : "Home"}</Link>
           <Link to={"/cough/team/" + lang}>
             {lang === "fa" ? "تیم ما" : "Team"}
           </Link>

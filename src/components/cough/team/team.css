@@ -3,20 +3,19 @@
 }
 
 .team {
-  width: 70%;
+  width: 85%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  font-size: 1.25em;
+  font-size: 1.2em;
   margin-top: 3%;
   padding-bottom: 5%;
-
 }
 
 .team-member {
-  width: 30%;
+  width: 35%;
   margin: auto;
   text-align: center;
   display: flex;
@@ -36,7 +35,7 @@
 }
 
 .team-member-title {
-  width: 90%;
+  width: 95%;
   margin: auto;
   font-size: 0.7em;
 }

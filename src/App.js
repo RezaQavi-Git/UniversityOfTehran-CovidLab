@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./components/static/Fonts/vazir-fonts/fonts.css";
 
@@ -25,12 +25,12 @@ class App extends React.Component {
         <Switch>
           <Route
             exact={true}
-            path="/coughtest/fa"
+            path="/fa"
             render={(props) => <Main lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/coughtest/en"
+            path="/en"
             render={(props) => <Main lang="en" {...props} />}
           ></Route>
 

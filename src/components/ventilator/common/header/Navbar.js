@@ -6,6 +6,8 @@ import "./navbar.css";
 import FALOGO from "../../../static/images/fa-lab-logo.png";
 import ENLOGO from "../../../static/images/en-lab-logo.png";
 
+import AUFLOGO from "../../../static/images/auf.png";
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -106,7 +108,13 @@ class HorizontalNavbar extends React.Component {
             alt="logo"
             className="navbar-logo-img"
           />
-          <p>
+          <img
+            src={AUFLOGO}
+            alt="logo"
+            className="navbar-logo-img-regtangle"
+          />
+          <p
+          className="navbar-logo-text">
             {lang === "fa"
               ? "ونتیلاتور"
               : "Ventilator"}

@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-.body {
+.cough-body {
   width: 100%;
   margin: auto;
   text-align: center;
@@ -30,38 +30,41 @@
   padding-bottom: 5%;
 }
 
-.body-head {
-  width: 80%;
+.cough-body-head {
+  width: 90%;
   margin: auto;
-  font-size: 1.7em;
+  font-size: 1.8em;
   text-align: center;
+  margin-top: 2%;
 }
 
-.body-description {
+.cough-body-description {
   width: 90%;
   margin: auto;
   font-size: 1em;
+  margin-top: 5%;
+  border: 3px var(--dark-blue) dotted;
 }
 
-.body-box {
+.cough-body-box {
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 3px var(--dark-blue) dotted;
   border-radius: 5px;
   margin-top: 2%;
+  padding: 2%;
 }
 
-.body-box-img {
+.cough-body-box-img {
   width: 40%;
   margin: auto;
   justify-content: center;
   align-items: center;
 }
-.body-box-txt {
+.cough-body-box-txt {
   width: 50%;
   margin: auto;
   text-align: center;
@@ -96,24 +99,24 @@
     height: 250px;
   }
 
-  .body {
+  .cough-body {
     width: 90%;
     margin: auto;
     text-align: center;
     font-size: 0.9em;
   }
-  .body-head {
+  .cough-body-head {
     width: 90%;
     margin: auto;
   }
 
-  .body-description {
+  .cough-body-description {
     width: 100%;
     margin: auto;
     text-align: justify;
   }
 
-  .body-box {
+  .cough-body-box {
     width: 95%;
     margin: auto;
     display: flex;
@@ -122,10 +125,10 @@
     align-items: center;
     margin-top: 2%;
   }
-  .body-box-img {
+  .cough-body-box-img {
     display: none;
   }
-  .body-box-txt {
+  .cough-body-box-txt {
     width: 95%;
     margin: auto;
   }
