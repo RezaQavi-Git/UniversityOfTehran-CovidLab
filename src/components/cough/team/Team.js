@@ -76,7 +76,7 @@ class TeamMembers extends React.Component {
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "دانشیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
+                ? "سرپرست آزمایشگاه،دانشیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
                 : "Associate Professor, Department of Machine Intelligence and Robotics, ECE, University of Tehran"}
             </p>
           </div>
