@@ -104,7 +104,7 @@ class HorizontalNavbar extends React.Component {
           <img
             src={lang === "fa" ? FALOGO : ENLOGO}
             alt="logo"
-            className="navbar-logo-img"
+            className="cough-navbar-logo-img"
           />
           <p className="navbar-logo-text" style={ {fontFamily: lang==="en" ? "sens" : "" }}>
             {lang === "fa"
