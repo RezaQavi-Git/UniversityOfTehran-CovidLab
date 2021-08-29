@@ -11,20 +11,20 @@
 
 .lang-button {
   position: absolute;
-  top: 8px;
-  right: 3%;
+  top: 1%;
+  right: 0%;
 }
 
 .lang-button-en {
   position: absolute;
-  top: 8px;
-  left: 3%;
+  top: 1%;
+  left: 0%;
 }
 
 .lang-img {
   width: 45px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .seprator {
@@ -33,7 +33,6 @@
   font-size: 1.8em;
   margin-top: 2%;
   margin-bottom: 2%;
-
   border-bottom: 2px var(--black) solid;
 }
 
