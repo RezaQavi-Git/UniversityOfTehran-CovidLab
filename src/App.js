@@ -17,6 +17,8 @@ import VLinks from "./components/ventilator/links/Links";
 import VStandards from "./components/ventilator/standards/Standards";
 
 import "./App.css";
+import "./components/common/total.css";
+
 
 class App extends React.Component {
   render() {
@@ -25,15 +27,14 @@ class App extends React.Component {
         <Switch>
           <Route
             exact={true}
-            path="/fa"
+            path="/coughtest/fa"
             render={(props) => <Main lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/en"
+            path="/coughtest/en"
             render={(props) => <Main lang="en" {...props} />}
           ></Route>
-
           <Route
             exact={true}
             path="/cough/fa"

@@ -1,10 +1,8 @@
 import React from "react";
 
 import Footer from "../../common/footer/Footer";
-import Language from "../common/header/Language";
 import Navbar from "../common/header/Navbar";
 
-import "../common/total-page.css";
 import './links.css'
 
 import $ from "jquery";
@@ -34,7 +32,6 @@ class Links extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/ventilator/links/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator">{lang === "fa" ? "لینک ها" : "Links"}</p>

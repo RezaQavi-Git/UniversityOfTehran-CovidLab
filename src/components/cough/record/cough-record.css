@@ -1,5 +1,13 @@
-* {
-  font-family: Vazir;
+.record-main {
+  width: 80%;
+  margin: auto;
+  background-color: rgb(62, 146, 195);
+  border-radius: 10px;
+}
+
+.title {
+  width: 70%;
+  margin: auto;
 }
 
 .title-head {
@@ -24,15 +32,17 @@
 }
 
 .record-body {
-  width: 60%;
+  width: 70%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--white);
+  background-color: rgb(250, 250, 250);
   border-radius: 15px;
   min-height: 150px;
+  padding: 1%;
+  margin-bottom: 2%;
 }
 
 .question {
@@ -55,6 +65,11 @@
   margin-top: 2%;
   text-align: center;
   margin-bottom: 5%;
+}
+
+.hints-box {
+  width: 90%;
+  margin: auto;
 }
 
 .hints {
@@ -81,19 +96,6 @@
   margin-top: 5%;
 }
 
-.record-body {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: var(--white);
-  border-radius: 15px;
-  min-height: 150px;
-  padding-bottom: 10%;
-}
-
 .record {
   width: 80%;
   margin: auto;
@@ -109,12 +111,13 @@
 
 .record-wave {
   width: 100%;
-  min-height: 150px;
   margin: auto;
+  min-height: 150px;
+  border-radius: 5px;
 }
 
 .record-voice {
-  width: 60%;
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -123,14 +126,17 @@
 }
 
 .record-player {
+  width: 80%;
+  margin: auto;
   margin-top: 10px;
   border-radius: 50px;
 }
 
 .record-button {
-  background-color: var(--red);
   width: 70px;
   border-radius: 50%;
+  margin: 2%;
+  background-color: var(--red);
 }
 
 .submit-voice {
@@ -141,7 +147,7 @@
   justify-content: space-between;
 }
 
-.notife {
+.notice {
   width: 80%;
   margin: auto;
   text-align: center;
@@ -189,24 +195,31 @@
 }
 
 @media screen and (max-width: 800px) {
-  .title-head {
-    text-align: center;
-    color: var(--black);
-    font-size: 1.8em;
-    margin-top: 2%;
+  .record-main {
+    width: 95%;
+    margin: auto;
   }
-  
+
+  .title {
+    width: 95%;
+    margin: auto;
+  }
+
+  .title-head {
+    font-size: 1.8em;
+  }
+
   .title-description {
     width: 90%;
     margin: auto;
     font-size: 1.1em;
-    text-align: center;
     margin-top: 3%;
   }
-  
+
   .record-body {
-    width: 100%;
+    width: 90%;
     margin: auto;
+    margin-bottom: 2%;
   }
 
   .questions {
@@ -231,12 +244,20 @@
     text-align: center;
   }
 
+  .hints-box {
+    width: 95%;
+    margin: auto;
+    font-size: 0.95em;
+  }
+
   .hints {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
 
   .health-tips {
+    width: 95%;
+    margin: auto;
     color: var(--red);
     list-style-type: none;
   }
@@ -246,7 +267,7 @@
     margin: auto;
     padding: 0 10px;
     color: var(--white);
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 5%;
   }
 
@@ -254,7 +275,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-top: 20px;
   }
@@ -274,7 +295,13 @@
     align-items: center;
   }
 
-  .notife {
+  .record-player {
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50px;
+  }
+  .notice {
     width: 90%;
     margin: auto;
     text-align: center;
@@ -315,5 +342,12 @@
 
   .submit-voice * {
     margin-top: 2%;
+  }
+
+  .record-player {
+    width: 99%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50px;
   }
 }

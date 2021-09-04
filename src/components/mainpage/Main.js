@@ -3,7 +3,6 @@ import React from "react";
 import $ from "jquery";
 
 import Footer from "../common/footer/Footer";
-import Language from "../cough/common/header/Language";
 
 import "./main.css";
 
@@ -32,6 +31,14 @@ class Main extends React.Component {
     $("body").attr("dir", dir);
   }
 
+  setLang(lang) {
+    var path = window.location.pathname;
+    path = path.slice(0, path.length - 2);
+    lang === "fa"
+      ? window.location.replace(path + "en")
+      : window.location.replace(path + "fa");
+  }
+  
   render() {
     const {
       lang,
@@ -39,8 +46,8 @@ class Main extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/" + lang} />
         <div className="main-body-top">
+        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
           <div className="main-body-text">
             <div className="main-body-logo">
               <img
@@ -49,17 +56,16 @@ class Main extends React.Component {
                 className="main-body-logo-img"
               ></img>
               <div className="main-body-logo-text">
-                <p style={{fontFamily: "Titrbold"}}>
+                {/* <p>
                   {lang === "fa" ? "دانشگاه تهران" : "University of Tehran"}
                 </p>
-                <p  style={{fontFamily: "Titrbold"}}>
+                <p>
                   {lang === "fa"
                     ? "دانشکده ی برق و کامپیوتر"
                     : "School of Electrical & Computer Engineering"}
-                </p>
+                </p> */}
               </div>
             </div>
-
             <p className="main-body-text-title">
               {lang === "fa" ? "آزمایشگاه کووید" : "COVID LAB"}
             </p>
@@ -131,7 +137,7 @@ class Main extends React.Component {
               </p>
               <p className="link-href">
                 <a
-                  href={"/#/cough/" + lang}
+                  href={"/coughtest/#/cough/" + lang}
                   className="link-href"
                 >
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
@@ -152,7 +158,7 @@ class Main extends React.Component {
               </p>
               <p className="link-href">
                 <a
-                  href={"/#/ventilator/" + lang}
+                  href={"/coughtest/#/ventilator/" + lang}
                   className="link-href"
                 >
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}

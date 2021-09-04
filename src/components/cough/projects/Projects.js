@@ -1,10 +1,8 @@
 import React from "react";
 
 import Footer from "../../common/footer/Footer";
-import Language from "../common/header/Language";
 import Navbar from "../common/header/Navbar";
 
-import "../common/total-page.css";
 import './projects.css'
 
 import $ from "jquery";
@@ -34,7 +32,6 @@ class Projects extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/projects/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator">{lang === "fa" ? "پروژه ها" : "Projects"}</p>

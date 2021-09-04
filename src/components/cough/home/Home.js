@@ -3,11 +3,9 @@ import React from "react";
 import $ from "jquery";
 
 import Footer from "../../common/footer/Footer";
-import Language from "../common/header/Language";
 import Navbar from "../common/header/Navbar";
 
 import "./home.css";
-import "../common/total-page.css";
 
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -41,7 +39,6 @@ class Home extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator"></p>

@@ -1,9 +1,7 @@
 import React from "react";
-import "./team.css";
 
 import Footer from "../../common/footer/Footer";
-import Language from "../common/header/Language";
-import "../common/total-page.css";
+import Navbar from "../common/header/Navbar";
 
 import HADIMORADI from "../../static/images/hadi-moradi.png";
 import HASANRAFIE from "../../static/images/hasan-rafie.png";
@@ -12,9 +10,8 @@ import SETAREDAN from "../../static/images/DrSetaredan.png";
 import MARYAMKHALILI from "../../static/images/maryam-khalily.png";
 import MOSTAFADERAFSHIAN from "../../static/images/mostafa-derafshian.png";
 
-
 import $ from "jquery";
-import Navbar from "../common/header/Navbar";
+import "../../common/team.css";
 
 class Team extends React.Component {
   constructor(props) {
@@ -41,10 +38,9 @@ class Team extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/team/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
-          <p className="seprator">{lang==="fa" ? "اعضا" : "Members" }</p>
+          <p className="seprator">{lang === "fa" ? "اعضا" : "Members"}</p>
           <TeamMembers lang={lang} />
           <p className="seprator"></p>
           <Footer lang={lang} />
@@ -99,21 +95,20 @@ class TeamMembers extends React.Component {
                 : "Managing Director of Arkan Ara Tejarat Alborz Company, Master of Medical Engineering, University of Tehran"}
             </p>
           </div>
-
           <div className="team-member">
             <img
               className="team-member-img"
-              src={FATEMINIA}
-              alt="Dr fateminia"
+              src={MARYAMKHALILI}
+              alt="Maryam Khalili"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "دکتر فاطمی نیا" : "Dr Fateminia"}
+              {lang === "fa" ? "مریم خلیلی" : "Maryam Khalili"}
             </p>
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "طراحی صنعتی دانشگاه تهران"
-                : "Industrial design, University of Tehran"}
+                ? "عضو هیئت علمی گروه طراحی صنعتی پردیس هنرهای زیبا دانشگاه تهران"
+                : "Member of the Faculty of Industrial Design, Fine Arts Campus, University of Tehran"}
             </p>
           </div>
         </div>
@@ -138,19 +133,20 @@ class TeamMembers extends React.Component {
           <div className="team-member">
             <img
               className="team-member-img"
-              src={MARYAMKHALILI}
-              alt="Maryam Khalili"
+              src={FATEMINIA}
+              alt="Dr fateminia"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "مریم خلیلی" : "Maryam Khalili"}
+              {lang === "fa" ? "دکتر فاطمی نیا" : "Dr Fateminia"}
             </p>
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "عضو هیئت علمی گروه طراحی صنعتی پردیس هنرهای زیبا دانشگاه تهران"
-                : "Member of the Faculty of Industrial Design, Fine Arts Campus, University of Tehran"}
+                ? "طراحی صنعتی دانشگاه تهران"
+                : "Industrial design, University of Tehran"}
             </p>
           </div>
+
           <div className="team-member">
             <img
               className="team-member-img"

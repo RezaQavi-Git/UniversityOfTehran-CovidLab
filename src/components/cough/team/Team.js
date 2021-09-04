@@ -1,9 +1,6 @@
 import React from "react";
-import "./team.css";
-
 import Footer from "../../common/footer/Footer";
-import Language from "../common/header/Language";
-import "../common/total-page.css";
+import Navbar from "../common/header/Navbar";
 
 import HADIMORADI from "../../static/images/hadi-moradi.png";
 import RESHADHOSSEINI from "../../static/images/reshad-hosseini.png";
@@ -12,7 +9,7 @@ import SAMANMAHDIAN from "../../static/images/saman-mahdian.png";
 import MAHBODNOURI from "../../static/images/mahbod-nouri.png";
 
 import $ from "jquery";
-import Navbar from "../common/header/Navbar";
+import "../../common/team.css";
 
 class Team extends React.Component {
   constructor(props) {
@@ -39,7 +36,6 @@ class Team extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/team/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator">{lang==="fa" ? "اعضا" : "Members" }</p>

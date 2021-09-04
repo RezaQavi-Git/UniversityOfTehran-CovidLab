@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./navbar.css";
 
 import FALOGO from "../../../static/images/fa-lab-logo.png";
 import ENLOGO from "../../../static/images/en-lab-logo.png";
-
 import AUFLOGO from "../../../static/images/auf.png";
+
+
+import "../../../common/navbar.css";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -62,6 +63,14 @@ class VerticalNavbar extends React.Component {
     };
   }
 
+  setLang(lang) {
+    var path = window.location.pathname;
+    path = path.slice(0, path.length - 2);
+    lang === "fa"
+      ? window.location.replace(path + "en")
+      : window.location.replace(path + "fa");
+  }
+
   render() {
     const lang = this.props.lang;
     return (
@@ -84,6 +93,7 @@ class VerticalNavbar extends React.Component {
         <Link to={"/ventilator/standards/" + lang}>
           {lang === "fa" ? "استانداردها" : "Standards"}
         </Link>
+        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
       </div>
     );
   }
@@ -97,6 +107,14 @@ class HorizontalNavbar extends React.Component {
     };
   }
 
+  setLang(lang) {
+    var path = window.location.pathname;
+    path = path.slice(0, path.length - 2);
+    lang === "fa"
+      ? window.location.replace(path + "en")
+      : window.location.replace(path + "fa");
+  }
+
   render() {
     const lang = this.props.lang;
 
@@ -104,14 +122,14 @@ class HorizontalNavbar extends React.Component {
       <div id="horizontal-navbar" className={"horizontal-navbar-" + lang}>
         <div className="navbar-logo">
           <img
-            src={lang === "fa" ? FALOGO : ENLOGO}
-            alt="logo"
-            className="navbar-logo-img"
-          />
-          <img
             src={AUFLOGO}
             alt="logo"
             className="navbar-logo-img-regtangle"
+          />
+          <img
+            src={lang === "fa" ? FALOGO : ENLOGO}
+            alt="logo"
+            className="navbar-logo-img"
           />
           <p
           className="navbar-logo-text">
@@ -139,6 +157,7 @@ class HorizontalNavbar extends React.Component {
           <Link to={"/ventilator/standards/" + lang}>
             {lang === "fa" ? "استانداردها" : "Standards"}
           </Link>
+        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
         </div>
       </div>
     );

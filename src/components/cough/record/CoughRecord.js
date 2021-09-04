@@ -48,14 +48,7 @@ class CoughRecord extends React.Component {
     this.setStatus = this.setStatus.bind(this);
   }
 
-  componentDidMount() {
-    // const lang = this.props.lang;
-    // const title = lang === "fa" ? "ضبط صدای سرفه" : "Record Voice";
-    // const dir = lang === "fa" ? "rtl" : "ltr";
-
-    // document.title = title;
-    // $("body").attr("dir", dir);
-  }
+  componentDidMount() {}
 
   setSituation(_situation) {
     this.setState({
@@ -88,49 +81,49 @@ class CoughRecord extends React.Component {
     const lang = this.props.lang;
     return (
       <React.Fragment>
-        <br />
-        <div className="title">
-          <div className="title-head">
-            <p>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</p>
+        <div className="record-main">
+          <div className="title">
+            <div className="title-head">
+              <p>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</p>
+            </div>
+            <div className="title-description">
+              <p>
+                {lang === "fa"
+                  ? "با ضبط و ارسال صدای سرفه‌ی خود یا دیگران میتوانید به تحقیقات در جهت تشخیص سریع‌تر بیماری Covid-19 کمک نمایید."
+                  : "You can help research for a faster diagnosis of Covid-19 by recording and sending the coughing sound of yourself or others."}
+              </p>
+            </div>
           </div>
-          <div className="title-description">
-            <p>
-              {lang === "fa"
-                ? "با ضبط و ارسال صدای سرفه‌ی خود یا دیگران میتوانید به تحقیقات در جهت تشخیص سریع‌تر بیماری Covid-19 کمک نمایید."
-                : "You can help research for a faster diagnosis of Covid-19 by recording and sending the coughing sound of yourself or others."}
-            </p>
+          <div className={"record-body " + lang}>
+            {this.state.status === "Q1" ? (
+              <Question
+                lang={lang}
+                question={lang === "fa" ? fa_questions[0] : en_questions[0]}
+                func={this.setSituation}
+                status={this.state.status}
+              />
+            ) : this.state.status === "Q2" ? (
+              <Question
+                lang={lang}
+                question={lang === "fa" ? fa_questions[1] : en_questions[1]}
+                func={this.setGender}
+                status={this.state.status}
+              />
+            ) : this.state.status === "Q3" ? (
+              <Question
+                lang={lang}
+                question={lang === "fa" ? fa_questions[2] : en_questions[2]}
+                func={this.setSmoke}
+                status={this.state.status}
+              />
+            ) : this.state.status === "Hint" ? (
+              <Hints lang={lang} func={this.setStatus} />
+            ) : this.state.status === "Recording" ? (
+              <Record lang={lang} />
+            ) : (
+              ""
+            )}
           </div>
-        </div>
-        <br />
-        <div className={"record-body " + lang}>
-          {this.state.status === "Q1" ? (
-            <Question
-              lang={lang}
-              question={lang === "fa" ? fa_questions[0] : en_questions[0]}
-              func={this.setSituation}
-              status={this.state.status}
-            />
-          ) : this.state.status === "Q2" ? (
-            <Question
-              lang={lang}
-              question={lang === "fa" ? fa_questions[1] : en_questions[1]}
-              func={this.setGender}
-              status={this.state.status}
-            />
-          ) : this.state.status === "Q3" ? (
-            <Question
-              lang={lang}
-              question={lang === "fa" ? fa_questions[2] : en_questions[2]}
-              func={this.setSmoke}
-              status={this.state.status}
-            />
-          ) : this.state.status === "Hint" ? (
-            <Hints lang={lang} func={this.setStatus} />
-          ) : this.state.status === "Recording" ? (
-            <Record lang={lang} />
-          ) : (
-            ""
-          )}
         </div>
       </React.Fragment>
     );
@@ -199,7 +192,7 @@ class Hints extends React.Component {
     const lang = this.props.lang;
 
     return (
-      <div className={"record " + lang}>
+      <div className={"hints-box " + lang}>
         <div className={"hints " + lang}>
           <div className={lang}>
             <p>
@@ -319,12 +312,9 @@ class Record extends React.Component {
     this.resetTimer();
   };
 
-  showAcceptButtun() {
-    
-  }
+  showAcceptButtun() {}
 
   cancelVoice() {
-    // document.getElementById("cry-question-body").style.display = "none";
     this.resetTimer();
     this.setState({
       status: true,
@@ -383,7 +373,7 @@ class Record extends React.Component {
             id="submit"
             className={this.state.recorded ? "submit-voice" : "hidden"}
           >
-            <p className="notife ">
+            <p className="notice ">
               {lang === "fa"
                 ? "آیا صدای ضبط شده مورد تایید شماست؟"
                 : "Do you approve of the recorded sound ? "}

@@ -1,11 +1,9 @@
 import React from "react";
 
 import Footer from "../../common/footer/Footer";
-import Language from "../common/header/Language";
 import Navbar from "../common/header/Navbar";
 
-import "../common/total-page.css";
-import "./news.css";
+import "../../common/news.css";
 
 import $ from "jquery";
 
@@ -34,7 +32,6 @@ class News extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Language lang={lang} url={"/cough/news/" + lang} />
         <div className="main">
           <Navbar lang={lang} />
           <p className="seprator">{lang === "fa" ? "اخبار" : "News"}</p>
