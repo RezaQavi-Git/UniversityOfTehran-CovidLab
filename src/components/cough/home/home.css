@@ -1,9 +1,5 @@
-* {
-  font-family: Vazir;
-}
-
 .slide-container {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -12,8 +8,8 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  border-radius: 5px;
-  height: 450px;
+  /* border-radius: 5px; */
+  height: 550px;
 }
 
 .each-slide span {
@@ -42,8 +38,10 @@
   width: 90%;
   margin: auto;
   font-size: 1em;
-  margin-top: 5%;
-  border: 3px var(--dark-blue) dotted;
+  margin-top: 3%;
+  /* border: 3px var(--dark-blue) dotted; */
+  border-radius: 5px;
+  box-shadow: 0 20px 20px var(--dark-blue);
 }
 
 .cough-body-box {
@@ -67,6 +65,11 @@
 .cough-body-box-txt {
   width: 50%;
   margin: auto;
+}
+.cough-body-box-txt a {
+  color: var(--red);
+  text-decoration: none;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -86,21 +89,23 @@
 
 @media screen and (max-width: 800px) {
   .slide-container {
-    width: 100%;
+    width: 80%;
     margin: auto;
   }
 
   .each-slide > div {
+    width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     height: 250px;
   }
 
   .cough-body {
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: center;
     font-size: 0.9em;
@@ -108,12 +113,14 @@
   .cough-body-head {
     width: 90%;
     margin: auto;
+    margin-top: 2%;
   }
 
   .cough-body-description {
-    width: 100%;
+    width: 80%;
     margin: auto;
-    text-align: justify;
+    /* text-align: justify; */
+    margin-top: 3%;
   }
 
   .cough-body-box {

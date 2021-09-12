@@ -46,8 +46,8 @@
   margin: auto;
   padding-left: 2%;
   padding-right: 2%;
-  font-size: 1.5em;
-  font-family: Titrbold;
+  font-size: 1.2em;
+  font-weight: 800;
 }
 
 .navbar-logo-img {
@@ -74,10 +74,11 @@
 }
 
 .changeLang-btn {
-  background-color:rgb(3, 124, 206);
+  background-color:rgb(46, 144, 33);
   border: none;
   border-radius: 5px;
   color: var(--white);
+  width: fit-content;
   height: fit-content;
   font-size: 1em;
   margin-bottom: 1%;
@@ -106,6 +107,7 @@
 .vertical-navbar {
   width: 95%;
   margin: auto;
+  margin-top: 1%;
   display: none;
   justify-content: center;
   flex-direction: column;

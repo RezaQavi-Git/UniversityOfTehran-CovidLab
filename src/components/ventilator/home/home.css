@@ -1,9 +1,5 @@
-* {
-  font-family: Vazir;
-}
-
 .slide-container {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -12,8 +8,8 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  border-radius: 5px;
-  height: 450px;
+  /* border-radius: 5px; */
+  height: 500px;
 }
 
 .each-slide span {
@@ -25,7 +21,7 @@
 .ventilator-body {
   width: 100%;
   margin: auto;
-  text-align: center;
+  /* text-align: center; */
   font-size: 1em;
   padding-bottom: 5%;
 }
@@ -35,16 +31,17 @@
   margin: auto;
   font-size: 1.8em;
   text-align: center;
-  margin-top: 3%;
-
+  margin-top: 2%;
 }
 
 .ventilator-body-description {
   width: 90%;
   margin: auto;
   font-size: 1em;
-  margin-top: 5%;
-  border: 3px var(--dark-blue) dotted;
+  margin-top: 3%;
+  /* border: 3px var(--dark-blue) dotted; */
+  border-radius: 5px;
+  box-shadow: 0 20px 20px var(--dark-blue);
 }
 
 .ventilator-body-box {
@@ -68,7 +65,7 @@
 .ventilator-body-box-txt {
   width: 50%;
   margin: auto;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .box-img {
@@ -92,29 +89,35 @@
   }
 
   .each-slide > div {
+    width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     height: 250px;
   }
 
   .ventilator-body {
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: center;
     font-size: 0.9em;
   }
+  
   .ventilator-body-head {
     width: 90%;
     margin: auto;
+    margin-top: 2%;
   }
 
   .ventilator-body-description {
-    width: 100%;
+    width: 80%;
     margin: auto;
     text-align: justify;
+    margin-top: 3%;
+
   }
 
   .ventilator-body-box {
