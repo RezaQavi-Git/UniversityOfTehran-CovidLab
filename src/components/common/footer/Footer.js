@@ -40,8 +40,8 @@ class Footer extends React.Component {
             <div className="footer-copyright">
               <p>
                 {lang === "fa"
-                  ? " تمامی حقوق سایت متعلق به شرکت فلان میباشد . طراح "
-                  : " All rights of the site belong to a certain company . Designer "}
+                  ? " تمامی حقوق سایت متعلق به دانشگاه تهران میباشد . طراحی شده توسط  "
+                  : " All rights reserved to the University of Tehran . Designed by "}
                 <a href="https://github.com/RezaQavi-git">
                   {lang === "fa" ? "رضا قوی" : "Reza Qavi"}
                 </a>

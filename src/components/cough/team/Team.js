@@ -67,13 +67,13 @@ class TeamMembers extends React.Component {
               alt="hadi moradi"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "دکتر هادی مرادی" : "Dr Hadi Moradi"}
+              {lang === "fa" ? "هادی مرادی" : "Hadi Moradi"}
             </p>
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "سرپرست آزمایشگاه،دانشیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
-                : "Associate Professor, Department of Machine Intelligence and Robotics, ECE, University of Tehran"}
+                ? "سرپرست آزمایشگاه،هیئت علمی گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
+                : "Head of Laboratory, Faculty of Machine Intelligence and Robotics, Faculty of Electrical and Computer Engineering, University of Tehran"}
             </p>
           </div>
 
@@ -89,8 +89,8 @@ class TeamMembers extends React.Component {
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "استادیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
-                : "Assistant Professor, Department of Machine Intelligence and Robotics, ECE, University of Tehran"}
+                ? "عضو هیئت علمی گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
+                : "Faculty member of Machine Intelligence and Robotics Department, Faculty of Electrical and Computer Engineering, University of Tehran"}
             </p>
           </div>
 

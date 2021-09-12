@@ -153,8 +153,8 @@ class Main extends React.Component {
               </p>
               <p className="link-description">
                 {lang === "fa"
-                  ? " هوش مصنوعیمصنوعیمصنوعیمصنوعی مصنوعیمصنوعی"
-                  : " sound using AI sound using AI sound using AI"}
+                  ? "ونتیلاتور طراحی شده درآزمایشگاه رباتیک پیشرفته دانشگاه تهران"
+                  : "Ventilator designed in the Advanced Robotics Laboratory of the University of Tehran"}
               </p>
               <p className="link-href">
                 <a

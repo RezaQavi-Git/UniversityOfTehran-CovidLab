@@ -122,11 +122,10 @@ class HorizontalNavbar extends React.Component {
           />
           <p
             className="navbar-logo-text"
-            style={{ fontFamily: lang === "en" ? "sens" : "" }}
           >
             {lang === "fa"
-              ? "تشخیص کووید 19 با صدای سرفه"
-              : "Detection of COVID 19 by coughing sound"}
+              ? "تشخیص بیماری کووید 19 با استفاده از صدای سرفه"
+              : "Detection of COVID 19 by Sound of Cough"}
           </p>
         </div>
         <div className="navbar-links">

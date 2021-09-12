@@ -41,7 +41,7 @@ class Home extends React.Component {
       <React.Fragment>
         <div className="main">
           <Navbar lang={lang} />
-          <p className="seprator"></p>
+          {/* <p className="seprator"></p> */}
           <HomeBody lang={lang} />
           <Footer lang={lang} />
         </div>
@@ -81,13 +81,13 @@ class HomeBody extends React.Component {
             </Slide>
           </div>
 
-          <div className="ventilator-body-head">
+          {/* <div className="ventilator-body-head">
             <p>
               {lang === "fa"
-                ? " 111111111این تایتل فرضی است کامل شود"
-                : "In title farzi ast/ kamel mishavad 1111111"}
+                ? "درباره ی ونتیلاتور"
+                : "About Ventilator"}
             </p>
-          </div>
+          </div> */}
           <div className="ventilator-body-description">
             <div className="ventilator-body-box">
               <div className="ventilator-body-box-img">

@@ -10,6 +10,12 @@ import SETAREDAN from "../../static/images/DrSetaredan.png";
 import MARYAMKHALILI from "../../static/images/maryam-khalily.png";
 import MOSTAFADERAFSHIAN from "../../static/images/mostafa-derafshian.png";
 
+import SAHELSALEHI from "../../static/images/sahel-salehi.png";
+import HOSEINVALE from "../../static/images/hossein-vale.png";
+import ZAHRASHARIATI from "../../static/images/zahra-shariati.png";
+import MOHSENNOROUZI from "../../static/images/mohsen-norouzi.png";
+
+
 import $ from "jquery";
 import "../../common/team.css";
 
@@ -69,13 +75,13 @@ class TeamMembers extends React.Component {
               alt="hadi moradi"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "دکتر هادی مرادی" : "Dr Hadi Moradi"}
+              {lang === "fa" ? "هادی مرادی" : "Hadi Moradi"}
             </p>
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "سرپرست آزمایشگاه،دانشیار گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
-                : "Associate Professor, Department of Machine Intelligence and Robotics, ECE, University of Tehran"}
+                ? "سرپرست آزمایشگاه،هیئت علمی گروه هوش ماشین و رباتیک دانشکده مهندسی برق و کامپیوتر دانشگاه تهران"
+                : "Head of Laboratory, Faculty of Machine Intelligence and Robotics, Faculty of Electrical and Computer Engineering, University of Tehran"}
             </p>
           </div>
 
@@ -121,7 +127,7 @@ class TeamMembers extends React.Component {
               alt="Dr Setaredan"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "دکتر ستاره دان" : "Dr Setaredan"}
+              {lang === "fa" ? "کمال الدین ستاره دان" : "Kamaleddin Setaredan"}
             </p>
             <br />
             <p className="team-member-title">
@@ -134,16 +140,16 @@ class TeamMembers extends React.Component {
             <img
               className="team-member-img"
               src={FATEMINIA}
-              alt="Dr fateminia"
+              alt="Mehran fateminia"
             />
             <p className="team-member-name">
-              {lang === "fa" ? "دکتر فاطمی نیا" : "Dr Fateminia"}
+              {lang === "fa" ? "مهران فاطمی نیا" : "Mehran Fateminia"}
             </p>
             <br />
             <p className="team-member-title">
               {lang === "fa"
-                ? "طراحی صنعتی دانشگاه تهران"
-                : "Industrial design, University of Tehran"}
+                ? "دکترای طراحی صنعتی دانشگاه تهران"
+                : "PhD in Industrial Design, University of Tehran"}
             </p>
           </div>
 
@@ -161,6 +167,77 @@ class TeamMembers extends React.Component {
               {lang === "fa"
                 ? "کارشناسی ارشد مهندسی پزشکی دانشگاه تهران"
                 : "Master of Medical Engineering, University of Tehran"}
+            </p>
+          </div>
+        </div>
+
+        <div id="team" className="team">
+          <div className="team-member">
+            <img
+              className="team-member-img"
+              src={SAHELSALEHI}
+              alt="sahel salehi"
+            />
+            <p className="team-member-name">
+              {lang === "fa" ? "ساحل صالحی" : "Sahel Salehi"}
+            </p>
+            <br />
+            <p className="team-member-title">
+              {lang === "fa"
+                ? "کارشناسی ارشد مهندسی مکانیک دانشگاه تهران"
+                : "Master of Mechanical Engineering, University of Tehran"}
+            </p>
+          </div>
+          <div className="team-member">
+            <img
+              className="team-member-img"
+              src={HOSEINVALE}
+              alt="Hossein Vale"
+            />
+            <p className="team-member-name">
+              {lang === "fa" ? "حسین واله" : "Hossein Vale"}
+            </p>
+            <br />
+            <p className="team-member-title">
+              {lang === "fa"
+                ? " دانشجوی کارشناسی مهندسی برق دانشگاه تهران"
+                : "Undergraduate student of electrical engineering, University of Tehran"}
+            </p>
+          </div>
+
+          <div className="team-member">
+            <img
+              className="team-member-img"
+              src={ZAHRASHARIATI}
+              alt="Zahra Shariati"
+            />
+            <p className="team-member-name">
+              {lang === "fa" ? "زهرا شریعتی" : "Zahra Shariati"}
+            </p>
+            <br />
+            <p className="team-member-title">
+              {lang === "fa"
+                ? "کارشناسی ارشد برق دانشگاه میلان ایتالیا"
+                : "Master of Electrical Engineering, University of Milan, Italy"}
+            </p>
+          </div>
+        </div>
+
+        <div id="team" className="team">
+          <div className="team-member">
+            <img
+              className="team-member-img"
+              src={MOHSENNOROUZI}
+              alt="Mohsen Norouzi"
+            />
+            <p className="team-member-name">
+              {lang === "fa" ? "محسن نوروزی" : "Mohsen Norouzi"}
+            </p>
+            <br />
+            <p className="team-member-title">
+              {lang === "fa"
+                ? "کارشناسی ارشد طراحی صنعتی دانشگاه تهران و عضو هیئت مدیره ی شرکت طرح آفرینان صنعت فرد"
+                : "Master of Industrial Design, University of Tehran and member of the board of directors of Tarf Afarinan Sanat Fard Company"}
             </p>
           </div>
         </div>
