@@ -58,12 +58,4 @@
     font-weight: 100;
     font-style: normal;
 }
-
-/* font-Titrbold */
-@font-face {
-    font-family: Titrbold;
-    src: url('titrbold.ttf') format('truetype');
-    font-weight: normal;
-  }
-
   /* http://fonts.codearena.ir/ */
