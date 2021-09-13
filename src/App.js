@@ -15,6 +15,8 @@ import VTeam from "./components/ventilator/team/Team";
 import VNews from "./components/ventilator/news/News";
 import VLinks from "./components/ventilator/links/Links";
 import VStandards from "./components/ventilator/standards/Standards";
+import VDescription from "./components/ventilator/description/Description";
+
 
 import "./App.css";
 import "./components/common/total.css";
@@ -147,6 +149,16 @@ class App extends React.Component {
             exact={true}
             path="/ventilator/standards/en"
             render={(props) => <VStandards lang="en" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/description/fa"
+            render={(props) => <VDescription lang="fa" {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/ventilator/description/en"
+            render={(props) => <VDescription lang="en" {...props} />}
           ></Route>
         </Switch>
       </Router>
