@@ -6,7 +6,6 @@ import Footer from "../common/footer/Footer";
 
 import "./main.css";
 
-import MAINPIC from "../static/images/ai-robot.png";
 import UTLOGO from "../static/images/ut-logo.png";
 import RSSD from "../static/images/rssd.png";
 import SINACARE from "../static/images/sinacare.png";
@@ -71,12 +70,58 @@ class Main extends React.Component {
             </p>
             <p className="main-body-text-description">
               {lang === "fa"
-                ? "گروه یادگیری ماشین و رباتیک (MLRG) به آموزش و تحقیق در زمینه رباتیک و سیستم های هوشمند اختصاص داده شده است. این برنامه به دنبال آماده سازی دانش آموزان برای حرفه ای صنعتی در رباتیک ، اتوماسیون و سیستم های هوشمند است. همچنین دانشجویانی را که مایل به تحصیل و تحقیقات پیشرفته هستند منجر به دکترا می شود. این آزمایشگاه در زمینه رباتیک و یادگیری ماشین را در مقطع کارشناسی ارشد و دکتری ارائه می دهد. "
-                : "Machine Learning and Robatics Group (MLRG) is dedicated to teaching and research in Robotics and Intelligent Systems. The program seeks to prepare the students for an industrial career in robotics, automation and intelligent systems. It also prepares the students who wish to pursue advanced studies and research leading to a Ph.D. It offers both master degree and Ph.D. in Robotics and Machine Learning."}
+                ? "تلاش های زیادی در دانشگاه تهران برای مبارزه با کووید 19 انجام شده است. چندین فعالیت در اینجا ذکر شده است. "
+                : "There are many efforts at the University of Tehran to fight COVID 19. Several activities have been listed here."}
             </p>
           </div>
         </div>
         <div className="main-body-bottom">
+          <div className="main-body-links">
+            <div className="main-body-link">
+              <div className="link-img">
+                <img src={COUGH} alt="folan" className="link-image"></img>
+              </div>
+              <p className="link-title">
+                {lang === "fa"
+                  ? "تشخیص COVID-19 از طریق صدای سرفه"
+                  : "COVID-19 diagnosis via cough sound"}
+              </p>
+              <p className="link-description">
+                {lang === "fa"
+                  ? "تشخیص علائم COVID-19 از طریق صدای سرفه با استفاده از هوش مصنوعی"
+                  : "Diagnosing COVID-19 symptoms from cough sound using AI"}
+              </p>
+              <p className="link-href">
+                <a
+                  href={"/cough/" + lang}
+                  className="link-href"
+                >
+                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
+                </a>
+              </p>
+            </div>
+            <div className="main-body-link">
+              <div className="link-img">
+                <img src={VENTILATOR} alt="folan" className="link-image"></img>
+              </div>
+              <p className="link-title">
+                {lang === "fa" ? "ونتیلاتور" : "Ventilator"}
+              </p>
+              <p className="link-description">
+                {lang === "fa"
+                  ? "پروژه دستگاه تنفس مصنوعی برای مواقع اضطراری"
+                  : "Artificial respiration project for emergencies"}
+              </p>
+              <p className="link-href">
+                <a
+                  href={"/ventilator/" + lang}
+                  className="link-href"
+                >
+                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
+                </a>
+              </p>
+            </div>
+          </div>
           <div className="main-body-links">
             <div className="main-body-link">
               <div className="link-img">
@@ -115,52 +160,6 @@ class Main extends React.Component {
               </p>
               <p className="link-href">
                 <a href="https://www.sinacare.ir/covid/" className="link-href">
-                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="main-body-links">
-            <div className="main-body-link">
-              <div className="link-img">
-                <img src={COUGH} alt="folan" className="link-image"></img>
-              </div>
-              <p className="link-title">
-                {lang === "fa"
-                  ? "تشخیص COVID-19 از طریق صدای سرفه"
-                  : "COVID-19 diagnosis via cough sound"}
-              </p>
-              <p className="link-description">
-                {lang === "fa"
-                  ? "تشخیص علائم COVID-19 از طریق صدای سرفه با استفاده از هوش مصنوعی"
-                  : "Diagnosing COVID-19 symptoms from cough sound using AI"}
-              </p>
-              <p className="link-href">
-                <a
-                  href={"/coughtest/#/cough/" + lang}
-                  className="link-href"
-                >
-                  {lang === "fa" ? "ادامه مطلب" : "Read more"}
-                </a>
-              </p>
-            </div>
-            <div className="main-body-link">
-              <div className="link-img">
-                <img src={VENTILATOR} alt="folan" className="link-image"></img>
-              </div>
-              <p className="link-title">
-                {lang === "fa" ? "ونتیلاتور" : "Ventilator"}
-              </p>
-              <p className="link-description">
-                {lang === "fa"
-                  ? "ونتیلاتور طراحی شده درآزمایشگاه رباتیک پیشرفته دانشگاه تهران"
-                  : "Ventilator designed in the Advanced Robotics Laboratory of the University of Tehran"}
-              </p>
-              <p className="link-href">
-                <a
-                  href={"/coughtest/#/ventilator/" + lang}
-                  className="link-href"
-                >
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>

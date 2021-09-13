@@ -9,10 +9,9 @@ import "./home.css";
 
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import pic1 from "../../static/images/robolab.png";
-import pic2 from "../../static/images/ventilator.png";
+import pic2 from "../../static/images/ventilator-slide.png";
 
-const slideImages = [pic2, pic1, pic2];
+const slideImages = [pic2, pic2];
 
 class Home extends React.Component {
   constructor(props) {
@@ -73,11 +72,11 @@ class HomeBody extends React.Component {
                   {/* <span>Slide 2</span> */}
                 </div>
               </div>
-              <div className="each-slide">
+              {/* <div className="each-slide">
                 <div style={{ backgroundImage: `url(${slideImages[2]})` }}>
-                  {/* <span>Slide 3</span> */}
+                  <span>Slide 3</span>
                 </div>
-              </div>
+              </div> */}
             </Slide>
           </div>
 
@@ -91,13 +90,18 @@ class HomeBody extends React.Component {
           <div className="ventilator-body-description">
             <div className="ventilator-body-box">
               <div className="ventilator-body-box-img">
-                <img src={pic2} alt="record" className="box-img" />
+                <img src={pic2} alt="ventilator" className="box-img" />
               </div>
               <div className="ventilator-body-box-txt">
                 <p>
                   {lang === "fa"
-                    ? "ویروس کرونا دوره نهفتگی بین 1 روز تا دو هفته را دارد که باعث میگردد به راحتی بین افراد شیوع پیدا کند. از سوی دیگر، تشخیص آن در این دوره نهفتگی به سادگی نبوده و هزینه بر میباشد. لذا طراحی و ساخت سیستمهای هوشمند جهت غربالگری اولیه، همانند تشخیص از صدای سرفه افراد، میتواند کمک بسزایی در جهت جلوگیری از شیوع این بیماری با ایجاد آگاهی در افراد بنماید. این سایت، تحقیقات مربوط به غربالگری کوید 19 از طریق پردازش صدای سرفه کاربران راه اندازی شده است. در این سامانه شما میتوانید به غربالگری اولیه خود پرداخته و در صورت نیاز خودقرنطینگی انجام داده یا به مراکز بهداشتی مراجعه نمایید."
-                    : "The corona virus has a latency period of one day to two weeks, which makes it easily spread between people. On the other hand, it is not easy to diagnose in this period of latency and it is costly. Therefore, designing and building intelligent systems for initial screening, such as detecting the sound of people coughing, can help a lot to prevent the spread of this disease by creating awareness in people. This site launches research on Covid 19 screening through user's cough processing. In this system, you can do your initial screening and, if necessary, perform self-cornealization or refer to health centers."}
+                    ? "این پروژه در جهت طراحی و ساخت یک دستگاه آمبو اتوماتیک یا دستگاه تنفس مصنوعی (Respirator) جهت استفاده در مواقع ضروری میباشد. طراحی اولیه دستگاه بر مبنای طراحی ای در دانشگاه ام آی تی (MIT) انجام گرفته است که با همکاری آن تیم، سیستم بهبود یافته است. دستگاه طوری طراحی گردیده است که بتوان از امکانات موجود در ایران استفاده کرده و بصورت محلی آنرا ساخت. لذا قرار است که دستگاه بصورت نسخه باز (Open source) ارائه گردد تا متخصصین دیگر هم بتوانند آنرا بسازند. دستگاه از آمبوهای موجود در بازار استفاده کرده و لذا میتوان به آن اکسیژن هم وصل نمود. دستگاه را میتوان با قابلیتهای مختلف تهیه نمود و در آینده هم میتوان برای استفاده در آمبولانس ها و اطاق های اورژانس هم استفاده گردد. "
+                    : "This project is for the design and construction of an automatic ambo device or artificial respiration device (Respirator) for use in emergencies. The initial design of the device was based on a design at MIT, with which the system was improved. The device is designed to use the facilities available in Iran and build it locally. Therefore, the device is to be provided as an open source version so that other professionals can build it. The device uses ambo available in the market and therefore oxygen can be connected to it. The device can be provided with different capabilities and in the future can be used in ambulances and emergency rooms."}
+                </p>
+                <p>
+                  {lang === "fa"
+                    ? "این دستگاه با همکاری دانشکده مهندسی برق و کامپیوتر دانشگاه تهران، پژوهشکده پلیمر و پتروشیمی ایران، و شرکت دانش بنیان نوژان طراحی و ساخته شده است."
+                    : "This device has been designed and manufactured in collaboration with the Faculty of Electrical and Computer Engineering, University of Tehran, Iran Polymer and Petrochemical Research Institute, and Nojan Knowledge-Based Company."}
                 </p>
                 {/* <a href={"/cough/record/" + lang}>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</a> */}
               </div>
