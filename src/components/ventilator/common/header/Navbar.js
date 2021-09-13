@@ -75,6 +75,9 @@ class VerticalNavbar extends React.Component {
     const lang = this.props.lang;
     return (
       <div id="vertical-navbar" className={"vertical-navbar " + lang}>
+        <Link to={"/" + lang}>
+          {lang === "fa" ? "صفحه اصلی" : "Main Page"}
+        </Link>
         <Link to={"/ventilator/" + lang}>
           {lang === "fa" ? "خانه" : "Home"}
         </Link>
@@ -139,6 +142,9 @@ class HorizontalNavbar extends React.Component {
           </p>
         </div>
         <div className="navbar-links">
+        <Link to={"/" + lang}>
+          {lang === "fa" ? "صفحه اصلی" : "Main Page"}
+        </Link>
           <Link to={"/ventilator/" + lang}>
             {lang === "fa" ? "خانه" : "Home"}
           </Link>

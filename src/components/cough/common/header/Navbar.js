@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import FALOGO from "../../../static/images/fa-lab-logo.png";
 import ENLOGO from "../../../static/images/en-lab-logo.png";
-// import UTLOGO from "../../../static/images/ut-logo.png";
-// import AUFLOGO from "../../../static/images/auf.png";
 
 import "../../../common/navbar.css";
 
@@ -74,6 +72,7 @@ class VerticalNavbar extends React.Component {
     const lang = this.props.lang;
     return (
       <div id="vertical-navbar" className={"vertical-navbar " + lang}>
+        <Link to={"/" + lang}>{lang === "fa" ? "صفحه اصلی" : "Main Page"}</Link>
         <Link to={"/cough/" + lang}>{lang === "fa" ? "خانه" : "Home"}</Link>
         <Link to={"/cough/team/" + lang}>
           {lang === "fa" ? "تیم ما" : "Team"}
@@ -87,7 +86,12 @@ class VerticalNavbar extends React.Component {
         <Link to={"/cough/news/" + lang}>
           {lang === "fa" ? "اخبار" : "News"}
         </Link>
-        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
+        <button
+          className="changeLang-btn"
+          onClick={this.setLang.bind(this, lang)}
+        >
+          fa/en
+        </button>
       </div>
     );
   }
@@ -120,15 +124,16 @@ class HorizontalNavbar extends React.Component {
             alt="logo"
             className="navbar-logo-img"
           />
-          <p
-            className="navbar-logo-text"
-          >
+          <p className="navbar-logo-text">
             {lang === "fa"
               ? "تشخیص بیماری کووید 19 با استفاده از صدای سرفه"
               : "Detection of COVID 19 by Sound of Cough"}
           </p>
         </div>
         <div className="navbar-links">
+          <Link to={"/" + lang}>
+            {lang === "fa" ? "صفحه اصلی" : "Main Page"}
+          </Link>
           <Link to={"/cough/" + lang}>{lang === "fa" ? "خانه" : "Home"}</Link>
           <Link to={"/cough/team/" + lang}>
             {lang === "fa" ? "تیم ما" : "Team"}
@@ -142,7 +147,12 @@ class HorizontalNavbar extends React.Component {
           <Link to={"/cough/news/" + lang}>
             {lang === "fa" ? "اخبار" : "News"}
           </Link>
-          <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
+          <button
+            className="changeLang-btn"
+            onClick={this.setLang.bind(this, lang)}
+          >
+            fa/en
+          </button>
         </div>
       </div>
     );

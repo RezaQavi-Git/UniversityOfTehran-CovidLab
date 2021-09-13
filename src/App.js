@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./components/static/Fonts/vazir-fonts/fonts.css";
 
@@ -23,16 +23,16 @@ import "./components/common/total.css";
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <Router basename="/coughtest">
         <Switch>
           <Route
             exact={true}
-            path="/coughtest/fa"
+            path="/fa"
             render={(props) => <Main lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
-            path="/coughtest/en"
+            path="/en"
             render={(props) => <Main lang="en" {...props} />}
           ></Route>
           <Route
