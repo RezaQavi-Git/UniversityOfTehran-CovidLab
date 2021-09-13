@@ -34,7 +34,7 @@ class Documents extends React.Component {
       <React.Fragment>
         <div className="main">
           <Navbar lang={lang} />
-          <p className="seprator">{lang === "fa" ? "مستندات" : "Documents"}</p>
+          <p className="seprator">{lang === "fa" ? "لیست قطعات" : "The list of components"}</p>
           <DocumentsBody lang={lang} />
           <p className="seprator"></p>
           <Footer lang={lang} />

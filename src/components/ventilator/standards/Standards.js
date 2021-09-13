@@ -60,7 +60,7 @@ class StandardsBody extends React.Component {
       <React.Fragment>
         <div className="standards-body">
           <p>{lang === "fa" ? "" : ""}</p>
-          <p>
+          {/* <p>
             {lang === "fa"
               ? "مزایا و معایب سیستم بر مبنای آمبوبگ در مقابل سیستم"
               : "Advantages and disadvantages of ambobag-based system versus system"}
@@ -140,7 +140,7 @@ class StandardsBody extends React.Component {
             {lang === "fa"
               ? "نتیجه گیری: در صورتی که دریافت مجوز در دستور کار تیم باشد استفاده از آمبوبگ پیشنهاد می شود. می توان با تکیه بر اینکه تجهیز آمبو بگ تجهیزی دارای مجوز است و با توجه به شرایط اضطرار و برای استفاده در آمبولانس ها، شانس دریافت مجوز را بالاتر برد"
               : "Conclusion: If obtaining a license is on the agenda of the team, the use of ambobag is recommended. It is possible to increase the chances of obtaining a license by relying on the fact that the equipment of the ambulance bag is licensed and according to the emergency conditions and for use in ambulances. "}
-          </p>
+          </p> */}
         </div>
       </React.Fragment>
     );

@@ -37,7 +37,7 @@ class Main extends React.Component {
       ? window.location.replace(path + "en")
       : window.location.replace(path + "fa");
   }
-  
+
   render() {
     const {
       lang,
@@ -46,7 +46,12 @@ class Main extends React.Component {
     return (
       <React.Fragment>
         <div className="main-body-top">
-        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
+          <button
+            className="changeLang-btn"
+            onClick={this.setLang.bind(this, lang)}
+          >
+            fa/en
+          </button>
           <div className="main-body-text">
             <div className="main-body-logo">
               <img
@@ -70,10 +75,13 @@ class Main extends React.Component {
             </p>
             <p className="main-body-text-description">
               {lang === "fa"
-                ? "تلاش های زیادی در دانشگاه تهران برای مبارزه با کووید 19 انجام شده است. چندین فعالیت در اینجا ذکر شده است. "
-                : "There are many efforts at the University of Tehran to fight COVID 19. Several activities have been listed here."}
+                ? "فعالیت‌ها و تلاش‌های بسیاری در دانشگاه تهران برای مبارزه با کووید 19 انجام گرفته است که به چند مورد آن اشاره می گردد. "
+                : "Many activities and efforts have been carried out at the University of Tehran to combat Covid 19, some of which are mentioned."}
             </p>
           </div>
+        </div>
+        <div className="main">
+          <p className="seprator">{lang === "fa" ? "پروژه های دانشگاه تهران" : "University of Tehran projects"}</p>
         </div>
         <div className="main-body-bottom">
           <div className="main-body-links">
@@ -92,10 +100,7 @@ class Main extends React.Component {
                   : "Diagnosing COVID-19 symptoms from cough sound using AI"}
               </p>
               <p className="link-href">
-                <a
-                  href={"/cough/" + lang}
-                  className="link-href"
-                >
+                <a href={"/coughtest/cough/" + lang} className="link-href">
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>
@@ -113,10 +118,7 @@ class Main extends React.Component {
                   : "Artificial respiration project for emergencies"}
               </p>
               <p className="link-href">
-                <a
-                  href={"/ventilator/" + lang}
-                  className="link-href"
-                >
+                <a href={"/coughtest/ventilator/" + lang} className="link-href">
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>

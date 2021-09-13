@@ -73,22 +73,6 @@ class NewsBody extends React.Component {
               className="news-box-link"
             >{lang==="fa"? "ادامه مطلب" : "Read more" }</a>
           </div>
-          <div className="news-box">
-            <p className="news-box-title">
-              {lang === "fa"
-                ? "مهندسان ایرانی تهویه منبع باز را توسعه می دهند"
-                : "Iranian Engineers Develop Open Source Ventilator"}
-            </p>
-            <p className="news-box-description">
-              {lang === "fa"
-                ? "هادی مرادی ، دانشیار دانشکده مهندسی برق و کامپیوتر دانشگاه تهران ، در تلاش است تا یک دستگاه تنفس باز منبع باز برای بیماران مبتلا به COVID-19 ایجاد کند."
-                : "Hadi Moradi, an associate professor at the University of Tehran’s School of Electrical & Computer Engineering, is working to develop an open source ventilator for patients who have COVID-19."}
-            </p>
-            <a
-              href="https://spectrum.ieee.org/engineers-iran-open-source-ventilator"
-              className="news-box-link"
-            >{lang==="fa"? "ادامه مطلب" : "Read more" }</a>
-          </div>
         </div>
       </React.Fragment>
     );

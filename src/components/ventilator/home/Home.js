@@ -103,7 +103,7 @@ class HomeBody extends React.Component {
                     ? "این دستگاه با همکاری دانشکده مهندسی برق و کامپیوتر دانشگاه تهران، پژوهشکده پلیمر و پتروشیمی ایران، و شرکت دانش بنیان نوژان طراحی و ساخته شده است."
                     : "This device has been designed and manufactured in collaboration with the Faculty of Electrical and Computer Engineering, University of Tehran, Iran Polymer and Petrochemical Research Institute, and Nojan Knowledge-Based Company."}
                 </p>
-                {/* <a href={"/cough/record/" + lang}>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</a> */}
+                <a href={"/ventilator/description/" + lang}>{lang === "fa" ? "ادامه مطلب" : "more"}</a>
               </div>
             </div>
           </div>
