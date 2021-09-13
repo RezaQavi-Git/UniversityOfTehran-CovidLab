@@ -2,7 +2,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../static/images/covid.png");
   background-size: cover;
-  min-height: 85vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: row;
   justify-content: center;

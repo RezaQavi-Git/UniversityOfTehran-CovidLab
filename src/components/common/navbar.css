@@ -17,6 +17,8 @@
   margin: auto;
   display: none;
   margin-top: 1%;
+  margin-top: 2%;
+
 }
 
 .small-navbar-button {
@@ -105,9 +107,11 @@
 
 /* Vertical navbar */
 .vertical-navbar {
-  width: 95%;
+  width: 85%;
   margin: auto;
   margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 5px;
   display: none;
   justify-content: center;
   flex-direction: column;
@@ -156,7 +160,7 @@
 
 /* Vertical navbar */
 .vertical-navbar-en {
-  width: 95%;
+  width: 85%;
   margin: auto;
   display: none;
   justify-content: center;
