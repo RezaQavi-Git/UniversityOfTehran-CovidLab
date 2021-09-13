@@ -1,6 +1,48 @@
 .documents-body {
-    width: 80%;
+  width: 95%;
+  margin: auto;
+  font-size: 1.1em;
+  color: rgb(23, 20, 54);
+  direction: ltr;
+}
+
+.documents-body table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.documents-body table {
+    width: 95%;
     margin: auto;
-    font-size: 1.2em;
-    color: seagreen;
+}
+
+.documents-body table tr td a{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--light-blue);
+    border-radius: 5px;
+    padding: 2%;
+}
+
+@media screen and (max-width:800px ){
+    .documents-body {
+        width: 95%;
+        margin: auto;
+        font-size: 0.8em;
+      }
+}
+
+
+@media screen and (max-width:400px ){
+    .documents-body {
+        width: 95%;
+        margin: auto;
+        font-size: 0.4em;
+      }
+      .documents-body table tr td a{
+          font-size: 0.8em;
+    }
 }

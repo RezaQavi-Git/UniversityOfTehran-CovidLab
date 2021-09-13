@@ -1,6 +1,30 @@
 .standards-body {
-    width: 80%;
+  width: 80%;
+  margin: auto;
+  font-size: 1.2em;
+  color: var(--dark-blue);
+}
+
+.ventilator-adv {
+  width: 90%;
+  margin: auto;
+  color: rgb(9, 99, 172);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.ventilator-dissadv {
+  width: 90%;
+  margin: auto;
+  color: rgb(184, 32, 32);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 800px) {
+  .standards-body {
+    width: 90%;
     margin: auto;
-    font-size: 1.2em;
-    color: seagreen;
+    font-size: 1em;
+  }
 }

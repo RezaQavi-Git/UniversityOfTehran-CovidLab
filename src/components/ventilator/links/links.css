@@ -1,6 +1,31 @@
 .links-body {
-    width: 80%;
+  width: 80%;
+  margin: auto;
+  font-size: 1.2em;
+  color: var(--dark-blue);
+}
+
+.links-body a {
+  width: 95%;
+  margin: auto;
+  font-size: 1em;
+  color: var(--navbar-blue);
+  direction: ltr;
+}
+
+.links-body a p {
+  width: 95%;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .links-body {
+    width: 90%;
     margin: auto;
-    font-size: 1.2em;
-    color: seagreen;
+    font-size: 1.1em;
+  }
+
+  .links-body a {
+    font-size: 0.8em;
+  }
 }
