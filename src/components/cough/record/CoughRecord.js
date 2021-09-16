@@ -5,6 +5,8 @@ import "./cough-record.css";
 import { ReactMic } from "react-mic";
 import Microphone from "../../static/images/microphone.png";
 
+import Cookies from "universal-cookie";
+
 const en_questions = [
   {
     title: "Please specify your status",
@@ -14,9 +16,18 @@ const en_questions = [
       "Other diseases",
       "Healthy",
     ],
+    value: ["covid", "suscovid", "other", "healthy"],
   },
-  { title: "Please specify your gender", options: ["Male", "Female"] },
-  { title: "Do you have a history of smoking?", options: ["Yes", "No"] },
+  {
+    title: "Please specify your gender",
+    options: ["Male", "Female"],
+    value: ["Male", "Female"],
+  },
+  {
+    title: "Do you have a history of smoking?",
+    options: ["Yes", "No"],
+    value: ["Yes", "No"],
+  },
 ];
 
 const fa_questions = [
@@ -28,9 +39,18 @@ const fa_questions = [
       "بیماری های دیگر",
       "سالم",
     ],
+    value: ["covid", "suscovid", "other", "healthy"],
   },
-  { title: "لطفا جنسیت خود را مشخص کنید", options: ["مرد", "زن"] },
-  { title: "آیا سابقه ی مصرف سیگار دارید؟", options: ["بله", "خیر"] },
+  {
+    title: "لطفا جنسیت خود را مشخص کنید",
+    options: ["مرد", "زن"],
+    value: ["Male", "Female"],
+  },
+  {
+    title: "آیا سابقه ی مصرف سیگار دارید؟",
+    options: ["بله", "خیر"],
+    value: ["Yes", "No"],
+  },
 ];
 
 class CoughRecord extends React.Component {
@@ -51,6 +71,8 @@ class CoughRecord extends React.Component {
   componentDidMount() {}
 
   setSituation(_situation) {
+    const cookies = new Cookies();
+    cookies.set("situation", _situation, { path: "/record" });
     this.setState({
       situation: _situation,
       status: "Q2",
@@ -58,6 +80,8 @@ class CoughRecord extends React.Component {
   }
 
   setGender(_gender) {
+    const cookies = new Cookies();
+    cookies.set("gender", _gender, { path: "/record" });
     this.setState({
       gender: _gender,
       status: "Q3",
@@ -65,6 +89,8 @@ class CoughRecord extends React.Component {
   }
 
   setSmoke(_smoke) {
+    const cookies = new Cookies();
+    cookies.set("smoke", _smoke, { path: "/record" });
     this.setState({
       smoke: _smoke,
       status: "Hint",
@@ -152,7 +178,7 @@ class Question extends React.Component {
             className="big-button"
             id={this.props.status + i.toString()}
             name={this.props.status}
-            value={question.options[i]}
+            value={question.value[i]}
             onClick={this.handelChange.bind(this)}
           />
           <label for={this.props.status + i.toString()}>
@@ -312,7 +338,10 @@ class Record extends React.Component {
     this.resetTimer();
   };
 
-  showAcceptButtun() {}
+  showAcceptButtun() {
+    const cookies = new Cookies();
+    cookies.set("voice", this.state.blobURL, { path: "/record" });
+  }
 
   cancelVoice() {
     this.resetTimer();
