@@ -60,14 +60,6 @@ class Main extends React.Component {
                 className="main-body-logo-img"
               ></img>
               <div className="main-body-logo-text">
-                {/* <p>
-                  {lang === "fa" ? "دانشگاه تهران" : "University of Tehran"}
-                </p>
-                <p>
-                  {lang === "fa"
-                    ? "دانشکده ی برق و کامپیوتر"
-                    : "School of Electrical & Computer Engineering"}
-                </p> */}
               </div>
             </div>
             <p className="main-body-text-title">
@@ -100,7 +92,7 @@ class Main extends React.Component {
                   : "Diagnosing COVID-19 symptoms from cough sound using AI"}
               </p>
               <p className="link-href">
-                <a href={"/coughtest/cough/" + lang} className="link-href">
+                <a href={"/app/cough/" + lang} className="link-href">
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>
@@ -118,7 +110,7 @@ class Main extends React.Component {
                   : "Artificial respiration project for emergencies"}
               </p>
               <p className="link-href">
-                <a href={"/coughtest/ventilator/" + lang} className="link-href">
+                <a href={"/app/ventilator/" + lang} className="link-href">
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>

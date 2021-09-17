@@ -79,14 +79,6 @@ class HomeBody extends React.Component {
               </div> */}
             </Slide>
           </div>
-
-          {/* <div className="ventilator-body-head">
-            <p>
-              {lang === "fa"
-                ? "درباره ی ونتیلاتور"
-                : "About Ventilator"}
-            </p>
-          </div> */}
           <div className="ventilator-body-description">
             <div className="ventilator-body-box">
               <div className="ventilator-body-box-img">
@@ -103,7 +95,7 @@ class HomeBody extends React.Component {
                     ? "این دستگاه با همکاری دانشکده مهندسی برق و کامپیوتر دانشگاه تهران، پژوهشکده پلیمر و پتروشیمی ایران، و شرکت دانش بنیان نوژان طراحی و ساخته شده است."
                     : "This device has been designed and manufactured in collaboration with the Faculty of Electrical and Computer Engineering, University of Tehran, Iran Polymer and Petrochemical Research Institute, and Nojan Knowledge-Based Company."}
                 </p>
-                <a href={"/ventilator/description/" + lang}>{lang === "fa" ? "ادامه مطلب" : "more"}</a>
+                <a href={"/app/ventilator/description/" + lang}>{lang === "fa" ? "ادامه مطلب" : "more"}</a>
               </div>
             </div>
           </div>

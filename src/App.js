@@ -25,7 +25,7 @@ import "./components/common/total.css";
 class App extends React.Component {
   render() {
     return (
-      <Router basename="/coughtest">
+      <Router basename="app">
         <Switch>
           <Route
             exact={true}

@@ -80,14 +80,6 @@ class HomeBody extends React.Component {
               </div>
             </Slide>
           </div>
-
-          {/* <div className="cough-body-head">
-            <p>
-              {lang === "fa"
-                ? "تشخیص کووید 19 با صدای سرفه"
-                : "Detection of COVID 19 by Sound of Cough"}
-            </p>
-          </div> */}
           <div className="cough-body-description">
             <div className="cough-body-box">
               <div className="cough-body-box-img">
@@ -99,22 +91,9 @@ class HomeBody extends React.Component {
                     ? "ویروس کرونا دوره نهفتگی بین 1 روز تا دو هفته را دارد که باعث میگردد به راحتی بین افراد شیوع پیدا کند. از سوی دیگر، تشخیص آن در این دوره نهفتگی به سادگی نبوده و هزینه بر میباشد. لذا طراحی و ساخت سیستمهای هوشمند جهت غربالگری اولیه، همانند تشخیص از صدای سرفه افراد، میتواند کمک بسزایی در جهت جلوگیری از شیوع این بیماری با ایجاد آگاهی در افراد بنماید. این سایت، تحقیقات مربوط به غربالگری کوید 19 از طریق پردازش صدای سرفه کاربران راه اندازی شده است. در این سامانه شما میتوانید به غربالگری اولیه خود پرداخته و در صورت نیاز خودقرنطینگی انجام داده یا به مراکز بهداشتی مراجعه نمایید."
                     : "The corona virus has a latency period of one day to two weeks, which makes it easily spread between people. On the other hand, it is not easy to diagnose in this period of latency and it is costly. Therefore, designing and building intelligent systems for initial screening, such as detecting the sound of people coughing, can help a lot to prevent the spread of this disease by creating awareness in people. This site launches research on Covid 19 screening through user's cough processing. In this system, you can do your initial screening and, if necessary, perform self-cornealization or refer to health centers."}
                 </p>
-                <a href={"/cough/record/" + lang}>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</a>
+                <a href={"app/cough/record/" + lang}>{lang === "fa" ? "ضبط صدا" : "Record Voice"}</a>
               </div>
             </div>
-            {/* <div className="body-box">
-                <div className="body-box-img">
-                  <img src={pic} alt="record" className="box-img" />
-                </div>
-              <div className="body-box-txt">
-                <p>
-                  {lang === "fa"
-                    ? "ویروس کرونا دوره نهفتگی بین 1 روز تا دو هفته را دارد که باعث میگردد به راحتی بین افراد شیوع پیدا کند. از سوی دیگر، تشخیص آن در این دوره نهفتگی به سادگی نبوده و هزینه بر میباشد. لذا طراحی و ساخت سیستمهای هوشمند جهت غربالگری اولیه، همانند تشخیص از صدای سرفه افراد، میتواند کمک بسزایی در جهت جلوگیری از شیوع این بیماری با ایجاد آگاهی در افراد بنماید. این سایت، تحقیقات مربوط به غربالگری کوید 19 از طریق پردازش صدای سرفه کاربران راه اندازی شده است. در این سامانه شما میتوانید به غربالگری اولیه خود پرداخته و در صورت نیاز خودقرنطینگی انجام داده یا به مراکز بهداشتی مراجعه نمایید."
-                    : "The corona virus has a latency period of one day to two weeks, which makes it easily spread between people. On the other hand, it is not easy to diagnose in this period of latency and it is costly. Therefore, designing and building intelligent systems for initial screening, such as detecting the sound of people coughing, can help a lot to prevent the spread of this disease by creating awareness in people. This site launches research on Covid 19 screening through user's cough processing. In this system, you can do your initial screening and, if necessary, perform self-cornealization or refer to health centers."}
-                </p>
-                <a href="/fa">{lang === "fa" ? "ادامه مطلب" : "Read more"}</a>
-              </div>
-            </div> */}
           </div>
         </div>
         <br />
