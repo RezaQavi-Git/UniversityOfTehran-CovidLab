@@ -9,7 +9,7 @@
 .navbar-container {
   width: 100%;
   margin: auto;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .small-navbar {
@@ -44,7 +44,7 @@
 }
 
 .navbar-logo-text {
-  width: 100%;
+  width: 80%;
   margin: auto;
   padding-left: 2%;
   padding-right: 2%;
@@ -179,6 +179,10 @@
   text-align: right;
   padding: 16px;
   text-decoration: none;
+}
+
+.active-page p {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 650px) {

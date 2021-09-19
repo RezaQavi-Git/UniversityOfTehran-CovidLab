@@ -1,4 +1,4 @@
-.standards-body {
+.description-body {
   width: 80%;
   margin: auto;
   font-size: 1.2em;
@@ -22,7 +22,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .standards-body {
+  .description-body {
     width: 90%;
     margin: auto;
     font-size: 1em;

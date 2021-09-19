@@ -18,6 +18,18 @@
   margin: auto;
 }
 
+.red-text {
+  color: var(--red);
+}
+
+.request-link {
+  background-color: var(--green);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 0 2%;
+}
+
 @media screen and (max-width: 800px) {
   .links-body {
     width: 90%;
@@ -26,6 +38,10 @@
   }
 
   .links-body a {
+    font-size: 0.8em;
+  }
+
+  .links-body p {
     font-size: 0.8em;
   }
 }

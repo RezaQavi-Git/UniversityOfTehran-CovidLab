@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-size:cover;
   /* border-radius: 5px; */
-  height: 450px;
+  height: 370px;
 }
 
 .each-slide span {
@@ -37,11 +37,10 @@
 }
 
 .cough-body-description {
-  width: 90%;
+  width: 60%;
   margin: auto;
   font-size: 1em;
   margin-top: 3%;
-  /* border: 3px var(--dark-blue) dotted; */
   border-radius: 5px;
   box-shadow: 0 20px 20px var(--dark-blue);
 }
@@ -58,14 +57,14 @@
   padding: 2%;
 }
 
-.cough-body-box-img {
+/* .cough-body-box-img {
   width: 40%;
   margin: auto;
   justify-content: center;
   align-items: center;
-}
+} */
 .cough-body-box-txt {
-  width: 50%;
+  width: 80%;
   margin: auto;
 }
 .cough-body-box-txt a {
