@@ -1,0 +1,14 @@
+.request-body {
+  width: 80%;
+  margin: auto;
+  font-size: 1.2em;
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 800px) {
+  .request-body {
+    width: 90%;
+    margin: auto;
+    font-size: 0.85em;
+  }
+}
