@@ -33,7 +33,7 @@ class Record extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="record"/>
           <p className="seprator"></p>
           <CoughRecord lang={lang} />
           <p className="seprator"></p>

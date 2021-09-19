@@ -42,7 +42,7 @@ class Standards extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="standards" />
           <p className="seprator">
             {lang === "fa" ? "استاندارد ها" : "Standards"}
           </p>
@@ -101,6 +101,15 @@ class StandardsBody extends React.Component {
               </a>
             </div>
           </div>
+          <p>
+            An overview of FDA’s activities regarding medical devices is found
+            <a href="https://www.fda.gov/medical-devices">here</a>. COVID-19
+            related guidance documents can be found
+            <a href="https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/covid-19-related-guidance-documents-industry-fda-staff-and-other-stakeholders">
+              here
+            </a>
+            .
+          </p>
         </div>
       </React.Fragment>
     );

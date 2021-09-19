@@ -33,7 +33,7 @@ class News extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="news"/>
           <p className="seprator">{lang === "fa" ? "اخبار" : "News"}</p>
           <NewsBody lang={lang} />
           <p className="seprator"></p>

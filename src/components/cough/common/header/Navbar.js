@@ -30,6 +30,8 @@ class Navbar extends React.Component {
 
   render() {
     const lang = this.props.lang;
+    const page = this.props.page;
+
 
     return (
       <div className="navbar-container">
@@ -45,8 +47,8 @@ class Navbar extends React.Component {
             <span>&#9776; {lang === "fa" ? "منو" : "Menu"}</span>
           </button>
         </div>
-        <HorizontalNavbar lang={lang} />
-        <VerticalNavbar id="vertical-navbar" lang={lang} />
+        <HorizontalNavbar lang={lang} page={page}/>
+        <VerticalNavbar id="vertical-navbar" lang={lang} page={page}/>
       </div>
     );
   }
@@ -70,22 +72,21 @@ class VerticalNavbar extends React.Component {
 
   render() {
     const lang = this.props.lang;
+    const page = this.props.page;
+
     return (
       <div id="vertical-navbar" className={"vertical-navbar " + lang}>
-        <Link to={"/" + lang}>{lang === "fa" ? "صفحه اصلی" : "Main Page"}</Link>
-        <Link to={"/cough/" + lang}>{lang === "fa" ? "خانه" : "Home"}</Link>
-        <Link to={"/cough/team/" + lang}>
-          {lang === "fa" ? "تیم ما" : "Team"}
-        </Link>
-        <Link to={"/cough/record/" + lang}>
-          {lang === "fa" ? "ضبط صدا" : "Record"}
-        </Link>
-        <Link to={"/cough/projects/" + lang}>
-          {lang === "fa" ? "پروژه ها" : "Projects"}
-        </Link>
-        <Link to={"/cough/news/" + lang}>
-          {lang === "fa" ? "اخبار" : "News"}
-        </Link>
+        <Link to={"/" + lang}><p>{lang === "fa" ? "صفحه اصلی" : "Main Page"}</p></Link>
+        <Link to={"/cough/" + lang} className={page==="home" ? "active-page": ""}><p>{lang === "fa" ? "خانه" : "Home"}</p></Link>
+        <Link to={"/cough/team/" + lang} className={page==="team" ? "active-page": ""}>
+          <p>{lang === "fa" ? "تیم ما" : "Team"}
+        </p></Link>
+        <Link to={"/cough/record/" + lang} className={page==="record" ? "active-page": ""}>
+          <p>{lang === "fa" ? "ضبط صدا" : "Record"}
+        </p></Link>
+        <Link to={"/cough/news/" + lang} className={page==="news" ? "active-page": ""}>
+          <p>{lang === "fa" ? "اخبار" : "News"}
+        </p></Link>
         <button
           className="changeLang-btn"
           onClick={this.setLang.bind(this, lang)}
@@ -115,7 +116,8 @@ class HorizontalNavbar extends React.Component {
 
   render() {
     const lang = this.props.lang;
-
+    const page = this.props.page;
+    console.log(page);
     return (
       <div id="horizontal-navbar" className={"horizontal-navbar-" + lang}>
         <div className="navbar-logo">
@@ -132,21 +134,18 @@ class HorizontalNavbar extends React.Component {
         </div>
         <div className="navbar-links">
           <Link to={"/" + lang}>
-            {lang === "fa" ? "صفحه اصلی" : "Main Page"}
-          </Link>
-          <Link to={"/cough/" + lang}>{lang === "fa" ? "خانه" : "Home"}</Link>
-          <Link to={"/cough/team/" + lang}>
-            {lang === "fa" ? "تیم ما" : "Team"}
-          </Link>
-          <Link to={"/cough/record/" + lang}>
-            {lang === "fa" ? "ضبط صدا" : "Record"}
-          </Link>
-          <Link to={"/cough/projects/" + lang}>
-            {lang === "fa" ? "پروژه ها" : "Projects"}
-          </Link>
-          <Link to={"/cough/news/" + lang}>
-            {lang === "fa" ? "اخبار" : "News"}
-          </Link>
+            <p>{lang === "fa" ? "صفحه اصلی" : "Main Page"}
+          </p></Link>
+          <Link to={"/cough/" + lang} className={page==="home" ? "active-page": ""}><p>{lang === "fa" ? "خانه" : "Home"}</p></Link>
+          <Link to={"/cough/team/" + lang} className={page==="team" ? "active-page": ""}>
+            <p>{lang === "fa" ? "تیم ما" : "Team"}
+          </p></Link>
+          <Link to={"/cough/record/" + lang} className={page==="record" ? "active-page": ""}>
+            <p>{lang === "fa" ? "ضبط صدا" : "Record"}
+          </p></Link>
+          <Link to={"/cough/news/" + lang} className={page==="news" ? "active-page": ""}>
+            <p>{lang === "fa" ? "اخبار" : "News"}
+          </p></Link>
           <button
             className="changeLang-btn"
             onClick={this.setLang.bind(this, lang)}

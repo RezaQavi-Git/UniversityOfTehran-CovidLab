@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 import FALOGO from "../../../static/images/fa-lab-logo.png";
 import ENLOGO from "../../../static/images/en-lab-logo.png";
 import AUFLOGO from "../../../static/images/auf.png";
-
 
 import "../../../common/navbar.css";
 
@@ -33,6 +31,7 @@ class Navbar extends React.Component {
 
   render() {
     const lang = this.props.lang;
+    const page = this.props.page;
 
     return (
       <div className="navbar-container">
@@ -48,8 +47,8 @@ class Navbar extends React.Component {
             <span>&#9776; {lang === "fa" ? "منو" : "Menu"}</span>
           </button>
         </div>
-        <HorizontalNavbar lang={lang} />
-        <VerticalNavbar id="vertical-navbar" lang={lang} />
+        <HorizontalNavbar lang={lang} page={page} />
+        <VerticalNavbar id="vertical-navbar" lang={lang} page={page} />
       </div>
     );
   }
@@ -73,30 +72,55 @@ class VerticalNavbar extends React.Component {
 
   render() {
     const lang = this.props.lang;
+    const page = this.props.page;
+
     return (
       <div id="vertical-navbar" className={"vertical-navbar " + lang}>
         <Link to={"/" + lang}>
-          {lang === "fa" ? "صفحه اصلی" : "Main Page"}
+          <p> {lang === "fa" ? "صفحه اصلی" : "Main Page"}</p>
         </Link>
-        <Link to={"/ventilator/" + lang}>
-          {lang === "fa" ? "خانه" : "Home"}
+        <Link
+          to={"/ventilator/" + lang}
+          className={page === "home" ? "active-page" : ""}
+        >
+          <p> {lang === "fa" ? "خانه" : "Home"}</p>
         </Link>
-        <Link to={"/ventilator/team/" + lang}>
-          {lang === "fa" ? "تیم ما" : "Team"}
+        <Link
+          to={"/ventilator/team/" + lang}
+          className={page === "team" ? "active-page" : ""}
+        >
+          <p> {lang === "fa" ? "تیم ما" : "Team"}</p>
         </Link>
-        <Link to={"/ventilator/documents/" + lang}>
-          {lang === "fa" ? "مستندات" : "Documents"}
+        <Link
+          to={"/ventilator/documents/" + lang}
+          className={page === "documents" ? "active-page" : ""}
+        >
+          <p> {lang === "fa" ? "مستندات" : "Documents"}</p>
         </Link>
-        <Link to={"/ventilator/links/" + lang}>
-          {lang === "fa" ? "لینک ها" : "Links"}
+        <Link
+          to={"/ventilator/links/" + lang}
+          className={page === "links" ? "active-page" : ""}
+        >
+          <p> {lang === "fa" ? "لینک ها" : "Links"}</p>
         </Link>
-        <Link to={"/ventilator/news/" + lang}>
-          {lang === "fa" ? "اخبار" : "News"}
+        <Link
+          to={"/ventilator/news/" + lang}
+          className={page === "news" ? "active-page" : ""}
+        >
+          <p> {lang === "fa" ? "اخبار" : "News"}</p>
         </Link>
-        <Link to={"/ventilator/standards/" + lang}>
-          {lang === "fa" ? "استانداردها" : "Standards"}
+        <Link
+          to={"/ventilator/standards/" + lang}
+          className={page === "standards" ? "active-page" : ""}
+        >
+          <p> {lang === "fa" ? "استانداردها" : "Standards"}</p>
         </Link>
-        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
+        <button
+          className="changeLang-btn"
+          onClick={this.setLang.bind(this, lang)}
+        >
+          fa/en
+        </button>
       </div>
     );
   }
@@ -120,50 +144,67 @@ class HorizontalNavbar extends React.Component {
 
   render() {
     const lang = this.props.lang;
+    const page = this.props.page;
 
     return (
       <div id="horizontal-navbar" className={"horizontal-navbar-" + lang}>
         <div className="navbar-logo">
-          <img
-            src={AUFLOGO}
-            alt="logo"
-            className="navbar-logo-img-regtangle"
-          />
+          <img src={AUFLOGO} alt="logo" className="navbar-logo-img-regtangle" />
           <img
             src={lang === "fa" ? FALOGO : ENLOGO}
             alt="logo"
             className="navbar-logo-img"
           />
-          <p
-          className="navbar-logo-text">
-            {lang === "fa"
-              ? "ونتیلاتور"
-              : "Ventilator"}
+          <p className="navbar-logo-text">
+            {lang === "fa" ? "ونتیلاتور" : "Ventilator"}
           </p>
         </div>
         <div className="navbar-links">
-        <Link to={"/" + lang}>
-          {lang === "fa" ? "صفحه اصلی" : "Main Page"}
-        </Link>
-          <Link to={"/ventilator/" + lang}>
-            {lang === "fa" ? "خانه" : "Home"}
+          <Link to={"/" + lang}>
+            <p>{lang === "fa" ? "صفحه اصلی" : "Main Page"}</p>
           </Link>
-          <Link to={"/ventilator/team/" + lang}>
-            {lang === "fa" ? "تیم ما" : "Team"}
+          <Link
+            to={"/ventilator/" + lang}
+            className={page === "home" ? "active-page" : ""}
+          >
+            <p>{lang === "fa" ? "خانه" : "Home"}</p>
           </Link>
-          <Link to={"/ventilator/documents/" + lang}>
-            {lang === "fa" ? "مستندات" : "Documents"}
+          <Link
+            to={"/ventilator/team/" + lang}
+            className={page === "team" ? "active-page" : ""}
+          >
+            <p>{lang === "fa" ? "تیم ما" : "Team"}</p>
           </Link>
-          <Link to={"/ventilator/links/" + lang}>
-            {lang === "fa" ? "لینک ها" : "Links"}
+          <Link
+            to={"/ventilator/documents/" + lang}
+            className={page === "documents" ? "active-page" : ""}
+          >
+            <p>{lang === "fa" ? "مستندات" : "Documents"}</p>
           </Link>
-          <Link to={"/ventilator/news/" + lang}>
-            {lang === "fa" ? "اخبار" : "News"}
+          <Link
+            to={"/ventilator/links/" + lang}
+            className={page === "links" ? "active-page" : ""}
+          >
+            <p>{lang === "fa" ? "لینک ها" : "Links"}</p>
           </Link>
-          <Link to={"/ventilator/standards/" + lang}>
-            {lang === "fa" ? "استانداردها" : "Standards"}
+          <Link
+            to={"/ventilator/news/" + lang}
+            className={page === "news" ? "active-page" : ""}
+          >
+            <p>{lang === "fa" ? "اخبار" : "News"}</p>
           </Link>
-        <button className="changeLang-btn"  onClick={this.setLang.bind(this, lang)}>fa/en</button>
+          <Link
+            to={"/ventilator/standards/" + lang}
+            className={page === "standards" ? "active-page" : ""}
+          >
+            <p>{lang === "fa" ? "استانداردها" : "Standards"}</p>
+          </Link>
+          <button
+            className="changeLang-btn"
+            onClick={this.setLang.bind(this, lang)}
+          >
+            fa/en
+          </button>
         </div>
       </div>
     );

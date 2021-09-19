@@ -45,7 +45,7 @@ class Team extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="team"/>
           <p className="seprator">{lang === "fa" ? "اعضا" : "Members"}</p>
           <TeamMembers lang={lang} />
           <p className="seprator"></p>

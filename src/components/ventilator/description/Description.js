@@ -33,7 +33,7 @@ class Description extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="description"/>
           <p className="seprator">
             {lang === "fa" ? "توضیحات" : "Description"}
           </p>
@@ -58,7 +58,7 @@ class DescriptionBody extends React.Component {
     const lang = this.props.lang;
     return (
       <React.Fragment>
-        <div className="standards-body">
+        <div className="description-body">
           <p>{lang === "fa" ? "" : ""}</p>
           <p>
             {lang === "fa"

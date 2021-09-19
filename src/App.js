@@ -17,10 +17,9 @@ import VLinks from "./components/ventilator/links/Links";
 import VStandards from "./components/ventilator/standards/Standards";
 import VDescription from "./components/ventilator/description/Description";
 
-
 import "./App.css";
 import "./components/common/total.css";
-
+import FDARequest from "./components/ventilator/fdarequest/FDARequest";
 
 class App extends React.Component {
   render() {
@@ -87,8 +86,6 @@ class App extends React.Component {
             path="/cough/news/en"
             render={(props) => <News lang="en" {...props} />}
           ></Route>
-
-
 
           <Route
             exact={true}
@@ -159,6 +156,12 @@ class App extends React.Component {
             exact={true}
             path="/ventilator/description/en"
             render={(props) => <VDescription lang="en" {...props} />}
+          ></Route>
+
+          <Route
+            exact={true}
+            path="/ventilator/request/en"
+            render={(props) => <FDARequest lang="en" {...props} />}
           ></Route>
         </Switch>
       </Router>

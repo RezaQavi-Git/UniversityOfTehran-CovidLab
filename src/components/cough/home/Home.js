@@ -40,7 +40,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="home"/>
           {/* <p className="seprator"></p> */}
           <HomeBody lang={lang} />
           <Footer lang={lang} />
@@ -82,9 +82,9 @@ class HomeBody extends React.Component {
           </div>
           <div className="cough-body-description">
             <div className="cough-body-box">
-              <div className="cough-body-box-img">
+              {/* <div className="cough-body-box-img">
                 <img src={pic2} alt="record" className="box-img" />
-              </div>
+              </div> */}
               <div className="cough-body-box-txt">
                 <p>
                   {lang === "fa"

@@ -39,7 +39,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className="main">
-          <Navbar lang={lang} />
+          <Navbar lang={lang} page="home"/>
           {/* <p className="seprator"></p> */}
           <HomeBody lang={lang} />
           <Footer lang={lang} />
