@@ -3,6 +3,7 @@
   margin: auto;
   font-size: 1.2em;
   color: var(--dark-blue);
+  direction: ltr;
 }
 
 .links-body a {

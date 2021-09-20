@@ -1,21 +1,7 @@
 .standards-body {
-  width: 95%;
+  width: 80%;
   margin: auto;
-}
-
-
-.standard-slide-container {
-  width: 90%;
-  margin: auto;
-  border: 3px solid var(--dark-blue);
-  height: fit-content;
-}
-
-.standard-each-slide > div {
-  background-size: cover;
-  border-radius: 5px;
-  height: 1500px;
-
+  direction: ltr;
 }
 
 .download-link {
@@ -27,35 +13,18 @@
 
 .download-link a{
   color: var(--white);
-  background-color: var(--green);
+  background-color: rgb(58, 179, 58);
   border-radius: 5px;
   text-decoration: none;
   font-size: 1.5em;
   padding: 0 2%;
 }
 
-@media screen and (max-width: 950px) {
-  .standard-slide-container {
-    width: 95%;
-    margin: auto;
-  }
-  
-  .standard-each-slide > div {
-    background-size: cover;
-    height: 900px;
-  }
-
-}
 
 @media screen and (max-width: 500px) {
-  .standard-slide-container {
-    width: 95%;
+  .standards-body {
+    width: 90%;
     margin: auto;
+    direction: ltr;
   }
-  
-  .standard-each-slide > div {
-    background-size: cover;
-    height: 470px;
-  }
-
 }
