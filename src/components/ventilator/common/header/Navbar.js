@@ -136,6 +136,11 @@ class HorizontalNavbar extends React.Component {
 
   setLang(lang) {
     var path = window.location.pathname;
+
+    path === "/ventilator/" ? 
+    window.location.replace("/ventilator/en")
+      
+    :
     path = path.slice(0, path.length - 2);
     lang === "fa"
       ? window.location.replace(path + "en")

@@ -64,6 +64,10 @@ class VerticalNavbar extends React.Component {
 
   setLang(lang) {
     var path = window.location.pathname;
+    console.log(path)
+    path === "/cough/" ? 
+      window.location.replace("/cough/en")
+    :
     path = path.slice(0, path.length - 2);
     lang === "fa"
       ? window.location.replace(path + "en")
@@ -108,6 +112,10 @@ class HorizontalNavbar extends React.Component {
 
   setLang(lang) {
     var path = window.location.pathname;
+    console.log(path)
+    path === "/cough/" ? 
+      window.location.replace("/cough/en")
+    :
     path = path.slice(0, path.length - 2);
     lang === "fa"
       ? window.location.replace(path + "en")
@@ -117,7 +125,6 @@ class HorizontalNavbar extends React.Component {
   render() {
     const lang = this.props.lang;
     const page = this.props.page;
-    console.log(page);
     return (
       <div id="horizontal-navbar" className={"horizontal-navbar-" + lang}>
         <div className="navbar-logo">

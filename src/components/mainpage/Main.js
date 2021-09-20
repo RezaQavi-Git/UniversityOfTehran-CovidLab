@@ -92,7 +92,7 @@ class Main extends React.Component {
                   : "Diagnosing COVID-19 symptoms from cough sound using AI"}
               </p>
               <p className="link-href">
-                <a href={"/app/cough/" + lang} className="link-href">
+                <a href={"/cough/" + lang} className="link-href">
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>
@@ -110,7 +110,7 @@ class Main extends React.Component {
                   : "Artificial respiration project for emergencies"}
               </p>
               <p className="link-href">
-                <a href={"/app/ventilator/" + lang} className="link-href">
+                <a href={"/ventilator/" + lang} className="link-href">
                   {lang === "fa" ? "ادامه مطلب" : "Read more"}
                 </a>
               </p>

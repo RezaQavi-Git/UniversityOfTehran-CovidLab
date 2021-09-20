@@ -24,8 +24,13 @@ import FDARequest from "./components/ventilator/fdarequest/FDARequest";
 class App extends React.Component {
   render() {
     return (
-      <Router basename="app">
+      <Router basename="">
         <Switch>
+          <Route
+            exact={true}
+            path="/"
+            render={(props) => <Main lang="fa" {...props} />}
+          ></Route>
           <Route
             exact={true}
             path="/fa"
@@ -35,6 +40,12 @@ class App extends React.Component {
             exact={true}
             path="/en"
             render={(props) => <Main lang="en" {...props} />}
+          ></Route>
+
+          <Route
+            exact={true}
+            path="/cough/"
+            render={(props) => <Home lang="fa" {...props} />}
           ></Route>
           <Route
             exact={true}
@@ -87,6 +98,11 @@ class App extends React.Component {
             render={(props) => <News lang="en" {...props} />}
           ></Route>
 
+          <Route
+            exact={true}
+            path="/ventilator/"
+            render={(props) => <VHome lang="fa" {...props} />}
+          ></Route>
           <Route
             exact={true}
             path="/ventilator/fa"
